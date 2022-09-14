@@ -43,7 +43,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto ">
             <li class="nav-item active-link">
-                <a class="nav-link" href="index.html">HOME</a>
+                <a class="nav-link" href="@Url.Action("Index" , "Home")">HOME</a>
             </li>
             <li class="nav-item">
                 <div class="dropdown">
@@ -53,14 +53,14 @@
                     </a>
                     <div class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton">
                         <a class="dropdown-item" href="@Url.Action("VisionMission" , "About")">Vison & Mission</a>
-                        <a class="dropdown-item" href="infrastructure.html">Infrastructure</a>
-                        <a class="dropdown-item" href="principal.html">Principal</a>
-                        <a class="dropdown-item" href="overview.html">Overview</a>
+                        <a class="dropdown-item" href="@Url.Action("Infrastructure" , "About")">Infrastructure</a>
+                        <a class="dropdown-item" href="@Url.Action("Principal" , "About")">Principal</a>
+                        <a class="dropdown-item" href="@Url.Action("Overview" , "About")">Overview</a>
                     </div>
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="admission.html">ADMISSION</a>
+                <a class="nav-link" href="@Url.Action("Admission" , "Admission")">ADMISSION</a>
             </li>
             <li class="nav-item">
                 <div class="dropdown">
@@ -69,14 +69,14 @@
                         COURSES
                     </a>
                     <div class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="cseDepartment.html">Computer Science & Engineering</a>
-                        <a class="dropdown-item" href="mechDeapartment.html">Mechanical Engineering</a>
-                        <a class="dropdown-item" href="electricalDepartment.html">Electrical Engineering</a>
-                        <a class="dropdown-item" href="ecDepartment.html">
+                        <a class="dropdown-item" href="@Url.Action("ComputerScience" , "Courses")">Computer Science & Engineering</a>
+                        <a class="dropdown-item" href="@Url.Action("Mechanical" , "Courses")">Mechanical Engineering</a>
+                        <a class="dropdown-item" href="@Url.Action("Electrical" , "Courses")">Electrical Engineering</a>
+                        <a class="dropdown-item" href="@Url.Action("ElectronicsCommunication" , "Courses")">
                             Electronics & Communication
                             Engineering
                         </a>
-                        <a class="dropdown-item" href="civilDepartment.html">Civil Engineering</a>
+                        <a class="dropdown-item" href="@Url.Action("Civil" , "Courses")">Civil Engineering</a>
                     </div>
                 </div>
             </li>
@@ -87,7 +87,7 @@
                         COMMITTEES
                     </a>
                     <div class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="cells.html">Women cell</a>
+                        <a class="dropdown-item" href="@Url.Action("WomenCell" , "Committees")">Women cell</a>
                         <a class="dropdown-item" href="#">Another action</a>
                     </div>
                 </div>
@@ -99,19 +99,14 @@
                         STUDENT CORNER
                     </a>
                     <div class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="studymaterial.html">STUDY MATERIAL</a>
-                        <a class="dropdown-item" href="StudentCouncil.html">STUDENT COUNCIL</a>
+                        <a class="dropdown-item" href="@Url.Action("StudyMaterial" , "StudentCorner")">STUDY MATERIAL</a>
+                        <a class="dropdown-item" href="@Url.Action("StudentCouncil" , "StudentCorner")">STUDENT COUNCIL</a>
                     </div>
                 </div>
             </li>
-            <!-- <li class="nav-item">
-                <a class="nav-link" href="StudentCouncil.html">STUDENT CORNER</a>
-            </li>
+            
             <li class="nav-item">
-                <a class="nav-link" href="studymaterial.html">STUDY MATERIAL</a>
-            </li> -->
-            <li class="nav-item">
-                <a class="nav-link" href="event.html">EVENT</a>
+                <a class="nav-link" href="@Url.Action("Event" , "Event")">EVENT</a>
             </li>
             <li class="nav-item">
                 <div class="dropdown">
@@ -120,15 +115,15 @@
                         TPO CELL
                     </a>
                     <div class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="Placements.html">TPO Overview</a>
-                        <a class="dropdown-item" href="tpo-vision.html">TPO Vision & Mission</a>
-                        <a class="dropdown-item" href="plac&cell.html">Placements</a>
-                        <a class="dropdown-item" href="graph.html">Graph View</a>
+                        <a class="dropdown-item" href="@Url.Action("Overview" , "TPO")">TPO Overview</a>
+                        <a class="dropdown-item" href="@Url.Action("VissionMission" , "TPO")">TPO Vision & Mission</a>
+                        <a class="dropdown-item" href="@Url.Action("Placements" , "TPO")">Placements</a>
+                        <a class="dropdown-item" href="@Url.Action("Graphview" , "TPO")">Graph View</a>
                     </div>
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="contactus.html">CONTACT</a>
+                <a class="nav-link" href="@Url.Action("Contact" , "Contact")">CONTACT</a>
             </li>
             <li class="nav-item">
                 <div class="dropdown">
@@ -137,19 +132,19 @@
                         FACULTY
                     </a>
                     <div class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="cseFaculty.html">
+                        <a class="dropdown-item" href="@Url.Action("ComputerScience" , "Faculty")">
                             Computer Science &
                             Engineering
                         </a>
-                        <a class="dropdown-item" href="mechFaculty.html">Mechanical Engineering</a>
-                        <a class="dropdown-item" href="electricalFaculty.html">Electrical Engineering</a>
-                        <a class="dropdown-item" href="ecFaculty.html">Electronics & Communication Engineering</a>
-                        <a class="dropdown-item" href="civilFaculty.html">Civil Engineering</a>
+                        <a class="dropdown-item" href="@Url.Action("Mechanical" , "Faculty")">Mechanical Engineering</a>
+                        <a class="dropdown-item" href="@Url.Action("Electrical" , "Faculty")">Electrical Engineering</a>
+                        <a class="dropdown-item" href="@Url.Action("ElectronicsCommunication" , "Faculty")">Electronics & Communication Engineering</a>
+                        <a class="dropdown-item" href="@Url.Action("Civil" , "Faculty")">Civil Engineering</a>
                     </div>
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="gallery1.html">GALLERY</a>
+                <a class="nav-link" href="@Url.Action("Gallery" , "Gallery")">GALLERY</a>
             </li>
         </ul>
     </div>
