@@ -5,4 +5,679 @@
 }
 
 <h1>Gallery</h1>
+ <div class="gal-container">
+        <h3>GALLERY</h3>
+        <h1>PHOTOS OF OUR COLLEGE</h1>
+    </div>
 
+        <div class="">
+            <div class="container">
+                <!-- <div class="d-flex justify-content-center">
+                    <div class="headings h4 text-center font-weight-bold mb-4 text-dark">EVENTS</div>
+                </div> -->
+                <div class="row" id="eventId">
+    
+                    <button class="event activeEvent" name="Recent" onclick="openevent('Recent')">
+                        <ul class="col">
+                         <li>Recent</li> 
+                        </ul> 
+                    </button>
+                    <button class="event" name="All" onclick="openevent('All')">
+                            <ul class="col">
+                                <li>All</li> 
+                            </ul> 
+                    </button>
+                    <button class="event" name="Freshers" onclick="openevent('Freshers')">
+                          <ul class="col"><li>Freshers</li></ul>
+                   </button>
+               <button class="event" onclick="openevent('Farwell')">
+                        <ul class="col">
+                          <li>Farwell</li>
+                    </button>
+                    <button class="event" onclick="openevent('Festivals')">
+                        <ul class="col ">
+                           <li> Festivals</li>
+                    </button>
+                    <button class="event" onclick="openevent('college-campus')">
+                        <ul class="col ">
+                           <li>college-campus</li>
+                        </ul>
+                    </button>
+                    <button class="event" onclick="openevent('fecilities')">
+                        <ul class="col ">
+                           <li>Facilities</li>
+                           </ul>
+                    </button>
+                    <button class="event" onclick="openevent('days-event')">
+                        <ul class="col ">
+                           <li> Days</li>  
+                    </button>
+                    <button class="event" onclick="openevent('NSS-event')">
+                        <ul class="col ">
+                               <li>NSS-events</li> 
+                        </button> 
+                </div>
+                <div class="gal-menu" class="d-inline" id="yearId">
+                <div class="dropdown1">
+                    <button class="dropbtn1">YEAR
+                        <i class="fa fa-caret-down"></i>
+                      </button>
+                      <div class="dropdown-content1">
+                        <ul>
+                       <li> <button onclick="openyear('year1All')"><a>2019</a></button></li>
+                       <li> <button onclick="openyear('year2All')"><a>2020</a></button></li>
+                       <li> <button onclick="openyear('year3All')"><a>2021</a></button></li>
+                    </ul>
+                      </div>
+
+                </div>
+                </div>
+            </div>
+        </div>
+    
+<!---defult recent-->    
+       <div class="branch container-fluid mx-auto" id="Recent" >
+        <div class="text-center d-flex justify-content-center align-items-center">
+          <!--   <div class="bg-light-1">--->
+            <div class=" container-fluid">
+                <!-- ALL imges -->
+                <div id="Recent" class="year ">
+                    <div class="align-items-center d-flex justify-content-center p-3"><h2 class="headings  mb-4 font-weight-bold  title1">RECENT</h2></div>
+                </div>
+                <div class="owl-carousel owl-theme owl-loaded align-items-center p-3">
+                    <div class="owl-stage-outer  ">
+                        <div class="owl-stage">
+                            <div class="owl-item">
+                                <img src="images/Gallery/ev-4.jpg" />
+                            </div>
+                            <div class="owl-item h-25">
+                                <img src="images/Gallery/ev-5.jpg" />
+                            </div>
+                            <div class="owl-item">
+                                <img src="images/Gallery/ev-6.jpg" />
+                            </div>
+                            <div class="owl-item">
+                                <img src="images/Gallery/ev-4.jpg" />
+                            </div>
+                            <div class="owl-item">
+                                <img src="images/Gallery/ev-5.jpg" />
+                            </div>
+                            <div class="owl-item">
+                                <img src="images/Gallery/ev-6.jpg" />
+                            </div>
+                            <div class="owl-item">
+                                <img src="images/Gallery/ev-4.jpg" />
+                            </div>
+                            <div class="owl-item">
+                                <img src="images/Gallery/ev-5.jpg" />
+                            </div>
+                            <div class="owl-item">
+                                <img src="images/Gallery/ev-6.jpg" />
+                            </div>
+                            <div class="owl-item">
+                                <img src="images/Gallery/ev-4.jpg" />
+                            </div>
+                            <div class="owl-item">
+                                <img src="images/Gallery/ev-5.jpg" />
+                            </div>
+                            <div class="owl-item">
+                                <img src="images/Gallery/ev-6.jpg" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </div>
+
+    <!-- year-2018 -->
+    <div id="year1All" class="year" style="display:none">
+        <h2 class="align-items-center d-flex justify-content-center p-3">Recent19k</h2>
+                            
+                            
+            <!---gallrey-->
+                <div class="row">
+                    <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
+                        <div class="effect">
+                            <img src="images/events/diwali.jpg" class="gal-img">
+                            <div class=" w-60 row mx-auto mg-glass"><a href="#"
+                                    class="fa fa-search text-white   icone1"></a></div>
+                        </div>
+                    </div>
+            
+                    <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
+                        <div class="effect">
+                            <img src="images/events/farwell.jpg" class="gal-img">
+                            <div class=" w-60 row mx-auto mg-glass"><a href="#"
+                                    class="fa fa-search text-white   icone1"></a></div>
+                        </div>
+                    </div>
+                    <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
+                        <div class="effect">
+                            <img src="images/events/freshers-party.png" class="gal-img">
+                            <div class="w-60 row    mx-auto mg-glass"><a href="#"
+                                    class="fa fa-search text-white   icone1"></a></div>
+                        </div>
+                    </div>
+                    <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
+                        <div class="effect">
+                            <img src="images/events/diwali.jpg" class="gal-img">
+                            <div class="w-60 row  mx-auto mg-glass"><a href="#"
+                                    class="fa fa-search text-white   icone1"></a></div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="row">
+                    <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
+                        <div class="effect">
+                            <img src="images/events/farwell.jpg" class="gal-img">
+                            <div class="w-60 row    mx-auto mg-glass"><a href="#"
+                                    class="fa fa-search text-white  icone1"></a></div>
+                        </div>
+                    </div>
+                    <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
+                        <div class="effect">
+                            <img src="images/events/freshers-party.png" class="gal-img">
+                            <div class="w-60 row   mx-auto mg-glass"><a href="#"
+                                    class="fa fa-search text-white   icone1 "></a></div>
+                        </div>
+                    </div>
+                    <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
+                        <div class="effect">
+                            <img src="images/events/farwell.jpg" class="gal-img">
+                            <div class="w-60 row mx-auto mg-glass"><a href="#"
+                                    class="fa fa-search text-white  icone1"></a></div>
+                        </div>
+                    </div>
+                    <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
+                        <div class="effect">
+                            <img src="images/events/diwali.jpg" class="gal-img">
+                            <div class="w-60 row mx-auto mg-glass"><a href="#"
+                                    class="fa fa-search text-white  icone1"></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    <!---defult-->    
+    <div class="branch container-fluid mx-auto" id="All" style="display:none;">
+        <div class="text-center d-flex justify-content-center align-items-center">
+          <!--   <div class="bg-light-1">--->
+            <div class=" container-fluid">
+                <!-- ALL imges -->
+                <div id="All" class="year">
+                    <div class="align-items-center d-flex justify-content-center p-3"><h2 class="headings  mb-4 font-weight-bold  title1">All</h2></div>
+                </div>
+                <div class="owl-carousel owl-theme owl-loaded align-items-center p-3">
+                    <div class="owl-stage-outer  ">
+                        <div class="owl-stage">
+                            <div class="owl-item">
+                                <img src="images/Gallery/ev-4.jpg" />
+                            </div>
+                            <div class="owl-item h-25">
+                                <img src="images/Gallery/ev-5.jpg" />
+                            </div>
+                            <div class="owl-item">
+                                <img src="images/Gallery/ev-6.jpg" />
+                            </div>
+                            <div class="owl-item">
+                                <img src="images/Gallery/ev-4.jpg" />
+                            </div>
+                            <div class="owl-item">
+                                <img src="images/Gallery/ev-5.jpg" />
+                            </div>
+                            <div class="owl-item">
+                                <img src="images/Gallery/ev-6.jpg" />
+                            </div>
+                            <div class="owl-item">
+                                <img src="images/Gallery/ev-4.jpg" />
+                            </div>
+                            <div class="owl-item">
+                                <img src="images/Gallery/ev-5.jpg" />
+                            </div>
+                            <div class="owl-item">
+                                <img src="images/Gallery/ev-6.jpg" />
+                            </div>
+                            <div class="owl-item">
+                                <img src="images/Gallery/ev-4.jpg" />
+                            </div>
+                            <div class="owl-item">
+                                <img src="images/Gallery/ev-5.jpg" />
+                            </div>
+                            <div class="owl-item">
+                                <img src="images/Gallery/ev-6.jpg" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </div>
+
+<!--defult-->
+    <div class="branch container-fluid mx-auto" id="Freshers" style="display:none;">
+        <div class="text-center d-flex justify-content-center align-items-center">
+          <!--   <div class="bg-light-1">--->
+            <div class=" container-fluid">
+                <!-- ALL imges -->
+                <div id="Freshers" class="year">
+                    <div class="align-items-center d-flex justify-content-center p-3"><h2 class="headings  mb-4 font-weight-bold  title1">Freshers</h2></div>
+                </div>
+                
+<!---gallrey-->
+    <div class="row">
+        <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
+            <div class="effect">
+                <img src="images/events/diwali.jpg" class="gal-img">
+                <div class=" w-60 row mx-auto mg-glass"><a href="#"
+                        class="fa fa-search text-white   icone1"></a></div>
+            </div>
+        </div>
+
+        <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
+            <div class="effect">
+                <img src="images/events/farwell.jpg" class="gal-img">
+                <div class=" w-60 row mx-auto mg-glass"><a href="#"
+                        class="fa fa-search text-white   icone1"></a></div>
+            </div>
+        </div>
+        <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
+            <div class="effect">
+                <img src="images/events/freshers-party.png" class="gal-img">
+                <div class="w-60 row    mx-auto mg-glass"><a href="#"
+                        class="fa fa-search text-white   icone1"></a></div>
+            </div>
+        </div>
+        <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
+            <div class="effect">
+                <img src="images/events/diwali.jpg" class="gal-img">
+                <div class="w-60 row  mx-auto mg-glass"><a href="#"
+                        class="fa fa-search text-white   icone1"></a></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
+            <div class="effect">
+                <img src="images/events/farwell.jpg" class="gal-img">
+                <div class="w-60 row    mx-auto mg-glass"><a href="#"
+                        class="fa fa-search text-white  icone1"></a></div>
+            </div>
+        </div>
+        <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
+            <div class="effect">
+                <img src="images/events/freshers-party.png" class="gal-img">
+                <div class="w-60 row   mx-auto mg-glass"><a href="#"
+                        class="fa fa-search text-white   icone1 "></a></div>
+            </div>
+        </div>
+        <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
+            <div class="effect">
+                <img src="images/events/farwell.jpg" class="gal-img">
+                <div class="w-60 row mx-auto mg-glass"><a href="#"
+                        class="fa fa-search text-white  icone1"></a></div>
+            </div>
+        </div>
+        <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
+            <div class="effect">
+                <img src="images/events/diwali.jpg" class="gal-img">
+                <div class="w-60 row mx-auto mg-glass"><a href="#"
+                        class="fa fa-search text-white  icone1"></a></div>
+            </div>
+        </div>
+      </div>
+    </div>
+   </div>
+</div>
+<!---defult-->
+
+<div class="branch container-fluid mx-auto" id="Farwell" style="display:none;">
+    <div class="text-center d-flex justify-content-center align-items-center">
+      <!--   <div class="bg-light-1">--->
+        <div class=" container-fluid">
+            <!-- ALL imges -->
+            <div id="Farwell" class="year">
+                <div class="align-items-center d-flex justify-content-center p-3"><h2 class="headings mb-4 font-weight-bold  title1">Farwell</h2></div>
+            </div>
+<!---gallrey-->
+   <div class="row">
+       <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
+           <div class="effect">
+               <img src="images/events/diwali.jpg" class="gal-img">
+               <div class=" w-60 row mx-auto mg-glass"><a href="#"
+                       class="fa fa-search text-white   icone1"></a></div>
+           </div>
+       </div>
+
+       <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
+           <div class="effect">
+               <img src="images/events/farwell.jpg" class="gal-img">
+               <div class=" w-60 row mx-auto mg-glass"><a href="#"
+                       class="fa fa-search text-white   icone1"></a></div>
+           </div>
+       </div>
+       <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
+           <div class="effect">
+               <img src="images/events/freshers-party.png" class="gal-img">
+               <div class="w-60 row    mx-auto mg-glass"><a href="#"
+                       class="fa fa-search text-white   icone1"></a></div>
+           </div>
+       </div>
+       <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
+           <div class="effect">
+               <img src="images/events/diwali.jpg" class="gal-img">
+               <div class="w-60 row  mx-auto mg-glass"><a href="#"
+                       class="fa fa-search text-white   icone1"></a></div>
+           </div>
+       </div>
+   </div>
+
+   <div class="row">
+       <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
+           <div class="effect">
+               <img src="images/events/farwell.jpg" class="gal-img">
+               <div class="w-60 row    mx-auto mg-glass"><a href="#"
+                       class="fa fa-search text-white  icone1"></a></div>
+           </div>
+       </div>
+       <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
+           <div class="effect">
+               <img src="images/events/freshers-party.png" class="gal-img">
+               <div class="w-60 row   mx-auto mg-glass"><a href="#"
+                       class="fa fa-search text-white   icone1 "></a></div>
+           </div>
+       </div>
+       <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
+           <div class="effect">
+               <img src="images/events/farwell.jpg" class="gal-img">
+               <div class="w-60 row mx-auto mg-glass"><a href="#"
+                       class="fa fa-search text-white  icone1"></a></div>
+           </div>
+       </div>
+       <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
+           <div class="effect">
+               <img src="images/events/diwali.jpg" class="gal-img">
+               <div class="w-60 row mx-auto mg-glass"><a href="#"
+                       class="fa fa-search text-white  icone1"></a></div>
+                 </div>
+             </div>
+         </div>
+      </div>
+   </div>
+</div>
+ <!---defult-->    
+ <div class="branch container-fluid mx-auto" id="Festivals" style="display:none;">
+    <div class="text-center d-flex justify-content-center align-items-center">
+      <!--   <div class="bg-light-1">--->
+        <div class=" container-fluid">
+            <!-- ALL imges -->
+            <div id="Festivals" class="year">
+                <div class="align-items-center d-flex justify-content-center p-3"><h2 class="headings  mb-4 font-weight-bold  title1">Festivals</h2></div>
+            </div>
+            <div class="owl-carousel owl-theme owl-loaded align-items-center p-3">
+                <div class="owl-stage-outer  ">
+                    <div class="owl-stage position-relative">
+                        <div class="owl-item">
+                            <img src="images/Gallery/ev-4.jpg" />
+                        </div>
+                        <div class="owl-item h-25">
+                            <img src="images/Gallery/ev-5.jpg" />
+                        </div>
+                        <div class="owl-item">
+                            <img src="images/Gallery/ev-6.jpg" />
+                        </div>
+                        <div class="owl-item">
+                            <img src="images/Gallery/ev-4.jpg" />
+                        </div>
+                        <div class="owl-item">
+                            <img src="images/Gallery/ev-5.jpg" />
+                        </div>
+                        <div class="owl-item">
+                            <img src="images/Gallery/ev-6.jpg" />
+                        </div>
+                        <div class="owl-item">
+                            <img src="images/Gallery/ev-4.jpg" />
+                        </div>
+                        <div class="owl-item">
+                            <img src="images/Gallery/ev-5.jpg" />
+                        </div>
+                        <div class="owl-item">
+                            <img src="images/Gallery/ev-6.jpg" />
+                        </div>
+                        <div class="owl-item">
+                            <img src="images/Gallery/ev-4.jpg" />
+                        </div>
+                        <div class="owl-item">
+                            <img src="images/Gallery/ev-5.jpg" />
+                        </div>
+                        <div class="owl-item">
+                            <img src="images/Gallery/ev-6.jpg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+</div>
+
+<!---defult-->    
+<div class="branch container-fluid mx-auto" id="college-campus" style="display:none;">
+    <div class="text-center d-flex justify-content-center align-items-center">
+      <!--   <div class="bg-light-1">--->
+        <div class=" container-fluid">
+            <!-- ALL imges -->
+            <div id="college-campus" class="year">
+                <div class="align-items-center d-flex justify-content-center p-3"><h2 class="headings  mb-4 font-weight-bold  title1">college-campus</h2></div>
+            </div>
+            <div class="owl-carousel owl-theme owl-loaded align-items-center p-3">
+                <div class="owl-stage-outer  ">
+                    <div class="owl-stage">
+                        <div class="owl-item">
+                            <img src="images/Gallery/campus2.avif" />
+                        </div>
+                        <div class="owl-item h-25">
+                            <img src="images/Gallery/campus3.avif" />
+                        </div>
+                        <div class="owl-item">
+                            <img src="images/Gallery/campus4.avif" />
+                        </div>
+                        <div class="owl-item">
+                            <img src="images/Gallery/Campus2.avif" />
+                        </div>
+                        <div class="owl-item">
+                            <img src="images/Gallery/campus2.avif" />
+                        </div>
+                        <div class="owl-item">
+                            <img src="images/Gallery/campus3.avif" />
+                        </div>
+                        <div class="owl-item">
+                            <img src="images/Gallery/campus4.avif" />
+                        </div>
+                        <div class="owl-item">
+                            <img src="images/Gallery/Campus2.avif" />
+                        </div>
+                        <div class="owl-item">
+                            <img src="images/Gallery/campus2.avif" />
+                        </div>
+                        <div class="owl-item">
+                            <img src="images/Gallery/campus3.avif" />
+                        </div>
+                        <div class="owl-item">
+                            <img src="images/Gallery/campus4.avif" />
+                        </div>
+                        <div class="owl-item">
+                            <img src="images/Gallery/Campus2.avif" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+</div>
+
+<!---defult-->    
+<div class="branch container-fluid mx-auto" id="days-event" style="display:none;">
+    <div class="text-center d-flex justify-content-center align-items-center">
+      <!--   <div class="bg-light-1">--->
+        <div class=" container-fluid">
+            <!-- ALL imges -->
+            <div id="days-event" class="year">
+                <div class="align-items-center d-flex justify-content-center p-3"><h2 class="headings  mb-4 font-weight-bold  title1">days-event</h2></div>
+
+            </div>
+            <div class="owl-carousel owl-theme owl-loaded align-items-center p-3">
+                <div class="owl-stage-outer  ">
+                    <div class="owl-stage">
+                        <div class="owl-item">
+                            <img src="images/Gallery/campus2.avif" />
+                        </div>
+                        <div class="owl-item h-25">
+                            <img src="images/Gallery/campus3.avif" />
+                        </div>
+                        <div class="owl-item">
+                            <img src="images/Gallery/campus4.avif" />
+                        </div>
+                        <div class="owl-item">
+                            <img src="images/Gallery/Campus2.avif" />
+                        </div>
+                        <div class="owl-item">
+                            <img src="images/Gallery/campus2.avif" />
+                        </div>
+                        <div class="owl-item">
+                            <img src="images/Gallery/campus3.avif" />
+                        </div>
+                        <div class="owl-item">
+                            <img src="images/Gallery/campus4.avif" />
+                        </div>
+                        <div class="owl-item">
+                            <img src="images/Gallery/Campus2.avif" />
+                        </div>
+                        <div class="owl-item">
+                            <img src="images/Gallery/campus2.avif" />
+                        </div>
+                        <div class="owl-item">
+                            <img src="images/Gallery/campus3.avif" />
+                        </div>
+                        <div class="owl-item">
+                            <img src="images/Gallery/campus4.avif" />
+                        </div>
+                        <div class="owl-item">
+                            <img src="images/Gallery/Campus2.avif" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+</div>
+
+<!---defult-->    
+<div class="branch container-fluid mx-auto" id="fecilities" style="display:none;">
+    <div class="text-center d-flex justify-content-center align-items-center">
+      <!--   <div class="bg-light-1">--->
+        <div class=" container-fluid">
+            <!-- ALL imges -->
+            <div id="fecilities" class="year">
+                <div class="align-items-center d-flex justify-content-center p-3"><h2 class="headings  mb-4 font-weight-bold  title1">Fecilities</h2></div>
+            </div>
+            <div class="owl-carousel owl-theme owl-loaded align-items-center p-3">
+                <div class="owl-stage-outer  ">
+                    <div class="owl-stage">
+                        <div class="owl-item">
+                            <img src="images/Gallery/campus2.avif" />
+                        </div>
+                        <div class="owl-item h-25">
+                            <img src="images/Gallery/campus3.avif" />
+                        </div>
+                        <div class="owl-item">
+                            <img src="images/Gallery/campus4.avif" />
+                        </div>
+                        <div class="owl-item">
+                            <img src="images/Gallery/Campus2.avif" />
+                        </div>
+                        <div class="owl-item">
+                            <img src="images/Gallery/campus2.avif" />
+                        </div>
+                        <div class="owl-item">
+                            <img src="images/Gallery/campus3.avif" />
+                        </div>
+                        <div class="owl-item">
+                            <img src="images/Gallery/campus4.avif" />
+                        </div>
+                        <div class="owl-item">
+                            <img src="images/Gallery/Campus2.avif" />
+                        </div>
+                        <div class="owl-item">
+                            <img src="images/Gallery/campus2.avif" />
+                        </div>
+                        <div class="owl-item">
+                            <img src="images/Gallery/campus3.avif" />
+                        </div>
+                        <div class="owl-item">
+                            <img src="images/Gallery/campus4.avif" />
+                        </div>
+                        <div class="owl-item">
+                            <img src="images/Gallery/Campus2.avif" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+</div>
+
+<!---defult-->    
+<div class="branch container-fluid mx-auto" id="NSS-event" style="display:none;">
+    <div class="text-center d-flex justify-content-center align-items-center">
+      <!--   <div class="bg-light-1">--->
+        <div class=" container-fluid">
+            <!-- ALL imges -->
+            <div id="Nss-event" class="year">
+                <div class="align-items-center d-flex justify-content-center p-3"><h2 class="headings  mb-4 font-weight-bold  title1">Nss-event</h2></div>
+            </div>
+            <div class="owl-carousel owl-theme owl-loaded align-items-center p-3">
+                <div class="owl-stage-outer  ">
+                    <div class="owl-stage">
+                        <div class="owl-item">
+                            <img src="images/Gallery/campus2.avif" />
+                        </div>
+                        <div class="owl-item h-25">
+                            <img src="images/Gallery/campus3.avif" />
+                        </div>
+                        <div class="owl-item">
+                            <img src="images/Gallery/campus4.avif" />
+                        </div>
+                        <div class="owl-item">
+                            <img src="images/Gallery/Campus2.avif" />
+                        </div>
+                        <div class="owl-item">
+                            <img src="images/Gallery/campus2.avif" />
+                        </div>
+                        <div class="owl-item">
+                            <img src="images/Gallery/campus3.avif" />
+                        </div>
+                        <div class="owl-item">
+                            <img src="images/Gallery/campus4.avif" />
+                        </div>
+                        <div class="owl-item">
+                            <img src="images/Gallery/Campus2.avif" />
+                        </div>
+                        <div class="owl-item">
+                            <img src="images/Gallery/campus2.avif" />
+                        </div>
+                        <div class="owl-item">
+                            <img src="images/Gallery/campus3.avif" />
+                        </div>
+                        <div class="owl-item">
+                            <img src="images/Gallery/campus4.avif" />
+                        </div>
+                        <div class="owl-item">
+                            <img src="images/Gallery/Campus2.avif" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+</div>
