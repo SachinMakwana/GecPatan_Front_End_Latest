@@ -3,10 +3,71 @@
     ViewData["Title"] = "ComputerScience";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@section Script{
+    <script>
+        $(document).ready(function () {
+            $('#owl1').owlCarousel({
+                loop: true,
+                margin: 10,
+                responsiveClass: true,
+                responsive: {
+                    0: {
+                        items: 1,
+                        //nav: true
+                    },
+                    600: {
+                        items: 3,
+                        //nav: false
+                    },
+                    1000: {
+                        items: 4,
+                        //nav: true,
+                        loop: false,
+                        margin: 20
+                    },
+                    3000: {
+                        items: 6,
+                        //nav: true,
+                        loop: false,
+                        margin: 20
+                    }
+                }
+            })
+
+            $('#owl-carousel-2').owlCarousel({
+                loop: true,
+                margin: 10,
+                responsiveClass: true,
+                responsive: {
+                    0: {
+                        items: 1,
+                        //nav: true
+                    },
+                    600: {
+                        items: 1,
+                        //nav: false
+                    },
+                    1000: {
+                        items: 1,
+                        //nav: true,
+                        loop: false,
+                        margin: 20
+                    },
+                    3000: {
+                        items: 1,
+                        //nav: true,
+                        loop: false,
+                        margin: 20
+                    }
+                }
+            })
+        })
+    </script>
+}
 
 
 
-    <div class="header-block row d-flex align-items-center mx-auto">
+<div class="header-block row d-flex align-items-center mx-auto">
         <img src="~/images/departments/computer-science-engineering.jpg" />
     <div class="text-block text-block mx-auto d-flex align-items-center justify-content-center">
         COMPUTER DEPARTMENT
@@ -53,7 +114,7 @@
 
 <div class="row">
     <div class="frame">
-            <img src="~/images/dean.jpg" />
+            <img src="~/images\dean.jpg">
     </div>
     <div class="mesdean">
         <div class="headings h2 t-200">Message from the HOD </div>
@@ -97,7 +158,7 @@
         <div class="item">
             <div class="p-2">
                 <div class="thumbnail h-frame h-350 w-80">
-                    <img src="~/images/h2.jpg" class="img-container w-99 h-200">
+                        <img src="~/images/h2.jpg" class="img-container w-99 h-200">
                     <div class="caption">
                         <div class="h-name">Harikrishna Jethva</div>
                         <div class="hdept">HOD of C.S.E. depaprtment</div>
@@ -110,7 +171,7 @@
         <div class="item">
             <div class="p-2">
                 <div class="thumbnail h-frame h-350 w-80">
-                    <img src="~/images/h3.jpg" class="img-container w-99 h-200">
+                        <img src="~/images/h3.jpg" class="img-container w-99 h-200">
                     <div class="caption">
                         <div class="h-name">Prakash Javdekar</div>
                         <div class="hdept">HOD of Electrical depaprtment</div>
@@ -123,7 +184,7 @@
         <div class="item">
             <div class="p-2">
                 <div class="thumbnail h-frame h-350 w-80">
-                    <img src="~/images/h5.jpg" class="img-container w-99 h-200">
+                        <img src="~/images/h5.jpg" class="img-container w-99 h-200">
                     <div class="caption">
                         <div class="h-name">Smriti Irani</div>
                         <div class="hdept">HOD of Mechanical department</div>
@@ -136,7 +197,7 @@
         <div class="item">
             <div class="p-2">
                 <div class="thumbnail h-frame h-350 w-80">
-                    <img src="~/images/h4.jpg" class="img-container w-99 h-200">
+                        <img src="~/images/h4.jpg" class="img-container w-99 h-200">
                     <div class="caption">
                         <div class="h-name">Amit Shah</div>
                         <div class="hdept">HOD of Civil department</div>
@@ -149,7 +210,7 @@
         <div class="item">
             <div class="p-2">
                 <div class="thumbnail h-frame h-350 w-80">
-                    <img src="~/images/h1.jpg" class="img-container w-99 h-200">
+                        <img src="~/images/h1.jpg" class="img-container w-99 h-200">
                     <div class="caption">
                         <div class="h-name">Nitin Gadkari</div>
                         <div class="hdept">HOD of E.C. department</div>
@@ -162,7 +223,7 @@
         <div class="item">
             <div class="p-2">
                 <div class="thumbnail h-frame h-350 w-80">
-                    <img src="~/images/h2.jpg" class="img-container w-99 h-200">
+                        <img src="~/images/h2.jpg" class="img-container w-99 h-200">
                     <div class="caption">
                         <div class="h-name">Harikrishna Jethva</div>
                         <div class="hdept">HOD of C.S.E. depaprtment</div>
@@ -175,7 +236,7 @@
         <div class="item">
             <div class="p-2">
                 <div class="thumbnail h-frame h-350 w-80">
-                    <img src="~/images/h3.jpg" class="img-container w-99 h-200">
+                        <img src="~/images/h3.jpg" class="img-container w-99 h-200">
                     <div class="caption">
                         <div class="h-name">Prakash Javdekar</div>
                         <div class="hdept">HOD of Electrical department</div>
@@ -187,6 +248,8 @@
 
     </div>
 </div>
+
+
 
 <div class="row justify-content-center">
     <div class="col-11 overflow-hidden row">
@@ -314,3 +377,5 @@
         </div>
     </div>
 
+    
+    
