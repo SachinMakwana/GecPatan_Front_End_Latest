@@ -3,11 +3,12 @@
     ViewData["Title"] = "Contact";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<h1>Contact</h1>
+@section Styles{
+    <link href="~/css/contactus.css" rel="stylesheet" />
+}
 
   <div class="header-block row d-flex align-items-center mx-auto">
-        <img src="images/contactusBootstrap/keyBoard_img.jpg" alt="Contact">
+        <img src="~/images/contactusBootstrap/keyBoard_img.jpg" alt="Contact">
         <div class="text-block mx-auto text-center ">
             CONTACT US
         </div>
