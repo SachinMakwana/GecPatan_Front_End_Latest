@@ -6,3 +6,789 @@
 
 <h1>StudyMaterial</h1>
 
+ <div class="header-block row d-flex align-items-center mx-auto">
+        <img src="images/studyMaterial/bg-img-2.jpg" alt="Womens">
+        <div class="text-block mx-auto text-block mx-auto d-flex align-items-center justify-content-center">
+            Study Material
+        </div>
+    </div>
+
+    <!--  NEw design Department -->
+    <div class="m-5 p-3">
+        <div class="container">
+            <div class="d-flex justify-content-center">
+                <div class="headings h4 text-center font-weight-bold mb-4 text-dark">DEPARTMENTS</div>
+            </div>
+            <div class="row d-flex align-items-center justify-content-center" id="branchId">
+
+                <!-- <button class="department activeBranch" name="ec" onclick="selection('cse',this)"> -->
+                <button class="department activeBranch" name="cse" onclick="openBranch('cse')">
+                    <div class="col">
+                        <img src="images/studyMaterial/comlogo.png" alt=""
+                            class="department-logos border img-fluid rounded-circle">
+                        <div class="d-text font-weight-bold">
+                            Computer Science
+                        </div>
+                    </div>
+                </button>
+                <button class="department" name="ec" onclick="openBranch('ec')">
+                <!-- <button class="department" name="ec" onclick="selection('ec',this)"> -->
+                    <div class="col">
+                        <img src="images/studyMaterial/ec-logo-2.png " alt=""
+                            class="department-logos border img-fluid rounded-circle">
+                        <div class="d-text font-weight-bold">
+                            Electronics and Communication
+                        </div>
+                    </div>
+                </button>
+                <!-- <button class="department" name="ec" onclick="selection('mechanical',this)"> -->
+                <button class="department" onclick="openBranch('mechanical')">
+                    <div class="col">
+                        <img src="images/studyMaterial/mech-logo.png" alt=""
+                            class="department-logos  border img-fluid rounded-circle">
+                        <div class="d-text font-weight-bold">
+                            Mechanical
+                        </div>
+                    </div>
+                </button>
+                <button class="department" onclick="openBranch('civil')">
+                    <div class="col ">
+                        <img src="images/studyMaterial/civil11.jpg" alt=""
+                            class="department-logos  border img-fluid rounded-circle">
+                        <div class="d-text font-weight-bold">
+                            Civil
+                        </div>
+                    </div>
+                </button>
+                <button class="department" onclick="openBranch('electrical')">
+                    <div class="col ">
+                        <img src="images/studyMaterial/electrical-thunder-logo-icon-vector (1).png" alt=""
+                            class="department-logos border img-fluid rounded-circle">
+                        <div class="d-text font-weight-bold">
+                            Electrical
+                        </div>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Semester - CSE -->
+    <div class="branch container-fluid mx-auto m-5 p-5" id="cse">
+        <div class="text-center d-flex justify-content-center align-items-center">
+            <div class="headings h4 mb-4 font-weight-bold"> COMPUTER</div>
+        </div>
+        <div class="d-inline" id="semId">
+            <button class="sem-button activeSem" onclick="openSubject('sem1Cse')">SEM 1</button>
+            <button class="sem-button" onclick="openSubject('sem2Cse')">SEM 2</button>
+            <button class="sem-button" onclick="openSubject('sem3Cse')">SEM 3</button>
+            <button class="sem-button" onclick="openSubject('sem4Cse')">SEM 4</button>
+            <button class="sem-button" onclick="openSubject('sem5Cse')">SEM 5</button>
+            <button class="sem-button" onclick="openSubject('sem6Cse')">SEM 6</button>
+            <button class="sem-button" onclick="openSubject('sem7Cse')">SEM 7</button>
+            <button class="sem-button" onclick="openSubject('sem8Cse')">SEM 8</button>
+        </div>
+
+        <div class="bg-light-1">
+            <div class="bg-sub contaier p-4">
+                <!-- SEM 1 -->
+                <div id="sem1Cse" class="subjects p-2">
+                    <h2>SEM 1 - Subjects</h2>
+                    <button class="sub-button actieSub subjects-name">3110003 PPS </button>
+                    <button class="sub-button subjects-name"> 3110005 BEE</button>
+                    <button class="sub-button subjects-name">31100014 MATHS-1</button>
+                    <button class="sub-button subjects-name"> 3110006 BME</button>
+                    <button class="sub-button subjects-name">3110018 PHYSICS-2</button>
+                    <button class="sub-button subjects-name">3110013 EGD</button>
+                    <!-- Syllabus container -->
+                    <div class="sub-container">
+                        <div class="mt-3">
+                            3110003 PPS
+                        </div>
+                    </div>
+                </div>
+                <!-- SEM 2 -->
+                <div id="sem2Cse" class="subjects p-2" style="display:none">
+                    <h2>SEM 2 - Subjects</h2>
+                    <button class="sub-button actieSub subjects-name">3110003 PPS </button>
+                    <button class="sub-button subjects-name"> 3110005 BEE</button>
+                    <button class="sub-button subjects-name">31100014 MATHS-1</button>
+                    <button class="sub-button subjects-name"> 3110006 BME</button>
+                    <button class="sub-button subjects-name">3110018 PHYSICS-2</button>
+                    <button class="sub-button subjects-name">3110013 EGD</button>
+                    <!-- Syllabus container -->
+                    <div class="sub-container">
+                        <div class="mt-3">
+                            3110003 PPS
+                        </div>
+                    </div>
+                </div>
+                <div id="sem3Cse" class="subjects p-2" style="display:none">
+                    <h2>SEM 3 - Subjects</h2>
+                    <button class="sub-button actieSub subjects-name">3110003 PPS </button>
+                    <button class="sub-button subjects-name"> 3110005 BEE</button>
+                    <button class="sub-button subjects-name">31100014 MATHS-1</button>
+                    <button class="sub-button subjects-name"> 3110006 BME</button>
+                    <button class="sub-button subjects-name">3110018 PHYSICS-2</button>
+                    <button class="sub-button subjects-name">3110013 EGD</button>
+                    <!-- Syllabus container -->
+                    <div class="sub-container">
+                        <div class="mt-3">
+                            3110003 PPS
+                        </div>
+                    </div>
+                </div>
+                <div id="sem4Cse" class="subjects p-2" style="display:none">
+                    <h2>SEM 4 - Subjects</h2>
+                    <button class="sub-button actieSub subjects-name">3110003 PPS </button>
+                    <button class="sub-button subjects-name"> 3110005 BEE</button>
+                    <button class="sub-button subjects-name">31100014 MATHS-1</button>
+                    <button class="sub-button subjects-name"> 3110006 BME</button>
+                    <button class="sub-button subjects-name">3110018 PHYSICS-2</button>
+                    <button class="sub-button subjects-name">3110013 EGD</button>
+                    <!-- Syllabus container -->
+                    <div class="sub-container">
+                        <div class="mt-3">
+                            3110003 PPS
+                        </div>
+                    </div>
+                </div>
+                <div id="sem5Cse" class="subjects p-2" style="display:none">
+                    <h2>SEM 5 - Subjects</h2>
+                    <button class="sub-button actieSub subjects-name">3110003 PPS </button>
+                    <button class="sub-button subjects-name"> 3110005 BEE</button>
+                    <button class="sub-button subjects-name">31100014 MATHS-1</button>
+                    <button class="sub-button subjects-name"> 3110006 BME</button>
+                    <button class="sub-button subjects-name">3110018 PHYSICS-2</button>
+                    <button class="sub-button subjects-name">3110013 EGD</button>
+                    <!-- Syllabus container -->
+                    <div class="sub-container">
+                        <div class="mt-3">
+                            3110003 PPS
+                        </div>
+                    </div>
+                </div>
+                <div id="sem6Cse" class="subjects p-2" style="display:none">
+                    <h2>SEM 6 - Subjects</h2>
+                    <button class="sub-button actieSub subjects-name">3160601 CNS </button>
+                    <button class="sub-button subjects-name"> 3160704 TOC</button>
+                    <button class="sub-button subjects-name">3160713 IOT</button>
+                    <button class="sub-button subjects-name"> 3160003 IPDC</button>
+                    <button class="sub-button subjects-name">3160707 AJP</button>
+                    <button class="sub-button subjects-name">3160713 WP</button>
+                    <!-- Syllabus container -->
+                    <div class="sub-container">
+                        <div class="mt-3">
+                            3160601 CNS
+                        </div>
+                    </div>
+                </div>
+                <div id="sem7Cse" class="subjects p-2" style="display:none">
+                    <h2>SEM 7 - Subjects</h2>
+                    <button class="sub-button actieSub subjects-name">3110003 PPS </button>
+                    <button class="sub-button subjects-name"> 3110005 BEE</button>
+                    <button class="sub-button subjects-name">31100014 MATHS-1</button>
+                    <button class="sub-button subjects-name"> 3110006 BME</button>
+                    <button class="sub-button subjects-name">3110018 PHYSICS-2</button>
+                    <button class="sub-button subjects-name">3110013 EGD</button>
+                    <!-- Syllabus container -->
+                    <div class="sub-container">
+                        <div class="mt-3">
+                            3110003 PPS
+                        </div>
+                    </div>
+                </div>
+                <div id="sem8Cse" class="subjects p-2" style="display:none">
+                    <h2>SEM 8 - Subjects</h2>
+                    <button class="sub-button actieSub subjects-name">3110003 PPS </button>
+                    <button class="sub-button subjects-name"> 3110005 BEE</button>
+                    <button class="sub-button subjects-name">31100014 MATHS-1</button>
+                    <button class="sub-button subjects-name"> 3110006 BME</button>
+                    <button class="sub-button subjects-name">3110018 PHYSICS-2</button>
+                    <button class="sub-button subjects-name">3110013 EGD</button>
+                    <!-- Syllabus container -->
+                    <div class="sub-container">
+                        <div class="mt-3">
+                            3110003 PPS
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- semester EC -->
+    <div class="branch container-fluid mx-auto  m-5 p-5" id="ec" style="display:none">
+        <div class="text-center d-flex justify-content-center align-items-center">
+            <div class="headings h4 mb-4 font-weight-bold">Electronics and Communication </div>
+        </div>
+        <div class="d-inline" id="semIdEc">
+            <button class="sem-button activeSem" onclick="openSubject('sem1Ec')">SEM 1</button>
+            <button class="sem-button" onclick="openSubject('sem2Ec')">SEM 2</button>
+            <button class="sem-button" onclick="openSubject('sem3Ec')">SEM 3</button>
+            <button class="sem-button" onclick="openSubject('sem4Ec')">SEM 4</button>
+            <button class="sem-button" onclick="openSubject('sem5Ec')">SEM 5</button>
+            <button class="sem-button" onclick="openSubject('sem6Ec')">SEM 6</button>
+            <button class="sem-button" onclick="openSubject('sem7Ec')">SEM 7</button>
+            <button class="sem-button" onclick="openSubject('sem8Ec')">SEM 8</button>
+        </div>
+        <div class="bg-light-1">
+            <div class="bg-sub contaier p-4">
+                <!-- SEM 1 -->
+                <div id="sem1Ec" class="subjects p-2">
+                    <h2>SEM 1 - Subjects</h2>
+                    <button class="sub-button actieSub subjects-name">3110003 PPS </button>
+                    <button class="sub-button subjects-name"> 3110005 BEE</button>
+                    <button class="sub-button subjects-name">31100014 MATHS-1</button>
+                    <button class="sub-button subjects-name"> 3110006 BME</button>
+                    <button class="sub-button subjects-name">3110018 PHYSICS-2</button>
+                    <button class="sub-button subjects-name">3110013 EGD</button>
+                    <!-- Syllabus container -->
+                    <div class="sub-container">
+                        <div class="mt-3">
+                            3110003 PPS
+                        </div>
+                    </div>
+                </div>
+                <!-- SEM 2 -->
+                <div id="sem2Ec" class="subjects p-2" style="display:none">
+                    <h2>SEM 2 - Subjects</h2>
+                    <button class="sub-button actieSub subjects-name">3110003 PPS </button>
+                    <button class="sub-button subjects-name"> 3110005 BEE</button>
+                    <button class="sub-button subjects-name">31100014 MATHS-1</button>
+                    <button class="sub-button subjects-name"> 3110006 BME</button>
+                    <button class="sub-button subjects-name">3110018 PHYSICS-2</button>
+                    <button class="sub-button subjects-name">3110013 EGD</button>
+                    <!-- Syllabus container -->
+                    <div class="sub-container">
+                        <div class="mt-3">
+                            3110003 PPS
+                        </div>
+                    </div>
+                </div>
+                <!-- SEM 3 -->
+                <div id="sem3Ec" class="subjects p-2" style="display:none">
+                    <h2>SEM 3 - Subjects</h2>
+                    <button class="sub-button actieSub subjects-name">3110003 PPS </button>
+                    <button class="sub-button subjects-name"> 3110005 BEE</button>
+                    <button class="sub-button subjects-name">31100014 MATHS-1</button>
+                    <button class="sub-button subjects-name"> 3110006 BME</button>
+                    <button class="sub-button subjects-name">3110018 PHYSICS-2</button>
+                    <button class="sub-button subjects-name">3110013 EGD</button>
+                    <!-- Syllabus container -->
+                    <div class="sub-container">
+                        <div class="mt-3">
+                            3110003 PPS
+                        </div>
+                    </div>
+                </div>
+                <div id="sem4Ec" class="subjects p-2" style="display:none">
+                    <h2>SEM 4 - Subjects</h2>
+                    <button class="sub-button actieSub subjects-name">3110003 PPS </button>
+                    <button class="sub-button subjects-name"> 3110005 BEE</button>
+                    <button class="sub-button subjects-name">31100014 MATHS-1</button>
+                    <button class="sub-button subjects-name"> 3110006 BME</button>
+                    <button class="sub-button subjects-name">3110018 PHYSICS-2</button>
+                    <button class="sub-button subjects-name">3110013 EGD</button>
+                    <!-- Syllabus container -->
+                    <div class="sub-container">
+                        <div class="mt-3">
+                            3110003 PPS
+                        </div>
+                    </div>
+                </div>
+                <div id="sem5Ec" class="subjects p-2" style="display:none">
+                    <h2>SEM 5 - Subjects</h2>
+                    <button class="sub-button actieSub subjects-name">3110003 PPS </button>
+                    <button class="sub-button subjects-name"> 3110005 BEE</button>
+                    <button class="sub-button subjects-name">31100014 MATHS-1</button>
+                    <button class="sub-button subjects-name"> 3110006 BME</button>
+                    <button class="sub-button subjects-name">3110018 PHYSICS-2</button>
+                    <button class="sub-button subjects-name">3110013 EGD</button>
+                    <!-- Syllabus container -->
+                    <div class="sub-container">
+                        <div class="mt-3">
+                            3110003 PPS
+                        </div>
+                    </div>
+                </div>
+                <div id="sem6Ec" class="subjects p-2" style="display:none">
+                    <h2>SEM 6 - Subjects</h2>
+                    <button class="sub-button actieSub subjects-name">3160601 CNS </button>
+                    <button class="sub-button subjects-name"> 3160704 TOC</button>
+                    <button class="sub-button subjects-name">3160713 IOT</button>
+                    <button class="sub-button subjects-name"> 3160003 IPDC</button>
+                    <button class="sub-button subjects-name">3160707 AJP</button>
+                    <button class="sub-button subjects-name">3160713 WP</button>
+                    <!-- Syllabus container -->
+                    <div class="sub-container">
+                        <div class="mt-3">
+                            3160601 CNS
+                        </div>
+                    </div>
+                </div>
+                <div id="sem7Ec" class="subjects p-2" style="display:none">
+                    <h2>SEM 7 - Subjects</h2>
+                    <button class="sub-button actieSub subjects-name">3110003 PPS </button>
+                    <button class="sub-button subjects-name"> 3110005 BEE</button>
+                    <button class="sub-button subjects-name">31100014 MATHS-1</button>
+                    <button class="sub-button subjects-name"> 3110006 BME</button>
+                    <button class="sub-button subjects-name">3110018 PHYSICS-2</button>
+                    <button class="sub-button subjects-name">3110013 EGD</button>
+                    <!-- Syllabus container -->
+                    <div class="sub-container">
+                        <div class="mt-3">
+                            3110003 PPS
+                        </div>
+                    </div>
+                </div>
+                <div id="sem8Ec" class="subjects p-2" style="display:none">
+                    <h2>SEM 8 - Subjects</h2>
+                    <button class="sub-button actieSub subjects-name">3110003 PPS </button>
+                    <button class="sub-button subjects-name"> 3110005 BEE</button>
+                    <button class="sub-button subjects-name">31100014 MATHS-1</button>
+                    <button class="sub-button subjects-name"> 3110006 BME</button>
+                    <button class="sub-button subjects-name">3110018 PHYSICS-2</button>
+                    <button class="sub-button subjects-name">3110013 EGD</button>
+                    <!-- Syllabus container -->
+                    <div class="sub-container">
+                        <div class="mt-3">
+                            3110003 PPS
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- semester ME -->
+    <div class="branch container-fluid mx-auto  m-5 p-5" id="mechanical" style="display:none">
+        <div class="text-center d-flex justify-content-center align-items-center">
+            <div class="headings h4 mb-4 font-weight-bold">Mechanical</div>
+        </div>
+        <div class="d-inline" id="semIdMech">
+            <button class="sem-button activeSem" onclick="openSubject('sem1Mech')">SEM 1</button>
+            <button class="sem-button" onclick="openSubject('sem2Mech')">SEM 2</button>
+            <button class="sem-button" onclick="openSubject('sem3Mech')">SEM 3</button>
+            <button class="sem-button" onclick="openSubject('sem4Mech')">SEM 4</button>
+            <button class="sem-button" onclick="openSubject('sem5Mech')">SEM 5</button>
+            <button class="sem-button" onclick="openSubject('sem6Mech')">SEM 6</button>
+            <button class="sem-button" onclick="openSubject('sem7Mech')">SEM 7</button>
+            <button class="sem-button" onclick="openSubject('sem8Mech')">SEM 8</button>
+        </div>
+        <div class="bg-light-1">
+            <div class="bg-sub contaier p-4">
+                <!-- SEM 1 -->
+                <div id="sem1Mech" class="subjects p-2">
+                    <h2>SEM 1 - Subjects</h2>
+                    <button class="sub-button actieSub subjects-name">3110003 PPS </button>
+                    <button class="sub-button subjects-name"> 3110005 BEE</button>
+                    <button class="sub-button subjects-name">31100014 MATHS-1</button>
+                    <button class="sub-button subjects-name"> 3110006 BME</button>
+                    <button class="sub-button subjects-name">3110018 PHYSICS-2</button>
+                    <button class="sub-button subjects-name">3110013 EGD</button>
+                    <!-- Syllabus container -->
+                    <div class="sub-container">
+                        <div class="mt-3">
+                            3110003 PPS
+                        </div>
+                    </div>
+                </div>
+                <!-- SEM 2 -->
+                <div id="sem2Mech" class="subjects p-2" style="display:none">
+                    <h2>SEM 2 - Subjects</h2>
+                    <button class="sub-button actieSub subjects-name">3110003 PPS </button>
+                    <button class="sub-button subjects-name"> 3110005 BEE</button>
+                    <button class="sub-button subjects-name">31100014 MATHS-1</button>
+                    <button class="sub-button subjects-name"> 3110006 BME</button>
+                    <button class="sub-button subjects-name">3110018 PHYSICS-2</button>
+                    <button class="sub-button subjects-name">3110013 EGD</button>
+                    <!-- Syllabus container -->
+                    <div class="sub-container">
+                        <div class="mt-3">
+                            3110003 PPS
+                        </div>
+                    </div>
+                </div>
+                <!-- SEM 3 -->
+                <div id="sem3Mech" class="subjects p-2" style="display:none">
+                    <h2>SEM 3 - Subjects</h2>
+                    <button class="sub-button actieSub subjects-name">3110003 PPS </button>
+                    <button class="sub-button subjects-name"> 3110005 BEE</button>
+                    <button class="sub-button subjects-name">31100014 MATHS-1</button>
+                    <button class="sub-button subjects-name"> 3110006 BME</button>
+                    <button class="sub-button subjects-name">3110018 PHYSICS-2</button>
+                    <button class="sub-button subjects-name">3110013 EGD</button>
+                    <!-- Syllabus container -->
+                    <div class="sub-container">
+                        <div class="mt-3">
+                            3110003 PPS
+                        </div>
+                    </div>
+                </div>
+                <div id="sem4Mech" class="subjects p-2" style="display:none">
+                    <h2>SEM 4 - Subjects</h2>
+                    <button class="sub-button actieSub subjects-name">3110003 PPS </button>
+                    <button class="sub-button subjects-name"> 3110005 BEE</button>
+                    <button class="sub-button subjects-name">31100014 MATHS-1</button>
+                    <button class="sub-button subjects-name"> 3110006 BME</button>
+                    <button class="sub-button subjects-name">3110018 PHYSICS-2</button>
+                    <button class="sub-button subjects-name">3110013 EGD</button>
+                    <!-- Syllabus container -->
+                    <div class="sub-container">
+                        <div class="mt-3">
+                            3110003 PPS
+                        </div>
+                    </div>
+                </div>
+                <div id="sem5Mech" class="subjects p-2" style="display:none">
+                    <h2>SEM 5 - Subjects</h2>
+                    <button class="sub-button actieSub subjects-name">3110003 PPS </button>
+                    <button class="sub-button subjects-name"> 3110005 BEE</button>
+                    <button class="sub-button subjects-name">31100014 MATHS-1</button>
+                    <button class="sub-button subjects-name"> 3110006 BME</button>
+                    <button class="sub-button subjects-name">3110018 PHYSICS-2</button>
+                    <button class="sub-button subjects-name">3110013 EGD</button>
+                    <!-- Syllabus container -->
+                    <div class="sub-container">
+                        <div class="mt-3">
+                            3110003 PPS
+                        </div>
+                    </div>
+                </div>
+                <div id="sem6Mech" class="subjects p-2" style="display:none">
+                    <h2>SEM 6 - Subjects</h2>
+                    <button class="sub-button actieSub subjects-name">3160601 CNS </button>
+                    <button class="sub-button subjects-name"> 3160704 TOC</button>
+                    <button class="sub-button subjects-name">3160713 IOT</button>
+                    <button class="sub-button subjects-name"> 3160003 IPDC</button>
+                    <button class="sub-button subjects-name">3160707 AJP</button>
+                    <button class="sub-button subjects-name">3160713 WP</button>
+                    <!-- Syllabus container -->
+                    <div class="sub-container">
+                        <div class="mt-3">
+                            3160601 CNS
+                        </div>
+                    </div>
+                </div>
+                <div id="sem7Mech" class="subjects p-2" style="display:none">
+                    <h2>SEM 7 - Subjects</h2>
+                    <button class="sub-button actieSub subjects-name">3110003 PPS </button>
+                    <button class="sub-button subjects-name"> 3110005 BEE</button>
+                    <button class="sub-button subjects-name">31100014 MATHS-1</button>
+                    <button class="sub-button subjects-name"> 3110006 BME</button>
+                    <button class="sub-button subjects-name">3110018 PHYSICS-2</button>
+                    <button class="sub-button subjects-name">3110013 EGD</button>
+                    <!-- Syllabus container -->
+                    <div class="sub-container">
+                        <div class="mt-3">
+                            3110003 PPS
+                        </div>
+                    </div>
+                </div>
+                <div id="sem8Mech" class="subjects p-2" style="display:none">
+                    <h2>SEM 8 - Subjects</h2>
+                    <button class="sub-button actieSub subjects-name">3110003 PPS </button>
+                    <button class="sub-button subjects-name"> 3110005 BEE</button>
+                    <button class="sub-button subjects-name">31100014 MATHS-1</button>
+                    <button class="sub-button subjects-name"> 3110006 BME</button>
+                    <button class="sub-button subjects-name">3110018 PHYSICS-2</button>
+                    <button class="sub-button subjects-name">3110013 EGD</button>
+                    <!-- Syllabus container -->
+                    <div class="sub-container">
+                        <div class="mt-3">
+                            3110003 PPS
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- semester Civil -->
+    <div class="branch container-fluid mx-auto m-5 p-5" id="civil" style="display:none">
+        <div class="text-center d-flex justify-content-center align-items-center">
+            <div class="headings h4 mb-4 font-weight-bold">Civil</div>
+        </div>
+        <div class="d-inline" id="semIdCivil">
+            <button class="sem-button activeSem" onclick="openSubject('sem1Civil')">SEM 1</button>
+            <button class="sem-button" onclick="openSubject('sem2Civil')">SEM 2</button>
+            <button class="sem-button" onclick="openSubject('sem3Civil')">SEM 3</button>
+            <button class="sem-button" onclick="openSubject('sem4Civil')">SEM 4</button>
+            <button class="sem-button" onclick="openSubject('sem5Civil')">SEM 5</button>
+            <button class="sem-button" onclick="openSubject('sem6Civil')">SEM 6</button>
+            <button class="sem-button" onclick="openSubject('sem7Civil')">SEM 7</button>
+            <button class="sem-button" onclick="openSubject('sem8Civil')">SEM 8</button>
+        </div>
+        <div class="bg-light-1">
+            <div class="bg-sub contaier p-4">
+                <!-- SEM 1 -->
+                <div id="sem1Civil" class="subjects p-2">
+                    <h2>SEM 1 - Subjects</h2>
+                    <button class="sub-button actieSub subjects-name">3110003 PPS </button>
+                    <button class="sub-button subjects-name"> 3110005 BEE</button>
+                    <button class="sub-button subjects-name">31100014 MATHS-1</button>
+                    <button class="sub-button subjects-name"> 3110006 BME</button>
+                    <button class="sub-button subjects-name">3110018 PHYSICS-2</button>
+                    <button class="sub-button subjects-name">3110013 EGD</button>
+                    <!-- Syllabus container -->
+                    <div class="sub-container">
+                        <div class="mt-3">
+                            3110003 PPS
+                        </div>
+                    </div>
+                </div>
+                <!-- SEM 2 -->
+                <div id="sem2Civil" class="subjects p-2" style="display:none">
+                    <h2>SEM 2 - Subjects</h2>
+                    <button class="sub-button actieSub subjects-name">3110003 PPS </button>
+                    <button class="sub-button subjects-name"> 3110005 BEE</button>
+                    <button class="sub-button subjects-name">31100014 MATHS-1</button>
+                    <button class="sub-button subjects-name"> 3110006 BME</button>
+                    <button class="sub-button subjects-name">3110018 PHYSICS-2</button>
+                    <button class="sub-button subjects-name">3110013 EGD</button>
+                    <!-- Syllabus container -->
+                    <div class="sub-container">
+                        <div class="mt-3">
+                            3110003 PPS
+                        </div>
+                    </div>
+                </div>
+                <!-- SEM 3 -->
+                <div id="sem3Civil" class="subjects p-2" style="display:none">
+                    <h2>SEM 3 - Subjects</h2>
+                    <button class="sub-button actieSub subjects-name">3110003 PPS </button>
+                    <button class="sub-button subjects-name"> 3110005 BEE</button>
+                    <button class="sub-button subjects-name">31100014 MATHS-1</button>
+                    <button class="sub-button subjects-name"> 3110006 BME</button>
+                    <button class="sub-button subjects-name">3110018 PHYSICS-2</button>
+                    <button class="sub-button subjects-name">3110013 EGD</button>
+                    <!-- Syllabus container -->
+                    <div class="sub-container">
+                        <div class="mt-3">
+                            3110003 PPS
+                        </div>
+                    </div>
+                </div>
+                <div id="sem4Civil" class="subjects p-2" style="display:none">
+                    <h2>SEM 4 - Subjects</h2>
+                    <button class="sub-button actieSub subjects-name">3110003 PPS </button>
+                    <button class="sub-button subjects-name"> 3110005 BEE</button>
+                    <button class="sub-button subjects-name">31100014 MATHS-1</button>
+                    <button class="sub-button subjects-name"> 3110006 BME</button>
+                    <button class="sub-button subjects-name">3110018 PHYSICS-2</button>
+                    <button class="sub-button subjects-name">3110013 EGD</button>
+                    <!-- Syllabus container -->
+                    <div class="sub-container">
+                        <div class="mt-3">
+                            3110003 PPS
+                        </div>
+                    </div>
+                </div>
+                <div id="sem5Civil" class="subjects p-2" style="display:none">
+                    <h2>SEM 5 - Subjects</h2>
+                    <button class="sub-button actieSub subjects-name">3110003 PPS </button>
+                    <button class="sub-button subjects-name"> 3110005 BEE</button>
+                    <button class="sub-button subjects-name">31100014 MATHS-1</button>
+                    <button class="sub-button subjects-name"> 3110006 BME</button>
+                    <button class="sub-button subjects-name">3110018 PHYSICS-2</button>
+                    <button class="sub-button subjects-name">3110013 EGD</button>
+                    <!-- Syllabus container -->
+                    <div class="sub-container">
+                        <div class="mt-3">
+                            3110003 PPS
+                        </div>
+                    </div>
+                </div>
+                <div id="sem6Civil" class="subjects p-2" style="display:none">
+                    <h2>SEM 6 - Subjects</h2>
+                    <button class="sub-button actieSub subjects-name">3160601 CNS </button>
+                    <button class="sub-button subjects-name"> 3160704 TOC</button>
+                    <button class="sub-button subjects-name">3160713 IOT</button>
+                    <button class="sub-button subjects-name"> 3160003 IPDC</button>
+                    <button class="sub-button subjects-name">3160707 AJP</button>
+                    <button class="sub-button subjects-name">3160713 WP</button>
+                    <!-- Syllabus container -->
+                    <div class="sub-container">
+                        <div class="mt-3">
+                            3160601 CNS
+                        </div>
+                    </div>
+                </div>
+                <div id="sem7Civil" class="subjects p-2" style="display:none">
+                    <h2>SEM 7 - Subjects</h2>
+                    <button class="sub-button actieSub subjects-name">3110003 PPS </button>
+                    <button class="sub-button subjects-name"> 3110005 BEE</button>
+                    <button class="sub-button subjects-name">31100014 MATHS-1</button>
+                    <button class="sub-button subjects-name"> 3110006 BME</button>
+                    <button class="sub-button subjects-name">3110018 PHYSICS-2</button>
+                    <button class="sub-button subjects-name">3110013 EGD</button>
+                    <!-- Syllabus container -->
+                    <div class="sub-container">
+                        <div class="mt-3">
+                            3110003 PPS
+                        </div>
+                    </div>
+                </div>
+                <div id="sem8Civil" class="subjects p-2" style="display:none">
+                    <h2>SEM 8 - Subjects</h2>
+                    <button class="sub-button actieSub subjects-name">3110003 PPS </button>
+                    <button class="sub-button subjects-name"> 3110005 BEE</button>
+                    <button class="sub-button subjects-name">31100014 MATHS-1</button>
+                    <button class="sub-button subjects-name"> 3110006 BME</button>
+                    <button class="sub-button subjects-name">3110018 PHYSICS-2</button>
+                    <button class="sub-button subjects-name">3110013 EGD</button>
+                    <!-- Syllabus container -->
+                    <div class="sub-container">
+                        <div class="mt-3">
+                            3110003 PPS
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- semester electrical -->
+    <div class="branch container-fluid mx-auto m-5 p-5" id="electrical" style="display:none">
+        <div class="text-center d-flex justify-content-center align-items-center">
+            <div class="headings h4 mb-4 font-weight-bold">Electrical</div>
+        </div>
+        <div class="d-inline" id="semIdElectrical">
+            <button class="sem-button activeSem" onclick="openSubject('sem1Electrical')">SEM 1</button>
+            <button class="sem-button" onclick="openSubject('sem2Electrical')">SEM 2</button>
+            <button class="sem-button" onclick="openSubject('sem3Electrical')">SEM 3</button>
+            <button class="sem-button" onclick="openSubject('sem4Electrical')">SEM 4</button>
+            <button class="sem-button" onclick="openSubject('sem5Electrical')">SEM 5</button>
+            <button class="sem-button" onclick="openSubject('sem6Electrical')">SEM 6</button>
+            <button class="sem-button" onclick="openSubject('sem7Electrical')">SEM 7</button>
+            <button class="sem-button" onclick="openSubject('sem8Electrical')">SEM 8</button>
+        </div>
+        <div class="bg-light-1">
+            <div class="bg-sub contaier p-4">
+                <!-- SEM 1 -->
+                <div id="sem1Electrical" class="subjects p-2">
+                    <h2>SEM 1 - Subjects</h2>
+                    <button class="sub-button actieSub subjects-name">3110003 PPS </button>
+                    <button class="sub-button subjects-name"> 3110005 BEE</button>
+                    <button class="sub-button subjects-name">31100014 MATHS-1</button>
+                    <button class="sub-button subjects-name"> 3110006 BME</button>
+                    <button class="sub-button subjects-name">3110018 PHYSICS-2</button>
+                    <button class="sub-button subjects-name">3110013 EGD</button>
+                    <!-- Syllabus container -->
+                    <div class="sub-container">
+                        <div class="mt-3">
+                            3110003 PPS
+                        </div>
+                    </div>
+                </div>
+                <!-- SEM 2 -->
+                <div id="sem2Electrical" class="subjects p-2" style="display:none">
+                    <h2>SEM 2 - Subjects</h2>
+                    <button class="sub-button actieSub subjects-name">3110003 PPS </button>
+                    <button class="sub-button subjects-name"> 3110005 BEE</button>
+                    <button class="sub-button subjects-name">31100014 MATHS-1</button>
+                    <button class="sub-button subjects-name"> 3110006 BME</button>
+                    <button class="sub-button subjects-name">3110018 PHYSICS-2</button>
+                    <button class="sub-button subjects-name">3110013 EGD</button>
+                    <!-- Syllabus container -->
+                    <div class="sub-container">
+                        <div class="mt-3">
+                            3110003 PPS
+                        </div>
+                    </div>
+                </div>
+                <!-- SEM 3 -->
+                <div id="sem3Electrical" class="subjects p-2" style="display:none">
+                    <h2>SEM 3 - Subjects</h2>
+                    <button class="sub-button actieSub subjects-name">3110003 PPS </button>
+                    <button class="sub-button subjects-name"> 3110005 BEE</button>
+                    <button class="sub-button subjects-name">31100014 MATHS-1</button>
+                    <button class="sub-button subjects-name"> 3110006 BME</button>
+                    <button class="sub-button subjects-name">3110018 PHYSICS-2</button>
+                    <button class="sub-button subjects-name">3110013 EGD</button>
+                    <!-- Syllabus container -->
+                    <div class="sub-container">
+                        <div class="mt-3">
+                            3110003 PPS
+                        </div>
+                    </div>
+                </div>
+                <div id="sem4Electrical" class="subjects p-2" style="display:none">
+                    <h2>SEM 4 - Subjects</h2>
+                    <button class="sub-button actieSub subjects-name">3110003 PPS </button>
+                    <button class="sub-button subjects-name"> 3110005 BEE</button>
+                    <button class="sub-button subjects-name">31100014 MATHS-1</button>
+                    <button class="sub-button subjects-name"> 3110006 BME</button>
+                    <button class="sub-button subjects-name">3110018 PHYSICS-2</button>
+                    <button class="sub-button subjects-name">3110013 EGD</button>
+                    <!-- Syllabus container -->
+                    <div class="sub-container">
+                        <div class="mt-3">
+                            3110003 PPS
+                        </div>
+                    </div>
+                </div>
+                <div id="sem5Electrical" class="subjects p-2" style="display:none">
+                    <h2>SEM 5 - Subjects</h2>
+                    <button class="sub-button actieSub subjects-name">3110003 PPS </button>
+                    <button class="sub-button subjects-name"> 3110005 BEE</button>
+                    <button class="sub-button subjects-name">31100014 MATHS-1</button>
+                    <button class="sub-button subjects-name"> 3110006 BME</button>
+                    <button class="sub-button subjects-name">3110018 PHYSICS-2</button>
+                    <button class="sub-button subjects-name">3110013 EGD</button>
+                    <!-- Syllabus container -->
+                    <div class="sub-container">
+                        <div class="mt-3">
+                            3110003 PPS
+                        </div>
+                    </div>
+                </div>
+                <div id="sem6Electrical" class="subjects p-2" style="display:none">
+                    <h2>SEM 6 - Subjects</h2>
+                    <button class="sub-button actieSub subjects-name">3160601 CNS </button>
+                    <button class="sub-button subjects-name"> 3160704 TOC</button>
+                    <button class="sub-button subjects-name">3160713 IOT</button>
+                    <button class="sub-button subjects-name"> 3160003 IPDC</button>
+                    <button class="sub-button subjects-name">3160707 AJP</button>
+                    <button class="sub-button subjects-name">3160713 WP</button>
+                    <!-- Syllabus container -->
+                    <div class="sub-container">
+                        <div class="mt-3">
+                            3160601 CNS
+                        </div>
+                    </div>
+                </div>
+                <div id="sem7Electrical" class="subjects p-2" style="display:none">
+                    <h2>SEM 7 - Subjects</h2>
+                    <button class="sub-button actieSub subjects-name">3110003 PPS </button>
+                    <button class="sub-button subjects-name"> 3110005 BEE</button>
+                    <button class="sub-button subjects-name">31100014 MATHS-1</button>
+                    <button class="sub-button subjects-name"> 3110006 BME</button>
+                    <button class="sub-button subjects-name">3110018 PHYSICS-2</button>
+                    <button class="sub-button subjects-name">3110013 EGD</button>
+                    <!-- Syllabus container -->
+                    <div class="sub-container">
+                        <div class="mt-3">
+                            3110003 PPS
+                        </div>
+                    </div>
+                </div>
+                <div id="sem8Electrical" class="subjects p-2" style="display:none">
+                    <h2>SEM 8 - Subjects</h2>
+                    <button class="sub-button actieSub subjects-name">3110003 PPS </button>
+                    <button class="sub-button subjects-name"> 3110005 BEE</button>
+                    <button class="sub-button subjects-name">31100014 MATHS-1</button>
+                    <button class="sub-button subjects-name"> 3110006 BME</button>
+                    <button class="sub-button subjects-name">3110018 PHYSICS-2</button>
+                    <button class="sub-button subjects-name">3110013 EGD</button>
+                    <!-- Syllabus container -->
+                    <div class="sub-container">
+                        <div class="mt-3">
+                            3110003 PPS
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
