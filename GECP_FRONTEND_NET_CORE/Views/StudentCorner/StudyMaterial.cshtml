@@ -4,7 +4,56 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 @section Styles{
-    <link href="~/css/studymaterial.css" rel="stylesheet" />
+  <link href="~/css/cells.css" rel="stylesheet" />
+
+}
+@section Script{
+    <script>
+       
+
+        function openSubject(subjectName) {
+            var i;
+            var x = document.getElementsByClassName("subjects");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            document.getElementById(subjectName).style.display = "block";
+        }
+        $(document).ready(function () {
+            var btnContainer = document.getElementById("semId");
+            var btns = btnContainer.getElementsByClassName("sem-button");
+            for (var i = 0; i < btns.length; i++) {
+                btns[i].addEventListener("click", function () {
+                    var current = document.getElementsByClassName("activeSem");
+                    current[0].className = current[0].className.replace(" activeSem","");
+                    this.className += " activeSem";
+                });
+            }
+        })
+        
+        function openBranch(branchName) {
+            var i;
+            var x = document.getElementsByClassName("branch");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            document.getElementById(branchName).style.display = "block";
+        }
+
+        $(document).ready(function () {
+            var btnContainer = document.getElementById("branchId");
+            var btns = btnContainer.getElementsByClassName("department");
+            for (var i = 0; i < btns.length; i++) {
+                btns[i].addEventListener("click", function () {
+                    var current = document.getElementsByClassName("activeBranch");
+                    current[0].className = current[0].className.replace(" activeBranch", "");
+                    this.className += " activeBranch";
+                });
+            }
+        })
+
+
+    </script>
 }
 
 <h1>StudyMaterial</h1>

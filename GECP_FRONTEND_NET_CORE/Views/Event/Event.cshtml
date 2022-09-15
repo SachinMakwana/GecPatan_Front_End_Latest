@@ -3,7 +3,15 @@
     ViewData["Title"] = "Event";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<h1>Event</h1>
+@section Styles{
+    <link href="~/css/stylesheet.css" rel="stylesheet" />
+}
+<div class=" header-block row d-flex align-items-center mx-auto">
+        <img src="~/images/events/event-holi.jpg" alt="Contact">
+        <div class="object-block text-block mx-auto text-center d-flex align-items-center justify-content-center">
+            EVENTS
+        </div>
+    </div>
 
 <div class="ev-container">
         <h3>GALLERY</h3>
@@ -15,27 +23,27 @@
     <div class="row">
         <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
             <div class="effect">
-                <img src="images/events/diwali.jpg" class="gal-img">
+                <img src="~/images/events/diwali.jpg" class="gal-img">
                 <div class=" w-60 row mx-auto mg-glass"><a href="#" class="fa fa-search text-white   icone1"></a></div>
             </div>
         </div>
 
         <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
             <div class="effect">
-                <img src="images/events/farwell.jpg" class="gal-img">
+                <img src="~/images/events/farwell.jpg" class="gal-img">
                 <div class=" w-60 row mx-auto mg-glass"><a href="#" class="fa fa-search text-white   icone1"></a></div>
             </div>
         </div>
         <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
             <div class="effect">
-                <img src="images/events/freshers-party.png" class="gal-img">
+                <img src="~/images/events/freshers-party.png" class="gal-img">
                 <div class="w-60 row    mx-auto mg-glass"><a href="#" class="fa fa-search text-white   icone1"></a>
                 </div>
             </div>
         </div>
         <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
             <div class="effect">
-                <img src="images/events/diwali.jpg" class="gal-img">
+                <img src="~/images/events/diwali.jpg" class="gal-img">
                 <div class="w-60 row  mx-auto mg-glass"><a href="#" class="fa fa-search text-white   icone1"></a></div>
             </div>
         </div>
@@ -44,26 +52,26 @@
     <div class="row">
         <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
             <div class="effect">
-                <img src="images/events/farwell.jpg" class="gal-img">
+                <img src="~/images/events/farwell.jpg" class="gal-img">
                 <div class="w-60 row    mx-auto mg-glass"><a href="#" class="fa fa-search text-white  icone1"></a></div>
             </div>
         </div>
         <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
             <div class="effect">
-                <img src="images/events/freshers-party.png" class="gal-img">
+                <img src="~/images/events/freshers-party.png" class="gal-img">
                 <div class="w-60 row   mx-auto mg-glass"><a href="#" class="fa fa-search text-white   icone1 "></a>
                 </div>
             </div>
         </div>
         <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
             <div class="effect">
-                <img src="images/events/farwell.jpg" class="gal-img">
+                <img src="~/images/events/farwell.jpg" class="gal-img">
                 <div class="w-60 row mx-auto mg-glass"><a href="#" class="fa fa-search text-white  icone1"></a></div>
             </div>
         </div>
         <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
             <div class="effect">
-                <img src="images/events/diwali.jpg" class="gal-img">
+                <img src="~/images/events/diwali.jpg" class="gal-img">
                 <div class="w-60 row mx-auto mg-glass"><a href="#" class="fa fa-search text-white  icone1"></a></div>
             </div>
         </div>
@@ -83,7 +91,7 @@
         <div class="row ">
             <div class="gallery  col-md-3">
                 <div class="temp">
-                    <img class="sp-img position-relative" src="images/events/sp-1.jpg">
+                    <img class="sp-img position-relative" src="~/images/events/sp-1.jpg">
                     <div class="overlay2"></div>
                     <div class=" position-absolute text-white ev-name justify-content-sm-around ">
                         <h5>LLOYD WILSON</h5>
@@ -99,7 +107,7 @@
             </div>
             <div class="gallery  col-md-3 ">
                 <div class="temp">
-                    <img class="sp-img position-relative" src="images/events/sp-4.jpg">
+                    <img class="sp-img position-relative" src="~/images/events/sp-4.jpg">
                     <div class="overlay2"></div>
                     <div class=" position-absolute text-white ev-name justify-content-sm-around">
                         <h5>LLOYD WILSON</h5>
@@ -116,7 +124,7 @@
 
             <div class="gallery  col-md-3 ">
                 <div class="temp">
-                    <img class="sp-img position-relative" src="images/events/sp-3.jpg">
+                    <img class="sp-img position-relative" src="~/images/events/sp-3.jpg">
                     <div class="overlay2"></div>
                     <div class=" position-absolute text-white ev-name justify-content-sm-around">
                         <h5>LLOYD WILSON</h5>
@@ -133,7 +141,7 @@
 
             <div class="gallery  col-md-3">
                 <div class="temp">
-                    <img class="sp-img position-relative" src="images/events/sp-4.jpg">
+                    <img class="sp-img position-relative" src="~/images/events/sp-4.jpg">
                     <div class="overlay2"></div>
                     <div class=" position-absolute text-white ev-name">
                         <h5>LLOYD WILSON</h5>
@@ -176,7 +184,7 @@
 
             <div class="item">
                 <div class="h-100">
-                    <img class="w-100" src="images/events/bl-5.jpg">
+                    <img class="w-100" src="~/images/events/bl-5.jpg">
                     <div class="p-2 bg-gwhite">
                         <div class="row ">
                             <h1 class="gred">07</h1>
@@ -192,7 +200,7 @@
 
             <div class="item">
                 <div class="h-100">
-                    <img class="w-100" src="images/events/bl-6.jpg">
+                    <img class="w-100" src="~/images/events/bl-6.jpg">
                     <div class="p-2 bg-gwhite">
                         <div class="row ">
                             <h1 class="gred">08</h1>
@@ -208,7 +216,7 @@
 
             <div class="item">
                 <div class="h-100">
-                    <img class="w-100" src="images/events/bl-7.jpg">
+                    <img class="w-100" src="~/images/events/bl-7.jpg">
                     <div class="p-2 bg-gwhite">
                         <div class="row ">
                             <h1 class="gred">06</h1>
@@ -224,7 +232,7 @@
 
             <div class="item">
                 <div class="h-100">
-                    <img class="w-100" src="images/events/bl-5.jpg">
+                    <img class="w-100" src="~/images/events/bl-5.jpg">
                     <div class="p-2 bg-gwhite">
                         <div class="row ">
                             <h1 class="gred">09</h1>
@@ -240,7 +248,7 @@
 
             <div class="item">
                 <div class="h-100">
-                    <img class="w-100" src="images/events/bl-5.jpg">
+                    <img class="w-100" src="~/images/events/bl-5.jpg">
                     <div class="p-2 bg-gwhite">
                         <div class="row ">
                             <h1 class="gred">10</h1>
@@ -256,7 +264,7 @@
 
             <div class="item">
                 <div class="h-100">
-                    <img class="w-100" src="images/events/bl-5.jpg">
+                    <img class="w-100" src="~/images/events/bl-5.jpg">
                     <div class="p-2 bg-gwhite">
                         <div class="row ">
                             <h1 class="gred">11</h1>
@@ -272,7 +280,7 @@
 
             <div class="item">
                 <div class="h-100">
-                    <img class="w-100" src="images/events/bl-5.jpg">
+                    <img class="w-100" src="~/images/events/bl-5.jpg">
                     <div class="p-2 bg-gwhite">
                         <div class="row ">
                             <h1 class="gred">12</h1>
@@ -301,7 +309,7 @@
                     <h2 class="popuphe">TITLE HEADING</h2>
                     <h4 class="popuphe">Title description, Dec 7, 2017</h4>
                     <div class="fakeimg">
-                        <img src="images/events/bl-5.jpg" alt="">
+                        <img src="~/images/events/bl-5.jpg" alt="">
                     </div>
                     <p>Some text..</p>
                     <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do
@@ -325,7 +333,7 @@
                     <h2 class="popuphe">TITLE HEADING</h2>
                     <h4 class="popuphe">Title description, Dec 7, 2017</h4>
                     <div class="fakeimg">
-                        <img src="images/events/bl-6.jpg" alt="">
+                        <img src="~/images/events/bl-6.jpg" alt="">
                     </div>
                     <p>Some text..</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, exercitationem nihil, quae
@@ -363,7 +371,7 @@
                     <h2 class="popuphe">TITLE HEADING</h2>
                     <h4 class="popuphe">Title description, Dec 7, 2017</h4>
                     <div class="fakeimg">
-                        <img src="images/events/bl-5.jpg" alt="">
+                        <img src="~/images/events/bl-5.jpg" alt="">
                     </div>
                     <p>Some text..</p>
                     <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do
@@ -386,7 +394,7 @@
                     <h2 class="popuphe">TITLE HEADING</h2>
                     <h4 class="popuphe">Title description, Dec 7, 2017</h4>
                     <div class="fakeimg">
-                        <img src="images/events/bl-5.jpg" alt="">
+                        <img src="~/images/events/bl-5.jpg" alt="">
                     </div>
                     <p>Some text..</p>
                     <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do
@@ -409,7 +417,7 @@
                     <h2 class="popuphe">TITLE HEADING</h2>
                     <h4 class="popuphe">Title description, Dec 7, 2017</h4>
                     <div class="fakeimg">
-                        <img src="images/events/bl-5.jpg" alt="">
+                        <img src="~/images/events/bl-5.jpg" alt="">
                     </div>
                     <p>Some text..</p>
                     <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do
@@ -432,7 +440,7 @@
                     <h2 class="popuphe">TITLE HEADING</h2>
                     <h4 class="popuphe">Title description, Dec 7, 2017</h4>
                     <div class="fakeimg">
-                        <img src="images/events/bl-5.jpg" alt="">
+                        <img src="~/images/events/bl-5.jpg" alt="">
                     </div>
                     <p>Some text..</p>
                     <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do
@@ -455,7 +463,7 @@
                     <h2 class="popuphe">TITLE HEADING</h2>
                     <h4 class="popuphe">Title description, Dec 7, 2017</h4>
                     <div class="fakeimg">
-                        <img src="images/events/bl-5.jpg" alt="">
+                        <img src="~/images/events/bl-5.jpg" alt="">
                     </div>
                     <p>Some text..</p>
                     <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do
