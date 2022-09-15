@@ -3,6 +3,21 @@
     ViewData["Title"] = "Placements";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@section Styles{
+    <link rel="stylesheet" href="~/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="~/css/responsive.dataTables.min.css">
+    <link href="~/css/stylesheet.css" rel="stylesheet" />
+}
+@section Script{
+     <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.3.0/js/dataTables.responsive.min.js"></script>
+    <script>
+            $(document).ready(function () {
+                $('#example').DataTable();
+            });
+        </script>
+
+}
 <!--  Cell container   -->
 
 
@@ -10,7 +25,7 @@
 
         <div class="header-block d-flex align-items-center mx-auto">
             <!-- <div class="row">   -->
-            <img src="images/tpo/tpo.jpg.jpg" alt="Training And Placement Cell">
+            <img src="~/images/tpo/tpo.jpg.jpg" alt="Training And Placement Cell">
             <div class="text-block mx-auto text-block mx-auto d-flex align-items-center justify-content-center ">
                 Training And Placement Cell
             </div>
@@ -102,117 +117,6 @@
         </div>
         </div>
 
-        <!---student gallery-->
-        <!-- <div class="plac-header-2">
-        <div class="row t-7 pos-rel mx-auto pad-0">
-            <div class="col-md-2 overflow">
-                <img class="cell-img pos-rel" src="images/plac&cell/b1.jpg">
-                <div class="align-center justify-content-between plc-name">
-                <h5>LLOYD WILSON</h5>
-                <h6>TCS</h6>
-                <h6>3 to 3,50 lakh</h6>
-                </div>
-                </div>
-                <div class="col-md-2 overflow">
-                <img class="cell-img pos-rel" src="images/plac&cell/b1.jpg">
-                <div class="align-center justify-content-between plc-name">
-                <h5>LLOYD WILSON</h5>
-                <h6>TCS</h6>
-                <h6>3 to 3,50 lakh</h6>
-                </div>
-                </div>
-    
-                <div class="col-md-2 overflow">
-                <img class="cell-img pos-rel" src="images/plac&cell/b1.jpg">
-                <div class="align-center justify-content-between plc-name">
-                <h5>LLOYD WILSON</h5>
-                <h6>TCS</h6>
-                <h6>3 to 3,50 lakh</h6>
-                </div>
-                </div>
-    
-                <div class="col-md-2 overflow">
-                <img class="cell-img pos-rel" src="images/plac&cell/b1.jpg">
-                <div class="align-center justify-content-between plc-name">
-                <h5>LLOYD WILSON</h5>
-                <h6>TCS</h6>
-                <h6>3 to 3,50 lakh</h6>
-                </div>
-                </div>
-                <div class="col-md-2 overflow">
-                    <img class="cell-img pos-rel" src="images/plac&cell/b1.jpg">
-                    <div class="align-center justify-content-between plc-name">
-                    <h5>LLOYD WILSON</h5>
-                    <h6>TCS</h6>
-                    <h6>3 to 3,50 lakh</h6>
-                    </div>
-                    </div>
-                    <div class="col-md-2 overflow">
-                        <img class="cell-img pos-rel" src="images/plac&cell/b1.jpg">
-                        <div class="align-center justify-content-between plc-name">
-                        <h5>LLOYD WILSON</h5>
-                        <h6>TCS</h6>
-                        <h6>3 to 3,50 lakh</h6>
-                        </div>
-                        </div>
-                </div>
-                </div>
-
-                <div class="plac-header-4">
-                <div class="row t-7 pos-rel mx-auto pad-0">
-                <div class="col-md-2 overflow">
-                <img class="g1-img pos-rel" src="images/plac&cell/g1.jpg">
-                <div class="align-center justify-content-between plc-name1">
-                <h5>LLOYD WILSON</h5>
-                <h6>TCS</h6>
-                <h6>3 to 3,50 lakh</h6>
-                </div>
-                </div>
-                <div class="col-md-2 overflow">
-                <img class="g1-img pos-rel" src="images/plac&cell/g1.jpg">
-                <div class="align-center justify-content-between plc-name1">
-                <h5>LLOYD WILSON</h5>
-                <h6>TCS</h6>
-                <h6>3 to 3,50 lakh</h6>
-                </div>
-                </div>
-                <div class="col-md-2 overflow">
-                    <img class="g1-img pos-rel" src="images/plac&cell/g1.jpg">
-                    <div class="align-center justify-content-between plc-name1">
-                    <h5>LLOYD WILSON</h5>
-                    <h6>TCS</h6>
-                    <h6>3 to 3,50 lakh</h6>
-                    </div>
-                    </div>
-
-                    <div class="col-md-2 overflow">
-                    <img class="g1-img pos-rel" src="images/plac&cell/g1.jpg">
-                    <div class="align-center justify-content-between plc-name1">
-                    <h5>LLOYD WILSON</h5>
-                    <h6>TCS</h6>
-                    <h6>3 to 3,50 lakh</h6>
-                    </div>
-                    </div>
-                    <div class="col-md-2 overflow">
-                        <img class="g1-img pos-rel" src="images/plac&cell/g1.jpg">
-                        <div class="align-center justify-content-between plc-name1">
-                        <h5>LLOYD WILSON</h5>
-                        <h6>TCS</h6>
-                        <h6>3 to 3,50 lakh</h6>
-                        </div>
-                        </div>
-                        <div class="col-md-2 overflow">
-                            <img class="g1-img pos-rel" src="images/plac&cell/g1.jpg">
-                            <div class="align-center justify-content-between plc-name1">
-                            <h5>LLOYD WILSON</h5>
-                            <h6>TCS</h6>
-                            <h6>3 to 3,50 lakh</h6>
-                            </div>
-                            </div>
-                </div>
-                </div>-->
-
-
         <!--table data-->
         <div class="dtable mx-auto justify-content-center p-5">
             <table id="example" class="display responsive nowrap justify-content-center mx-auto " style="width:100%">
@@ -238,7 +142,77 @@
                         <td>RLOGICAL</td>
                         <td>4 to 4,50 lakh</td>
                         <td>krutwa@gmail.com</td>
-                        <td><img class="t-img" src="images/plac&cell/g1.jpg"></td>
+                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
+                    </tr>
+                    <tr>
+                        <td>krutwa</td>
+                        <td>nikhil</td>
+                        <td>vora</td>
+                        <td>computer</td>
+                        <td>RLOGICAL</td>
+                        <td>4 to 4,50 lakh</td>
+                        <td>krutwa@gmail.com</td>
+                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
+                    </tr>
+                    <tr>
+                        <td>krutwa</td>
+                        <td>nikhil</td>
+                        <td>vora</td>
+                        <td>computer</td>
+                        <td>RLOGICAL</td>
+                        <td>4 to 4,50 lakh</td>
+                        <td>krutwa@gmail.com</td>
+                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
+                    </tr>
+                    <tr>
+                        <td>krutwa</td>
+                        <td>nikhil</td>
+                        <td>vora</td>
+                        <td>computer</td>
+                        <td>RLOGICAL</td>
+                        <td>4 to 4,50 lakh</td>
+                        <td>krutwa@gmail.com</td>
+                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
+                    </tr>
+                    <tr>
+                        <td>krutwa</td>
+                        <td>nikhil</td>
+                        <td>vora</td>
+                        <td>computer</td>
+                        <td>RLOGICAL</td>
+                        <td>4 to 4,50 lakh</td>
+                        <td>krutwa@gmail.com</td>
+                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
+                    </tr>
+                    <tr>
+                        <td>krutwa</td>
+                        <td>nikhil</td>
+                        <td>vora</td>
+                        <td>computer</td>
+                        <td>RLOGICAL</td>
+                        <td>4 to 4,50 lakh</td>
+                        <td>krutwa@gmail.com</td>
+                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
+                    </tr>
+                    <tr>
+                        <td>krutwa</td>
+                        <td>nikhil</td>
+                        <td>vora</td>
+                        <td>computer</td>
+                        <td>RLOGICAL</td>
+                        <td>4 to 4,50 lakh</td>
+                        <td>krutwa@gmail.com</td>
+                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
+                    </tr>
+                    <tr>
+                        <td>krutwa</td>
+                        <td>nikhil</td>
+                        <td>vora</td>
+                        <td>computer</td>
+                        <td>RLOGICAL</td>
+                        <td>4 to 4,50 lakh</td>
+                        <td>krutwa@gmail.com</td>
+                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
                     </tr>
                     <tr>
                         <td>krutwa</td>
@@ -258,7 +232,7 @@
                         <td>RLOGICAL</td>
                         <td>4 to 4,50 lakh</td>
                         <td>krutwa@gmail.com</td>
-                        <td><img class="t-img" src="images/plac&cell/g1.jpg"></td>
+                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
                     </tr>
                     <tr>
                         <td>krutwa</td>
@@ -268,7 +242,7 @@
                         <td>RLOGICAL</td>
                         <td>4 to 4,50 lakh</td>
                         <td>krutwa@gmail.com</td>
-                        <td><img class="t-img" src="images/plac&cell/g1.jpg"></td>
+                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
                     </tr>
                     <tr>
                         <td>krutwa</td>
@@ -278,7 +252,7 @@
                         <td>RLOGICAL</td>
                         <td>4 to 4,50 lakh</td>
                         <td>krutwa@gmail.com</td>
-                        <td><img class="t-img" src="images/plac&cell/g1.jpg"></td>
+                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
                     </tr>
                     <tr>
                         <td>krutwa</td>
@@ -288,7 +262,7 @@
                         <td>RLOGICAL</td>
                         <td>4 to 4,50 lakh</td>
                         <td>krutwa@gmail.com</td>
-                        <td><img class="t-img" src="images/plac&cell/g1.jpg"></td>
+                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
                     </tr>
                     <tr>
                         <td>krutwa</td>
@@ -298,7 +272,7 @@
                         <td>RLOGICAL</td>
                         <td>4 to 4,50 lakh</td>
                         <td>krutwa@gmail.com</td>
-                        <td><img class="t-img" src="images/plac&cell/g1.jpg"></td>
+                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
                     </tr>
                     <tr>
                         <td>krutwa</td>
@@ -308,7 +282,7 @@
                         <td>RLOGICAL</td>
                         <td>4 to 4,50 lakh</td>
                         <td>krutwa@gmail.com</td>
-                        <td><img class="t-img" src="images/plac&cell/g1.jpg"></td>
+                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
                     </tr>
                     <tr>
                         <td>krutwa</td>
@@ -318,7 +292,7 @@
                         <td>RLOGICAL</td>
                         <td>4 to 4,50 lakh</td>
                         <td>krutwa@gmail.com</td>
-                        <td><img class="t-img" src="images/plac&cell/g1.jpg"></td>
+                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
                     </tr>
                     <tr>
                         <td>krutwa</td>
@@ -328,7 +302,7 @@
                         <td>RLOGICAL</td>
                         <td>4 to 4,50 lakh</td>
                         <td>krutwa@gmail.com</td>
-                        <td><img class="t-img" src="images/plac&cell/g1.jpg"></td>
+                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
                     </tr>
                     <tr>
                         <td>krutwa</td>
@@ -338,7 +312,7 @@
                         <td>RLOGICAL</td>
                         <td>4 to 4,50 lakh</td>
                         <td>krutwa@gmail.com</td>
-                        <td><img class="t-img" src="images/plac&cell/g1.jpg"></td>
+                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
                     </tr>
                     <tr>
                         <td>krutwa</td>
@@ -348,7 +322,7 @@
                         <td>RLOGICAL</td>
                         <td>4 to 4,50 lakh</td>
                         <td>krutwa@gmail.com</td>
-                        <td><img class="t-img" src="images/plac&cell/g1.jpg"></td>
+                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
                     </tr>
                     <tr>
                         <td>krutwa</td>
@@ -358,7 +332,7 @@
                         <td>RLOGICAL</td>
                         <td>4 to 4,50 lakh</td>
                         <td>krutwa@gmail.com</td>
-                        <td><img class="t-img" src="images/plac&cell/g1.jpg"></td>
+                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
                     </tr>
                     <tr>
                         <td>krutwa</td>
@@ -368,7 +342,7 @@
                         <td>RLOGICAL</td>
                         <td>4 to 4,50 lakh</td>
                         <td>krutwa@gmail.com</td>
-                        <td><img class="t-img" src="images/plac&cell/g1.jpg"></td>
+                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
                     </tr>
                     <tr>
                         <td>krutwa</td>
@@ -378,7 +352,7 @@
                         <td>RLOGICAL</td>
                         <td>4 to 4,50 lakh</td>
                         <td>krutwa@gmail.com</td>
-                        <td><img class="t-img" src="images/plac&cell/g1.jpg"></td>
+                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
                     </tr>
                     <tr>
                         <td>krutwa</td>
@@ -388,7 +362,7 @@
                         <td>RLOGICAL</td>
                         <td>4 to 4,50 lakh</td>
                         <td>krutwa@gmail.com</td>
-                        <td><img class="t-img" src="images/plac&cell/g1.jpg"></td>
+                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
                     </tr>
                     <tr>
                         <td>krutwa</td>
@@ -398,7 +372,7 @@
                         <td>RLOGICAL</td>
                         <td>4 to 4,50 lakh</td>
                         <td>krutwa@gmail.com</td>
-                        <td><img class="t-img" src="images/plac&cell/g1.jpg"></td>
+                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
                     </tr>
                     <tr>
                         <td>krutwa</td>
@@ -408,7 +382,7 @@
                         <td>RLOGICAL</td>
                         <td>4 to 4,50 lakh</td>
                         <td>krutwa@gmail.com</td>
-                        <td><img class="t-img" src="images/plac&cell/g1.jpg"></td>
+                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
                     </tr>
                     <tr>
                         <td>krutwa</td>
@@ -418,7 +392,7 @@
                         <td>RLOGICAL</td>
                         <td>4 to 4,50 lakh</td>
                         <td>krutwa@gmail.com</td>
-                        <td><img class="t-img" src="images/plac&cell/g1.jpg"></td>
+                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
                     </tr>
                     <tr>
                         <td>krutwa</td>
@@ -428,7 +402,7 @@
                         <td>RLOGICAL</td>
                         <td>4 to 4,50 lakh</td>
                         <td>krutwa@gmail.com</td>
-                        <td><img class="t-img" src="images/plac&cell/g1.jpg"></td>
+                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
                     </tr>
                     <tr>
                         <td>krutwa</td>
@@ -438,7 +412,7 @@
                         <td>RLOGICAL</td>
                         <td>4 to 4,50 lakh</td>
                         <td>krutwa@gmail.com</td>
-                        <td><img class="t-img" src="images/plac&cell/g1.jpg"></td>
+                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
                     </tr>
                     <tr>
                         <td>krutwa</td>
@@ -448,7 +422,7 @@
                         <td>RLOGICAL</td>
                         <td>4 to 4,50 lakh</td>
                         <td>krutwa@gmail.com</td>
-                        <td><img class="t-img" src="images/plac&cell/g1.jpg"></td>
+                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
                     </tr>
                     <tr>
                         <td>krutwa</td>
@@ -458,7 +432,7 @@
                         <td>RLOGICAL</td>
                         <td>4 to 4,50 lakh</td>
                         <td>krutwa@gmail.com</td>
-                        <td><img class="t-img" src="images/plac&cell/g1.jpg"></td>
+                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
                     </tr>
                     <tr>
                         <td>krutwa</td>
@@ -468,7 +442,7 @@
                         <td>RLOGICAL</td>
                         <td>4 to 4,50 lakh</td>
                         <td>krutwa@gmail.com</td>
-                        <td><img class="t-img" src="images/plac&cell/g1.jpg"></td>
+                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
                     </tr>
                     <tr>
                         <td>krutwa</td>
@@ -478,7 +452,7 @@
                         <td>RLOGICAL</td>
                         <td>4 to 4,50 lakh</td>
                         <td>krutwa@gmail.com</td>
-                        <td><img class="t-img" src="images/plac&cell/g1.jpg"></td>
+                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
                     </tr>
                     <tr>
                         <td>krutwa</td>
@@ -488,7 +462,7 @@
                         <td>RLOGICAL</td>
                         <td>4 to 4,50 lakh</td>
                         <td>krutwa@gmail.com</td>
-                        <td><img class="t-img" src="images/plac&cell/g1.jpg"></td>
+                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
                     </tr>
                     <tr>
                         <td>krutwa</td>
@@ -498,7 +472,7 @@
                         <td>RLOGICAL</td>
                         <td>4 to 4,50 lakh</td>
                         <td>krutwa@gmail.com</td>
-                        <td><img class="t-img" src="images/plac&cell/g1.jpg"></td>
+                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
                     </tr>
                     <tr>
                         <td>krutwa</td>
@@ -508,7 +482,7 @@
                         <td>RLOGICAL</td>
                         <td>4 to 4,50 lakh</td>
                         <td>krutwa@gmail.com</td>
-                        <td><img class="t-img" src="images/plac&cell/g1.jpg"></td>
+                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
                     </tr>
                     <tr>
                         <td>krutwa</td>
@@ -518,7 +492,7 @@
                         <td>RLOGICAL</td>
                         <td>4 to 4,50 lakh</td>
                         <td>krutwa@gmail.com</td>
-                        <td><img class="t-img" src="images/plac&cell/g1.jpg"></td>
+                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
                     </tr>
                     <tr>
                         <td>krutwa</td>
@@ -528,7 +502,7 @@
                         <td>RLOGICAL</td>
                         <td>4 to 4,50 lakh</td>
                         <td>krutwa@gmail.com</td>
-                        <td><img class="t-img" src="images/plac&cell/g1.jpg"></td>
+                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
                     </tr>
                     <tr>
                         <td>krutwa</td>
@@ -538,7 +512,7 @@
                         <td>RLOGICAL</td>
                         <td>4 to 4,50 lakh</td>
                         <td>krutwa@gmail.com</td>
-                        <td><img class="t-img" src="images/plac&cell/g1.jpg"></td>
+                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
                     </tr>
                     <tr>
                         <td>krutwa</td>
@@ -548,77 +522,7 @@
                         <td>RLOGICAL</td>
                         <td>4 to 4,50 lakh</td>
                         <td>krutwa@gmail.com</td>
-                        <td><img class="t-img" src="images/plac&cell/g1.jpg"></td>
-                    </tr>
-                    <tr>
-                        <td>krutwa</td>
-                        <td>nikhil</td>
-                        <td>vora</td>
-                        <td>computer</td>
-                        <td>RLOGICAL</td>
-                        <td>4 to 4,50 lakh</td>
-                        <td>krutwa@gmail.com</td>
-                        <td><img class="t-img" src="images/plac&cell/g1.jpg"></td>
-                    </tr>
-                    <tr>
-                        <td>krutwa</td>
-                        <td>nikhil</td>
-                        <td>vora</td>
-                        <td>computer</td>
-                        <td>RLOGICAL</td>
-                        <td>4 to 4,50 lakh</td>
-                        <td>krutwa@gmail.com</td>
-                        <td><img class="t-img" src="images/plac&cell/g1.jpg"></td>
-                    </tr>
-                    <tr>
-                        <td>krutwa</td>
-                        <td>nikhil</td>
-                        <td>vora</td>
-                        <td>computer</td>
-                        <td>RLOGICAL</td>
-                        <td>4 to 4,50 lakh</td>
-                        <td>krutwa@gmail.com</td>
-                        <td><img class="t-img" src="images/plac&cell/g1.jpg"></td>
-                    </tr>
-                    <tr>
-                        <td>krutwa</td>
-                        <td>nikhil</td>
-                        <td>vora</td>
-                        <td>computer</td>
-                        <td>RLOGICAL</td>
-                        <td>4 to 4,50 lakh</td>
-                        <td>krutwa@gmail.com</td>
-                        <td><img class="t-img" src="images/plac&cell/g1.jpg"></td>
-                    </tr>
-                    <tr>
-                        <td>krutwa</td>
-                        <td>nikhil</td>
-                        <td>vora</td>
-                        <td>computer</td>
-                        <td>RLOGICAL</td>
-                        <td>4 to 4,50 lakh</td>
-                        <td>krutwa@gmail.com</td>
-                        <td><img class="t-img" src="images/plac&cell/g1.jpg"></td>
-                    </tr>
-                    <tr>
-                        <td>krutwa</td>
-                        <td>nikhil</td>
-                        <td>vora</td>
-                        <td>computer</td>
-                        <td>RLOGICAL</td>
-                        <td>4 to 4,50 lakh</td>
-                        <td>krutwa@gmail.com</td>
-                        <td><img class="t-img" src="images/plac&cell/g1.jpg"></td>
-                    </tr>
-                    <tr>
-                        <td>krutwa</td>
-                        <td>nikhil</td>
-                        <td>vora</td>
-                        <td>computer</td>
-                        <td>RLOGICAL</td>
-                        <td>4 to 4,50 lakh</td>
-                        <td>krutwa@gmail.com</td>
-                        <td><img class="t-img" src="images/plac&cell/g1.jpg"></td>
+                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
                     </tr>
                     <tr>
                         <td>krupalu</td>
@@ -628,7 +532,7 @@
                         <td>INFOSYS</td>
                         <td>4 to 4,50 lakh</td>
                         <td>krupalu@gmail.com</td>
-                        <td><img class="t-img" src="images/plac&cell/b1.jpg"></td>
+                        <td><img class="t-img" src="~/images/plac&cell/b1.jpg"></td>
                     </tr>
                     <tr>
                         <td>krupalu</td>
@@ -638,7 +542,7 @@
                         <td>INFOSYS</td>
                         <td>4 to 4,50 lakh</td>
                         <td>krupalu@gmail.com</td>
-                        <td><img class="t-img" src="images/plac&cell/b1.jpg"></td>
+                        <td><img class="t-img" src="~/images/plac&cell/b1.jpg"></td>
                     </tr>
                     <tr>
                         <td>krupalu</td>
@@ -648,7 +552,7 @@
                         <td>INFOSYS</td>
                         <td>4 to 4,50 lakh</td>
                         <td>krupalu@gmail.com</td>
-                        <td><img class="t-img" src="images/plac&cell/b1.jpg"></td>
+                        <td><img class="t-img" src="~/images/plac&cell/b1.jpg"></td>
                     </tr>
                     <tr>
                         <td>krupalu</td>
@@ -658,7 +562,7 @@
                         <td>INFOSYS</td>
                         <td>4 to 4,50 lakh</td>
                         <td>krupalu@gmail.com</td>
-                        <td><img class="t-img" src="images/plac&cell/b1.jpg"></td>
+                        <td><img class="t-img" src="~/images/plac&cell/b1.jpg"></td>
                     </tr>
                     <tr>
                         <td>krupalu</td>
@@ -668,7 +572,7 @@
                         <td>INFOSYS</td>
                         <td>4 to 4,50 lakh</td>
                         <td>krupalu@gmail.com</td>
-                        <td><img class="t-img" src="images/plac&cell/b1.jpg"></td>
+                        <td><img class="t-img" src="~/images/plac&cell/b1.jpg"></td>
                     </tr>
                     <tr>
                         <td>krupalu</td>
@@ -678,7 +582,7 @@
                         <td>INFOSYS</td>
                         <td>4 to 4,50 lakh</td>
                         <td>krupalu@gmail.com</td>
-                        <td><img class="t-img" src="images/plac&cell/b1.jpg"></td>
+                        <td><img class="t-img" src="~/images/plac&cell/b1.jpg"></td>
                     </tr>
                     <tr>
                         <td>krupalu</td>
@@ -688,7 +592,7 @@
                         <td>INFOSYS</td>
                         <td>4 to 4,50 lakh</td>
                         <td>krupalu@gmail.com</td>
-                        <td><img class="t-img" src="images/plac&cell/b1.jpg"></td>
+                        <td><img class="t-img" src="~/images/plac&cell/b1.jpg"></td>
                     </tr>
                     <tr>
                         <td>krupalu</td>
@@ -698,7 +602,7 @@
                         <td>INFOSYS</td>
                         <td>4 to 4,50 lakh</td>
                         <td>krupalu@gmail.com</td>
-                        <td><img class="t-img" src="images/plac&cell/b1.jpg"></td>
+                        <td><img class="t-img" src="~/images/plac&cell/b1.jpg"></td>
                     </tr>
                     <tr>
                         <td>krupalu</td>
@@ -708,7 +612,7 @@
                         <td>INFOSYS</td>
                         <td>4 to 4,50 lakh</td>
                         <td>krupalu@gmail.com</td>
-                        <td><img class="t-img" src="images/plac&cell/b1.jpg"></td>
+                        <td><img class="t-img" src="~/images/plac&cell/b1.jpg"></td>
                     </tr>
                     <tr>
                         <td>krupalu</td>
@@ -718,7 +622,7 @@
                         <td>INFOSYS</td>
                         <td>4 to 4,50 lakh</td>
                         <td>krupalu@gmail.com</td>
-                        <td><img class="t-img" src="images/plac&cell/b1.jpg"></td>
+                        <td><img class="t-img" src="~/images/plac&cell/b1.jpg"></td>
                     </tr>
                     <tr>
                         <td>krupalu</td>
@@ -728,7 +632,7 @@
                         <td>INFOSYS</td>
                         <td>4 to 4,50 lakh</td>
                         <td>krupalu@gmail.com</td>
-                        <td><img class="t-img" src="images/plac&cell/b1.jpg"></td>
+                        <td><img class="t-img" src="~/images/plac&cell/b1.jpg"></td>
                     </tr>
                     <tr>
                         <td>krupalu</td>
@@ -738,7 +642,7 @@
                         <td>INFOSYS</td>
                         <td>4 to 4,50 lakh</td>
                         <td>krupalu@gmail.com</td>
-                        <td><img class="t-img" src="images/plac&cell/b1.jpg"></td>
+                        <td><img class="t-img" src="~/images/plac&cell/b1.jpg"></td>
                     </tr>
                     <tr>
                         <td>krupalu</td>
@@ -748,7 +652,7 @@
                         <td>INFOSYS</td>
                         <td>4 to 4,50 lakh</td>
                         <td>krupalu@gmail.com</td>
-                        <td><img class="t-img" src="images/plac&cell/b1.jpg"></td>
+                        <td><img class="t-img" src="~/images/plac&cell/b1.jpg"></td>
                     </tr>
                     <tr>
                         <td>krupalu</td>
@@ -758,7 +662,7 @@
                         <td>INFOSYS</td>
                         <td>4 to 4,50 lakh</td>
                         <td>krupalu@gmail.com</td>
-                        <td><img class="t-img" src="images/plac&cell/b1.jpg"></td>
+                        <td><img class="t-img" src="~/images/plac&cell/b1.jpg"></td>
                     </tr>
                     <tr>
                         <td>krupalu</td>
@@ -768,7 +672,7 @@
                         <td>INFOSYS</td>
                         <td>4 to 4,50 lakh</td>
                         <td>krupalu@gmail.com</td>
-                        <td><img class="t-img" src="images/plac&cell/b1.jpg"></td>
+                        <td><img class="t-img" src="~/images/plac&cell/b1.jpg"></td>
                     </tr>
                     <tr>
                         <td>krupalu</td>
@@ -778,7 +682,7 @@
                         <td>INFOSYS</td>
                         <td>4 to 4,50 lakh</td>
                         <td>krupalu@gmail.com</td>
-                        <td><img class="t-img" src="images/plac&cell/b1.jpg"></td>
+                        <td><img class="t-img" src="~/images/plac&cell/b1.jpg"></td>
                     </tr>
                     <tr>
                         <td>krupalu</td>
@@ -788,7 +692,7 @@
                         <td>INFOSYS</td>
                         <td>4 to 4,50 lakh</td>
                         <td>krupalu@gmail.com</td>
-                        <td><img class="t-img" src="images/plac&cell/b1.jpg"></td>
+                        <td><img class="t-img" src="~/images/plac&cell/b1.jpg"></td>
                     </tr>
                     <tr>
                         <td>krupalu</td>
@@ -798,7 +702,7 @@
                         <td>INFOSYS</td>
                         <td>4 to 4,50 lakh</td>
                         <td>krupalu@gmail.com</td>
-                        <td><img class="t-img" src="images/plac&cell/b1.jpg"></td>
+                        <td><img class="t-img" src="~/images/plac&cell/b1.jpg"></td>
                     </tr>
                 </tbody>
             </table>
