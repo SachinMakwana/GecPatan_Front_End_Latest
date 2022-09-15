@@ -5,11 +5,102 @@
 }
 @section Styles{
     <link href="~/css/overview.css" rel="stylesheet" />
+    <link href="~/css/stylesheet.css" rel="stylesheet" />
+    <link href="~/css/cells.css" rel="stylesheet" />
+    <link href="~/css/tpovision.css" rel="stylesheet" />
+}
+
+@section Script{
+    <script>
+        $(document).ready(function () {
+            $('#owl1').owlCarousel({
+                loop: true,
+                margin: 10
+            })
+
+            $('#owl-carousel-2').owlCarousel({
+                loop: true,
+                margin: 10,
+                responsiveClass: true,
+                responsive: {
+                    0: {
+                        items: 1,
+                        //nav: true
+                    },
+                    600: {
+                        items: 1,
+                        //nav: false
+                    },
+                    1000: {
+                        items: 1,
+                        //nav: true,
+                        loop: false,
+                        margin: 20
+                    },
+                    3000: {
+                        items: 1,
+                        //nav: true,
+                        loop: false,
+                        margin: 20
+                    }
+                }
+            })
+        })
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('#owl2').owlCarousel({
+                loop: true,
+                margin: 10,
+                responsiveClass: true,
+                responsive: {
+                    0: {
+                        items: 1,
+                        //nav: true
+                    },
+                    600: {
+                        items: 1,
+                        //nav: false
+                    },
+                    1000: {
+                        items: 1,
+                        //nav: true,
+                        loop: false,
+                        margin: 20
+                    }
+                }
+            })
+        })
+
+        $(document).ready(function () {
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 10,
+                responsiveClass: true,
+                responsive: {
+                    0: {
+                        items: 1,
+                        //nav: true
+                    },
+                    600: {
+                        items: 1,
+                        //nav: false
+                    },
+                    1000: {
+                        items: 2,
+                        //nav: true,
+                        loop: false,
+                        margin: 20
+                    }
+                }
+            })
+        })
+    </script>
 }
 
 <div class="header-block d-flex align-items-center mx-auto">
         <!-- <div class="row">   -->
-          <img src="images/tpo/tpo.jpg.jpg" alt="Training And Placement Cell">
+          <img src="~/images/tpo/tpo.jpg.jpg" alt="Training And Placement Cell">
           <div class="text-block mx-auto text-block mx-auto d-flex align-items-center justify-content-center ">
               Training And Placement Cell
           </div>
@@ -80,73 +171,73 @@
            <div class="row">
             <div class="col-md-3 col-sm-3 p-2">
                 <a href="#">
-                    <div class="bg-white"><img src="./images/ABB.jpg" class="square-270-100 position-relative" />
+                    <div class="bg-white"><img src="~/images/ABB.jpg" class="square-270-100 position-relative" />
                     </div>
                 </a>
             </div>
             <div class="col-md-3 col-sm-3 p-2">
                 <a href="#">
-                    <div class="bg-white"><img src="./images/ap.png" class="square-270-100 position-relative" />
+                    <div class="bg-white"><img src="~/images/ap.png" class="square-270-100 position-relative" />
                     </div>
                 </a>
             </div>
             <div class="col-md-3 col-sm-3 p-2">
                 <a href="#">
-                    <div class="bg-white"><img src="./images/atos.png" class="square-270-100 position-relative" />
+                    <div class="bg-white"><img src="~/images/atos.png" class="square-270-100 position-relative" />
                     </div>
                 </a>
             </div>
             <div class="col-md-3 col-sm-3 p-2">
                 <a href="#">
-                    <div class="bg-dblue"><img src="./images/decalthon.png"
+                    <div class="bg-dblue"><img src="~/images/decalthon.png"
                             class="square-270-100 position-relative" /></div>
                 </a>
             </div>
             <div class="col-md-3 col-sm-3 p-2">
                 <a href="#">
-                    <div class="bg-white"><img src="./images/godrej.webp"
+                    <div class="bg-white"><img src="~/images/godrej.webp"
                             class="square-270-100 position-relative" /></div>
                 </a>
             </div>
             <div class="col-md-3 col-sm-3 p-2">
                 <a href="#">
-                    <div class="bg-white"><img src="./images/Torrent-Power.png"
+                    <div class="bg-white"><img src="~/images/Torrent-Power.png"
                             class="square-270-100 position-relative" /></div>
                 </a>
             </div>
             <div class="col-md-3 col-sm-3 p-2">
                 <a href="#">
-                    <div class="bg-white"><img src="./images/VI.jpg" class="square-270-100 position-relative" />
+                    <div class="bg-white"><img src="~/images/VI.jpg" class="square-270-100 position-relative" />
                     </div>
                 </a>
             </div>
             <div class="col-md-3 col-sm-3 p-2">
                 <a href="#">
-                    <div class="bg-white"><img src="./images/byjus.jfif" class="square-270-100 position-relative" />
+                    <div class="bg-white"><img src="~/images/byjus.jfif" class="square-270-100 position-relative" />
                     </div>
                 </a>
             </div>
             <div class="col-md-3 col-sm-3 p-2">
                 <a href="#">
-                    <div class="bg-white"><img src="./images/amazon.jpg" class="square-270-100 position-relative" />
+                    <div class="bg-white"><img src="~/images/amazon.jpg" class="square-270-100 position-relative" />
                     </div>
                 </a>
             </div>
             <div class="col-md-3 col-sm-3 p-2">
                 <a href="#">
-                    <div class="bg-white"><img src="./images/tcs.webp" class="square-270-100 position-relative" />
+                    <div class="bg-white"><img src="~/images/tcs.webp" class="square-270-100 position-relative" />
                     </div>
                 </a>
             </div>
             <div class="col-md-3 col-sm-3 p-2">
                 <a href="#">
-                    <div class="bg-white"><img src="./images/AMW.jpg" class="square-270-100 position-relative" />
+                    <div class="bg-white"><img src="~/images/AMW.jpg" class="square-270-100 position-relative" />
                     </div>
                 </a>
             </div>
             <div class="col-md-3 col-sm-3 p-2">
                 <a href="#">
-                    <div class="bg-white"><img src="./images/VI.jpg" class="square-270-100 position-relative" />
+                    <div class="bg-white"><img src="~/images/VI.jpg" class="square-270-100 position-relative" />
                     </div>
                 </a>
             </div>
@@ -161,7 +252,7 @@
           <div class="row">  
             <div class="owl-carousel owl-theme">
                 <div class="item p-2">
-                    <div class="circle square-120p br-black mx-auto t-10"><img src="./images/AMW.png"></div>
+                    <div class="circle square-120p br-black mx-auto t-10"><img src="~/images/AMW.png"></div>
                     <div class="p-2 pt-5 h-frame mx-auto" id="compstate-2">
                         <p class="blue align-center">Lorem ipsum dolor</p>
                         <div class="content">
@@ -184,7 +275,7 @@
                     </div>
                 </div>
                 <div class="item p-2">
-                    <div class="circle square-120p br-black mx-auto t-10"><img src="./images/AMW.png"></div>
+                    <div class="circle square-120p br-black mx-auto t-10"><img src="~/images/AMW.png"></div>
                     <div class="p-2 pt-5 h-frame mx-auto" id="compstate-2">
                         <p class="blue align-center">Lorem ipsum dolor</p>
                         <div class="content"> sit amet consectetur adipisicing elit. Ut
@@ -206,7 +297,7 @@
                     </div>
                 </div>
                 <div class="item p-2">
-                    <div class="circle square-120p br-black mx-auto t-10"><img src="./images/AMW.png"></div>
+                    <div class="circle square-120p br-black mx-auto t-10"><img src="~/images/AMW.png"></div>
                     <div class="p-2 pt-5 h-frame mx-auto" id="compstate-2">
                         <p class="blue align-center">Lorem ipsum dolor</p>
                         <div class="content"> sit amet consectetur adipisicing elit. Ut
@@ -228,7 +319,7 @@
                     </div>
                 </div>
                 <div class="item p-2">
-                    <div class="circle square-120p br-black mx-auto t-10"><img src="./images/AMW.png"></div>
+                    <div class="circle square-120p br-black mx-auto t-10"><img src="~/images/AMW.png"></div>
                     <div class="p-2 pt-5 h-frame mx-auto" id="compstate-2">
                         <p class="blue align-center">Lorem ipsum dolor</p>
                         <div class="content"> sit amet consectetur adipisicing elit. Ut
@@ -247,42 +338,7 @@
             </div>
           </div>  
         </div>
-        <!-- 
-        <div class="col-md-6 pad-2 mx-auto">
-
-            <div class="circle square-120p br-black mx-auto t-10" id="comp-1"></div>
-            <div class="pad-2 pad-t-60 h-frame mx-auto" id="compstate-1">
-                <p class="blue align-center">Lorem ipsum dolor</p> sit amet consectetur adipisicing elit. Ut
-                corrupti dolorum, aliquid fuga a reiciendis repellendus aliquam dolorem doloribus dolore voluptatem
-                eaque aperiam, quod suscipit iusto esse nostrum amet nobis. Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Delectus ratione exercitationem consequuntur est, corrupti nulla cupiditate, odio
-                corporis enim natus officiis beatae repellat consequatur ab rem autem distinctio qui laudantium?
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic nam minus, facilis accusantium magni
-                tempore, nobis iure explicabo labore incidunt officiis totam exercitationem animi asperiores quis
-                dolore quas a aspernatur!
-            </div>
-        </div>
-
-        <div class="col-md-6 pad-2">
-            <div class="circle square-120p br-black mx-auto t-10" id="comp-2"></div>
-            <div class="pad-2 pad-t-60 h-frame mx-auto" id="compstate-2">
-                <p class="blue align-center">Lorem ipsum dolor</p> sit amet consectetur adipisicing elit. Ut
-                corrupti dolorum, aliquid fuga a reiciendis repellendus aliquam dolorem doloribus dolore voluptatem
-                eaque aperiam, quod suscipit iusto esse nostrum amet nobis. Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Delectus ratione exercitationem consequuntur est, corrupti nulla cupiditate, odio
-                corporis enim natus officiis beatae repellat consequatur ab rem autem distinctio qui laudantium?
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic nam minus, facilis accusantium magni
-                tempore, nobis iure explicabo labore incidunt officiis totam exercitationem animi asperiores quis
-                dolore quas a aspernatur!
-            </div>
-        </div>
-
-        <div class="row justi-center cursor">
-            <div class="nav-comp align-center" onClick="prevcomp()">
-                <-< /div>
-                    <div class="nav-comp align-center" onClick="nextcomp()">-></div>
-            </div>
-        </div> -->
+       
 
         <div class="justify-content-center mb-4" id="deptPage">
            <div class="row"> 
@@ -292,17 +348,12 @@
                     <h1>Placements</h1>
                     <p class="font-weight-normal blue t-200">Stories That Speaks<br>Truth</p>
                     <p class="brown">What our students and parents <br> say about our institute</p>
-                    <!-- <div class="justify-content-around">
-                       <div class="row"> 
-                        <div class="nav-r circle bg-brown mr-4"></div>
-                        <div class="nav-r circle bg-brown"></div>
-                    </div>  
-                    </div> -->
+                   
                 </div>
 
                 <div class="col-md-8 ml-auto mt-3">
                     <div class="alumnislider bg-ghostwhite">
-                        <img src="images/qoutes.png" class="quotes">
+                        <img src="~/images/qoutes.png" class="quotes">
                         <div class="owl-carousel owl-theme" id="owl-carousel-2">
                             <div class="item">
                                 <p id="first-alumni" class="brown">Lorem ipsum, or lipsum as it is sometimes known, is
