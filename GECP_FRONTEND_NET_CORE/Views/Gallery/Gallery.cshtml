@@ -3,8 +3,10 @@
     ViewData["Title"] = "Gallery";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<h1>Gallery</h1>
+@section Styles{
+    <link href="~/css/stylesheet.css" rel="stylesheet" />
+    <link href="~/css/studymaterial.css" rel="stylesheet" />
+}
  <div class="gal-container">
         <h3>GALLERY</h3>
         <h1>PHOTOS OF OUR COLLEGE</h1>
@@ -12,9 +14,6 @@
 
         <div class="">
             <div class="container">
-                <!-- <div class="d-flex justify-content-center">
-                    <div class="headings h4 text-center font-weight-bold mb-4 text-dark">EVENTS</div>
-                </div> -->
                 <div class="row" id="eventId">
     
                     <button class="event activeEvent" name="Recent" onclick="openevent('Recent')">
@@ -88,40 +87,40 @@
                     <div class="owl-stage-outer  ">
                         <div class="owl-stage">
                             <div class="owl-item">
-                                <img src="images/Gallery/ev-4.jpg" />
+                                <img src="~/images/Gallery/ev-4.jpg" />
                             </div>
                             <div class="owl-item h-25">
-                                <img src="images/Gallery/ev-5.jpg" />
+                                <img src="~/images/Gallery/ev-5.jpg" />
                             </div>
                             <div class="owl-item">
-                                <img src="images/Gallery/ev-6.jpg" />
+                                <img src="~/images/Gallery/ev-6.jpg" />
                             </div>
                             <div class="owl-item">
-                                <img src="images/Gallery/ev-4.jpg" />
+                                <img src="~/images/Gallery/ev-4.jpg" />
                             </div>
                             <div class="owl-item">
-                                <img src="images/Gallery/ev-5.jpg" />
+                                <img src="~/images/Gallery/ev-5.jpg" />
                             </div>
                             <div class="owl-item">
-                                <img src="images/Gallery/ev-6.jpg" />
+                                <img src="~/images/Gallery/ev-6.jpg" />
                             </div>
                             <div class="owl-item">
-                                <img src="images/Gallery/ev-4.jpg" />
+                                <img src="~/images/Gallery/ev-4.jpg" />
                             </div>
                             <div class="owl-item">
-                                <img src="images/Gallery/ev-5.jpg" />
+                                <img src="~/images/Gallery/ev-5.jpg" />
                             </div>
                             <div class="owl-item">
-                                <img src="images/Gallery/ev-6.jpg" />
+                                <img src="~/images/Gallery/ev-6.jpg" />
                             </div>
                             <div class="owl-item">
-                                <img src="images/Gallery/ev-4.jpg" />
+                                <img src="~/images/Gallery/ev-4.jpg" />
                             </div>
                             <div class="owl-item">
-                                <img src="images/Gallery/ev-5.jpg" />
+                                <img src="~/images/Gallery/ev-5.jpg" />
                             </div>
                             <div class="owl-item">
-                                <img src="images/Gallery/ev-6.jpg" />
+                                <img src="~/images/Gallery/ev-6.jpg" />
                             </div>
                         </div>
                     </div>
@@ -139,7 +138,7 @@
                 <div class="row">
                     <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
                         <div class="effect">
-                            <img src="images/events/diwali.jpg" class="gal-img">
+                            <img src="~/images/events/diwali.jpg" class="gal-img">
                             <div class=" w-60 row mx-auto mg-glass"><a href="#"
                                     class="fa fa-search text-white   icone1"></a></div>
                         </div>
@@ -147,21 +146,21 @@
             
                     <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
                         <div class="effect">
-                            <img src="images/events/farwell.jpg" class="gal-img">
+                            <img src="~/images/events/farwell.jpg" class="gal-img">
                             <div class=" w-60 row mx-auto mg-glass"><a href="#"
                                     class="fa fa-search text-white   icone1"></a></div>
                         </div>
                     </div>
                     <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
                         <div class="effect">
-                            <img src="images/events/freshers-party.png" class="gal-img">
+                            <img src="~/images/events/freshers-party.png" class="gal-img">
                             <div class="w-60 row    mx-auto mg-glass"><a href="#"
                                     class="fa fa-search text-white   icone1"></a></div>
                         </div>
                     </div>
                     <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
                         <div class="effect">
-                            <img src="images/events/diwali.jpg" class="gal-img">
+                            <img src="~/images/events/diwali.jpg" class="gal-img">
                             <div class="w-60 row  mx-auto mg-glass"><a href="#"
                                     class="fa fa-search text-white   icone1"></a></div>
                         </div>
@@ -171,28 +170,28 @@
                 <div class="row">
                     <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
                         <div class="effect">
-                            <img src="images/events/farwell.jpg" class="gal-img">
+                            <img src="~/images/events/farwell.jpg" class="gal-img">
                             <div class="w-60 row    mx-auto mg-glass"><a href="#"
                                     class="fa fa-search text-white  icone1"></a></div>
                         </div>
                     </div>
                     <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
                         <div class="effect">
-                            <img src="images/events/freshers-party.png" class="gal-img">
+                            <img src="~/images/events/freshers-party.png" class="gal-img">
                             <div class="w-60 row   mx-auto mg-glass"><a href="#"
                                     class="fa fa-search text-white   icone1 "></a></div>
                         </div>
                     </div>
                     <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
                         <div class="effect">
-                            <img src="images/events/farwell.jpg" class="gal-img">
+                            <img src="~/images/events/farwell.jpg" class="gal-img">
                             <div class="w-60 row mx-auto mg-glass"><a href="#"
                                     class="fa fa-search text-white  icone1"></a></div>
                         </div>
                     </div>
                     <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
                         <div class="effect">
-                            <img src="images/events/diwali.jpg" class="gal-img">
+                            <img src="~/images/events/diwali.jpg" class="gal-img">
                             <div class="w-60 row mx-auto mg-glass"><a href="#"
                                     class="fa fa-search text-white  icone1"></a></div>
                         </div>
@@ -212,40 +211,40 @@
                     <div class="owl-stage-outer  ">
                         <div class="owl-stage">
                             <div class="owl-item">
-                                <img src="images/Gallery/ev-4.jpg" />
+                                <img src="~/images/Gallery/ev-4.jpg" />
                             </div>
                             <div class="owl-item h-25">
-                                <img src="images/Gallery/ev-5.jpg" />
+                                <img src="~/images/Gallery/ev-5.jpg" />
                             </div>
                             <div class="owl-item">
-                                <img src="images/Gallery/ev-6.jpg" />
+                                <img src="~/images/Gallery/ev-6.jpg" />
                             </div>
                             <div class="owl-item">
-                                <img src="images/Gallery/ev-4.jpg" />
+                                <img src="~/images/Gallery/ev-4.jpg" />
                             </div>
                             <div class="owl-item">
-                                <img src="images/Gallery/ev-5.jpg" />
+                                <img src="~/images/Gallery/ev-5.jpg" />
                             </div>
                             <div class="owl-item">
-                                <img src="images/Gallery/ev-6.jpg" />
+                                <img src="~/images/Gallery/ev-6.jpg" />
                             </div>
                             <div class="owl-item">
-                                <img src="images/Gallery/ev-4.jpg" />
+                                <img src="~/images/Gallery/ev-4.jpg" />
                             </div>
                             <div class="owl-item">
-                                <img src="images/Gallery/ev-5.jpg" />
+                                <img src="~/images/Gallery/ev-5.jpg" />
                             </div>
                             <div class="owl-item">
-                                <img src="images/Gallery/ev-6.jpg" />
+                                <img src="~/images/Gallery/ev-6.jpg" />
                             </div>
                             <div class="owl-item">
-                                <img src="images/Gallery/ev-4.jpg" />
+                                <img src="~/images/Gallery/ev-4.jpg" />
                             </div>
                             <div class="owl-item">
-                                <img src="images/Gallery/ev-5.jpg" />
+                                <img src="~/images/Gallery/ev-5.jpg" />
                             </div>
                             <div class="owl-item">
-                                <img src="images/Gallery/ev-6.jpg" />
+                                <img src="~/images/Gallery/ev-6.jpg" />
                             </div>
                         </div>
                     </div>
@@ -268,7 +267,7 @@
     <div class="row">
         <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
             <div class="effect">
-                <img src="images/events/diwali.jpg" class="gal-img">
+                            <img src="~/images/events/diwali.jpg" class="gal-img">
                 <div class=" w-60 row mx-auto mg-glass"><a href="#"
                         class="fa fa-search text-white   icone1"></a></div>
             </div>
@@ -276,21 +275,21 @@
 
         <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
             <div class="effect">
-                <img src="images/events/farwell.jpg" class="gal-img">
+                <img src="~/images/events/farwell.jpg" class="gal-img">
                 <div class=" w-60 row mx-auto mg-glass"><a href="#"
                         class="fa fa-search text-white   icone1"></a></div>
             </div>
         </div>
         <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
             <div class="effect">
-                <img src="images/events/freshers-party.png" class="gal-img">
+                            <img src="~/images/events/freshers-party.png" class="gal-img">
                 <div class="w-60 row    mx-auto mg-glass"><a href="#"
                         class="fa fa-search text-white   icone1"></a></div>
             </div>
         </div>
         <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
             <div class="effect">
-                <img src="images/events/diwali.jpg" class="gal-img">
+                <img src="~/images/events/diwali.jpg" class="gal-img">
                 <div class="w-60 row  mx-auto mg-glass"><a href="#"
                         class="fa fa-search text-white   icone1"></a></div>
             </div>
@@ -300,28 +299,28 @@
     <div class="row">
         <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
             <div class="effect">
-                <img src="images/events/farwell.jpg" class="gal-img">
+                <img src="~/images/events/farwell.jpg" class="gal-img">
                 <div class="w-60 row    mx-auto mg-glass"><a href="#"
                         class="fa fa-search text-white  icone1"></a></div>
             </div>
         </div>
         <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
             <div class="effect">
-                <img src="images/events/freshers-party.png" class="gal-img">
+                <img src="~/images/events/freshers-party.png" class="gal-img">
                 <div class="w-60 row   mx-auto mg-glass"><a href="#"
                         class="fa fa-search text-white   icone1 "></a></div>
             </div>
         </div>
         <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
             <div class="effect">
-                <img src="images/events/farwell.jpg" class="gal-img">
+                <img src="~/images/events/farwell.jpg" class="gal-img">
                 <div class="w-60 row mx-auto mg-glass"><a href="#"
                         class="fa fa-search text-white  icone1"></a></div>
             </div>
         </div>
         <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
             <div class="effect">
-                <img src="images/events/diwali.jpg" class="gal-img">
+                            <img src="~/images/events/diwali.jpg" class="gal-img">
                 <div class="w-60 row mx-auto mg-glass"><a href="#"
                         class="fa fa-search text-white  icone1"></a></div>
             </div>
@@ -344,7 +343,7 @@
    <div class="row">
        <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
            <div class="effect">
-               <img src="images/events/diwali.jpg" class="gal-img">
+                            <img src="~/images/events/diwali.jpg" class="gal-img">
                <div class=" w-60 row mx-auto mg-glass"><a href="#"
                        class="fa fa-search text-white   icone1"></a></div>
            </div>
@@ -352,21 +351,21 @@
 
        <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
            <div class="effect">
-               <img src="images/events/farwell.jpg" class="gal-img">
+               <img src="~/images/events/farwell.jpg" class="gal-img">
                <div class=" w-60 row mx-auto mg-glass"><a href="#"
                        class="fa fa-search text-white   icone1"></a></div>
            </div>
        </div>
        <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
            <div class="effect">
-               <img src="images/events/freshers-party.png" class="gal-img">
+               <img src="~/images/events/freshers-party.png" class="gal-img">
                <div class="w-60 row    mx-auto mg-glass"><a href="#"
                        class="fa fa-search text-white   icone1"></a></div>
            </div>
        </div>
        <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
            <div class="effect">
-               <img src="images/events/diwali.jpg" class="gal-img">
+                            <img src="~/images/events/diwali.jpg" class="gal-img">
                <div class="w-60 row  mx-auto mg-glass"><a href="#"
                        class="fa fa-search text-white   icone1"></a></div>
            </div>
@@ -376,21 +375,21 @@
    <div class="row">
        <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
            <div class="effect">
-               <img src="images/events/farwell.jpg" class="gal-img">
+               <img src="~/images/events/farwell.jpg" class="gal-img">
                <div class="w-60 row    mx-auto mg-glass"><a href="#"
                        class="fa fa-search text-white  icone1"></a></div>
            </div>
        </div>
        <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
            <div class="effect">
-               <img src="images/events/freshers-party.png" class="gal-img">
+               <img src="~/images/events/freshers-party.png" class="gal-img">
                <div class="w-60 row   mx-auto mg-glass"><a href="#"
                        class="fa fa-search text-white   icone1 "></a></div>
            </div>
        </div>
        <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
            <div class="effect">
-               <img src="images/events/farwell.jpg" class="gal-img">
+               <img src="~/images/events/farwell.jpg" class="gal-img">
                <div class="w-60 row mx-auto mg-glass"><a href="#"
                        class="fa fa-search text-white  icone1"></a></div>
            </div>
@@ -419,40 +418,40 @@
                 <div class="owl-stage-outer  ">
                     <div class="owl-stage position-relative">
                         <div class="owl-item">
-                            <img src="images/Gallery/ev-4.jpg" />
+                            <img src="~/images/Gallery/ev-4.jpg" />
                         </div>
                         <div class="owl-item h-25">
-                            <img src="images/Gallery/ev-5.jpg" />
+                            <img src="~/images/Gallery/ev-5.jpg" />
                         </div>
                         <div class="owl-item">
-                            <img src="images/Gallery/ev-6.jpg" />
+                            <img src="~/images/Gallery/ev-6.jpg" />
                         </div>
                         <div class="owl-item">
-                            <img src="images/Gallery/ev-4.jpg" />
+                            <img src="~/images/Gallery/ev-4.jpg" />
                         </div>
                         <div class="owl-item">
-                            <img src="images/Gallery/ev-5.jpg" />
+                            <img src="~/images/Gallery/ev-5.jpg" />
                         </div>
                         <div class="owl-item">
-                            <img src="images/Gallery/ev-6.jpg" />
+                            <img src="~/images/Gallery/ev-6.jpg" />
                         </div>
                         <div class="owl-item">
-                            <img src="images/Gallery/ev-4.jpg" />
+                            <img src="~/images/Gallery/ev-4.jpg" />
                         </div>
                         <div class="owl-item">
-                            <img src="images/Gallery/ev-5.jpg" />
+                            <img src="~/images/Gallery/ev-5.jpg" />
                         </div>
                         <div class="owl-item">
-                            <img src="images/Gallery/ev-6.jpg" />
+                            <img src="~/images/Gallery/ev-6.jpg" />
                         </div>
                         <div class="owl-item">
-                            <img src="images/Gallery/ev-4.jpg" />
+                            <img src="~/images/Gallery/ev-4.jpg" />
                         </div>
                         <div class="owl-item">
-                            <img src="images/Gallery/ev-5.jpg" />
+                            <img src="~/images/Gallery/ev-5.jpg" />
                         </div>
                         <div class="owl-item">
-                            <img src="images/Gallery/ev-6.jpg" />
+                            <img src="~/images/Gallery/ev-6.jpg" />
                         </div>
                     </div>
                 </div>
@@ -474,40 +473,40 @@
                 <div class="owl-stage-outer  ">
                     <div class="owl-stage">
                         <div class="owl-item">
-                            <img src="images/Gallery/campus2.avif" />
+                            <img src="~/images/Gallery/campus2.avif" />
                         </div>
                         <div class="owl-item h-25">
-                            <img src="images/Gallery/campus3.avif" />
+                            <img src="~/images/Gallery/campus3.avif" />
                         </div>
                         <div class="owl-item">
-                            <img src="images/Gallery/campus4.avif" />
+                            <img src="~/images/Gallery/campus4.avif" />
                         </div>
                         <div class="owl-item">
-                            <img src="images/Gallery/Campus2.avif" />
+                            <img src="~/images/Gallery/Campus2.avif" />
                         </div>
                         <div class="owl-item">
-                            <img src="images/Gallery/campus2.avif" />
+                            <img src="~/images/Gallery/campus2.avif" />
                         </div>
                         <div class="owl-item">
-                            <img src="images/Gallery/campus3.avif" />
+                            <img src="~/images/Gallery/campus3.avif" />
                         </div>
                         <div class="owl-item">
-                            <img src="images/Gallery/campus4.avif" />
+                            <img src="~/images/Gallery/campus4.avif" />
                         </div>
                         <div class="owl-item">
-                            <img src="images/Gallery/Campus2.avif" />
+                            <img src="~/images/Gallery/Campus2.avif" />
                         </div>
                         <div class="owl-item">
-                            <img src="images/Gallery/campus2.avif" />
+                            <img src="~/images/Gallery/campus2.avif" />
                         </div>
                         <div class="owl-item">
-                            <img src="images/Gallery/campus3.avif" />
+                            <img src="~/images/Gallery/campus3.avif" />
                         </div>
                         <div class="owl-item">
-                            <img src="images/Gallery/campus4.avif" />
+                            <img src="~/images/Gallery/campus4.avif" />
                         </div>
                         <div class="owl-item">
-                            <img src="images/Gallery/Campus2.avif" />
+                            <img src="~/images/Gallery/Campus2.avif" />
                         </div>
                     </div>
                 </div>
@@ -530,40 +529,40 @@
                 <div class="owl-stage-outer  ">
                     <div class="owl-stage">
                         <div class="owl-item">
-                            <img src="images/Gallery/campus2.avif" />
+                            <img src="~/images/Gallery/campus2.avif" />
                         </div>
                         <div class="owl-item h-25">
-                            <img src="images/Gallery/campus3.avif" />
+                            <img src="~/images/Gallery/campus3.avif" />
                         </div>
                         <div class="owl-item">
-                            <img src="images/Gallery/campus4.avif" />
+                            <img src="~/images/Gallery/campus4.avif" />
                         </div>
                         <div class="owl-item">
-                            <img src="images/Gallery/Campus2.avif" />
+                            <img src="~/images/Gallery/Campus2.avif" />
                         </div>
                         <div class="owl-item">
-                            <img src="images/Gallery/campus2.avif" />
+                            <img src="~/images/Gallery/campus2.avif" />
                         </div>
                         <div class="owl-item">
-                            <img src="images/Gallery/campus3.avif" />
+                            <img src="~/images/Gallery/campus3.avif" />
                         </div>
                         <div class="owl-item">
-                            <img src="images/Gallery/campus4.avif" />
+                            <img src="~/images/Gallery/campus4.avif" />
                         </div>
                         <div class="owl-item">
-                            <img src="images/Gallery/Campus2.avif" />
+                            <img src="~/images/Gallery/Campus2.avif" />
                         </div>
                         <div class="owl-item">
-                            <img src="images/Gallery/campus2.avif" />
+                            <img src="~/images/Gallery/campus2.avif" />
                         </div>
                         <div class="owl-item">
-                            <img src="images/Gallery/campus3.avif" />
+                            <img src="~/images/Gallery/campus3.avif" />
                         </div>
                         <div class="owl-item">
-                            <img src="images/Gallery/campus4.avif" />
+                            <img src="~/images/Gallery/campus4.avif" />
                         </div>
                         <div class="owl-item">
-                            <img src="images/Gallery/Campus2.avif" />
+                            <img src="~/images/Gallery/Campus2.avif" />
                         </div>
                     </div>
                 </div>
@@ -585,40 +584,40 @@
                 <div class="owl-stage-outer  ">
                     <div class="owl-stage">
                         <div class="owl-item">
-                            <img src="images/Gallery/campus2.avif" />
+                            <img src="~/images/Gallery/campus2.avif" />
                         </div>
                         <div class="owl-item h-25">
-                            <img src="images/Gallery/campus3.avif" />
+                            <img src="~/images/Gallery/campus3.avif" />
                         </div>
                         <div class="owl-item">
-                            <img src="images/Gallery/campus4.avif" />
+                            <img src="~/images/Gallery/campus4.avif" />
                         </div>
                         <div class="owl-item">
-                            <img src="images/Gallery/Campus2.avif" />
+                            <img src="~/images/Gallery/Campus2.avif" />
                         </div>
                         <div class="owl-item">
-                            <img src="images/Gallery/campus2.avif" />
+                            <img src="~/images/Gallery/campus2.avif" />
                         </div>
                         <div class="owl-item">
-                            <img src="images/Gallery/campus3.avif" />
+                            <img src="~/images/Gallery/campus3.avif" />
                         </div>
                         <div class="owl-item">
-                            <img src="images/Gallery/campus4.avif" />
+                            <img src="~/images/Gallery/campus4.avif" />
                         </div>
                         <div class="owl-item">
-                            <img src="images/Gallery/Campus2.avif" />
+                            <img src="~/images/Gallery/Campus2.avif" />
                         </div>
                         <div class="owl-item">
-                            <img src="images/Gallery/campus2.avif" />
+                            <img src="~/images/Gallery/campus2.avif" />
                         </div>
                         <div class="owl-item">
-                            <img src="images/Gallery/campus3.avif" />
+                            <img src="~/images/Gallery/campus3.avif" />
                         </div>
                         <div class="owl-item">
-                            <img src="images/Gallery/campus4.avif" />
+                            <img src="~/images/Gallery/campus4.avif" />
                         </div>
                         <div class="owl-item">
-                            <img src="images/Gallery/Campus2.avif" />
+                            <img src="~/images/Gallery/Campus2.avif" />
                         </div>
                     </div>
                 </div>
@@ -640,40 +639,40 @@
                 <div class="owl-stage-outer  ">
                     <div class="owl-stage">
                         <div class="owl-item">
-                            <img src="images/Gallery/campus2.avif" />
+                            <img src="~/images/Gallery/campus2.avif" />
                         </div>
                         <div class="owl-item h-25">
-                            <img src="images/Gallery/campus3.avif" />
+                            <img src="~/images/Gallery/campus3.avif" />
                         </div>
                         <div class="owl-item">
-                            <img src="images/Gallery/campus4.avif" />
+                            <img src="~/images/Gallery/campus4.avif" />
                         </div>
                         <div class="owl-item">
-                            <img src="images/Gallery/Campus2.avif" />
+                            <img src="~/images/Gallery/Campus2.avif" />
                         </div>
                         <div class="owl-item">
-                            <img src="images/Gallery/campus2.avif" />
+                            <img src="~/images/Gallery/campus2.avif" />
                         </div>
                         <div class="owl-item">
-                            <img src="images/Gallery/campus3.avif" />
+                            <img src="~/images/Gallery/campus3.avif" />
                         </div>
                         <div class="owl-item">
-                            <img src="images/Gallery/campus4.avif" />
+                            <img src="~/images/Gallery/campus4.avif" />
                         </div>
                         <div class="owl-item">
-                            <img src="images/Gallery/Campus2.avif" />
+                            <img src="~/images/Gallery/Campus2.avif" />
                         </div>
                         <div class="owl-item">
-                            <img src="images/Gallery/campus2.avif" />
+                            <img src="~/images/Gallery/campus2.avif" />
                         </div>
                         <div class="owl-item">
-                            <img src="images/Gallery/campus3.avif" />
+                            <img src="~/images/Gallery/campus3.avif" />
                         </div>
                         <div class="owl-item">
-                            <img src="images/Gallery/campus4.avif" />
+                            <img src="~/images/Gallery/campus4.avif" />
                         </div>
                         <div class="owl-item">
-                            <img src="images/Gallery/Campus2.avif" />
+                            <img src="~/images/Gallery/Campus2.avif" />
                         </div>
                     </div>
                 </div>
