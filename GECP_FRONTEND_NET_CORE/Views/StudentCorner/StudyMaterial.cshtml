@@ -4,8 +4,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 @section Styles{
-  <link href="~/css/cells.css" rel="stylesheet" />
-
+  <link href="~/css/studymaterial.css" rel="stylesheet" />
 }
 @section Script{
     <script>
@@ -56,10 +55,8 @@
     </script>
 }
 
-<h1>StudyMaterial</h1>
-
  <div class="header-block row d-flex align-items-center mx-auto">
-        <img src="images/studyMaterial/bg-img-2.jpg" alt="Womens">
+        <img src="~/images/studyMaterial/bg-img-2.jpg" alt="Womens">
         <div class="text-block mx-auto text-block mx-auto d-flex align-items-center justify-content-center">
             Study Material
         </div>
@@ -76,7 +73,7 @@
                 <!-- <button class="department activeBranch" name="ec" onclick="selection('cse',this)"> -->
                 <button class="department activeBranch" name="cse" onclick="openBranch('cse')">
                     <div class="col">
-                        <img src="images/studyMaterial/comlogo.png" alt=""
+                        <img src="~/images/studyMaterial/comlogo.png" alt=""
                             class="department-logos border img-fluid rounded-circle">
                         <div class="d-text font-weight-bold">
                             Computer Science
@@ -86,7 +83,7 @@
                 <button class="department" name="ec" onclick="openBranch('ec')">
                 <!-- <button class="department" name="ec" onclick="selection('ec',this)"> -->
                     <div class="col">
-                        <img src="images/studyMaterial/ec-logo-2.png " alt=""
+                        <img src="~/images/studyMaterial/ec-logo-2.png " alt=""
                             class="department-logos border img-fluid rounded-circle">
                         <div class="d-text font-weight-bold">
                             Electronics and Communication
@@ -96,7 +93,7 @@
                 <!-- <button class="department" name="ec" onclick="selection('mechanical',this)"> -->
                 <button class="department" onclick="openBranch('mechanical')">
                     <div class="col">
-                        <img src="images/studyMaterial/mech-logo.png" alt=""
+                        <img src="~/images/studyMaterial/mech-logo.png" alt=""
                             class="department-logos  border img-fluid rounded-circle">
                         <div class="d-text font-weight-bold">
                             Mechanical
@@ -105,7 +102,7 @@
                 </button>
                 <button class="department" onclick="openBranch('civil')">
                     <div class="col ">
-                        <img src="images/studyMaterial/civil11.jpg" alt=""
+                        <img src="~/images/studyMaterial/civil11.jpg" alt=""
                             class="department-logos  border img-fluid rounded-circle">
                         <div class="d-text font-weight-bold">
                             Civil
@@ -114,7 +111,7 @@
                 </button>
                 <button class="department" onclick="openBranch('electrical')">
                     <div class="col ">
-                        <img src="images/studyMaterial/electrical-thunder-logo-icon-vector (1).png" alt=""
+                        <img src="~/images/studyMaterial/electrical-thunder-logo-icon-vector (1).png" alt=""
                             class="department-logos border img-fluid rounded-circle">
                         <div class="d-text font-weight-bold">
                             Electrical
