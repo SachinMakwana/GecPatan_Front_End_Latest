@@ -67,185 +67,84 @@
         })
     </script>
 }
-<div class="header-block row d-flex align-items-center mx-auto">
-    <img src="~/images/departments/thisisengineering-raeng-lx8coox66ms-unsplash.jpg" />
-    <div class="text-block text-block mx-auto d-flex align-items-center justify-content-center">
-        MECHANICAL DEPARTMENT
-    </div>
-</div>
 
-<!-- <div class="depaprtment">
-    <img src="images/departments/thisisengineering-raeng-lx8CooX66ms-unsplash.jpg">
-    <div class="centered text-white font-weight-bold"> MECHANICAL DEPARTMENT</div>
-</div> -->
 
-<div class="p-2 m-custom">
-    <div class=" headings h2 m-3">About Faculty of Computer Science </div>
-    <div class="row mt-4">
-        <div class="col-md-6 col-sm-6 my-2">
-            <div class="dept pad-b-120"> </div>
-        </div>
-        <div class="col-md-6 col-sm-6 my-2">
-            <div class="description t-80">
-                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-                classical
-                Latin literature from 45 BC, making it over 2000 years old.Richard McClintock, a Latin professor at
-                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from
-                a
-                Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the
-                undoubtable source. Lorem Ipsum comes
-                <!-- <span id="compro"> -->
-                from sections 1.10.32 and 1.10.33 of "de Finibus
-                Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a
-                treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem
-                Ipsum, "Lorem ipsum dolor sit amet", comes from a line in sectionThere are many variations of
-                passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by
-                injected humour, or randomised words which don't look even slightly believable. If you are going to
-                use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the
-                middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as
-                necessary, making this the first true generator on the Internet. It uses a dictionary of over 200
-                Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which
-                looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected
-                humour, or non-characteristic words etc.
-                <!-- </span><span onClick="morle()" id="morle">...more</span> -->
+@foreach (var department in Model.departmentVM)
+{
+    @if (department.Name == "ME")
+    {
+        <div class="header-block row d-flex align-items-center mx-auto">
+            <img src="~/images/departments/thisisengineering-raeng-lx8coox66ms-unsplash.jpg" />
+            <div class="text-block text-block mx-auto d-flex align-items-center justify-content-center">
+                @department.Name
             </div>
         </div>
-    </div>
-</div>
 
-<div class="row">
-    <div class="frame">
-        <img src="~/images/dean.jpg" />
-    </div>
-    <div class="mesdean">
-        <div class="headings h2 t-200">Message from the HOD </div>
-        <div class="description t-80">
-            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
-            Latin literature from 45 BC, making it over 2000 years old.Richard McClintock, a Latin professor at
-            Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a
-            Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the
-            undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et
-            Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the
-            theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor
-            sit amet", comes from a line in sectionThere are many variations of passages of Lorem Ipsum available,
-            but the majority.
-            <h6>H. B. Jethva</h6>
+        <div class="p-2 m-custom">
+            <div class=" headings h2 m-3">About Faculty of Computer Science </div>
+            <div class="row mt-4">
+                <div class="col-md-6 col-sm-6 my-2">
+                    <div class="dept pad-b-120"> </div>
+                </div>
+                <div class="col-md-6 col-sm-6 my-2">
+                    <div class="description t-80">
+                        @department.Description
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
 
+        <div class="row">
+            <div class="frame">
+                @foreach (var hod in Model.facultyVMList)
+                {
+                    @if (hod.Designation == "HOD" && hod.DeptId == 300)
+                    {
+
+                        <img src="@hod.Image">
+                        break;
+                    }
+                }
+            </div>
+            <div class="mesdean">
+                <div class="headings h2 t-200">Message from the HOD </div>
+                <div class="description t-80">
+                    @department.Message
+                </div>
+            </div>
+        </div>
+        break;
+    }
+}
 
 <div class="H-head t-120">
     Our Faculty Of Department</br>
     <div class="blue t-150">Meet FACULTYs</div>
 </div>
 
+
 <!-- OWL CAROUSEL -->
 <div class="mx-4 mb-5">
     <div class="owl-carousel owl-theme" id="owl1">
-        <div class="item">
-            <div class="p-2">
-                <div class="thumbnail h-frame h-350 w-80">
-                    <img src="~/images/h1.jpg" class="img-container w-99 h-200">
-                    <div class="caption">
-                        <div class="h-name">Nitin Gadkari</div>
-                        <div class="hdept">HOD of E.C. department</div>
-                        <div class="h-qual">M.Tech(IISC), B.Tech(IIT)</div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <div class="item">
-            <div class="p-2">
-                <div class="thumbnail h-frame h-350 w-80">
-                    <img src="~/images/h2.jpg" class="img-container w-99 h-200">
-                    <div class="caption">
-                        <div class="h-name">Harikrishna Jethva</div>
-                        <div class="hdept">HOD of C.S.E. depaprtment</div>
-                        <div class="h-qual">M.Tech(IISC), B.Tech(IIT)</div>
+        @foreach (var faculty in Model.facultyVMList)
+        {
+            @if (faculty.DeptId == 300)
+            {
+                <div class="item">
+                    <div class="p-2">
+                        <div class="thumbnail h-frame h-350 w-80">
+                            <img src="@faculty.Image" class="img-container w-99 h-200">
+                            <div class="caption">
+                                <div class="h-name">@faculty.Name</div>
+                                <div class="hdept">@faculty.Designation</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            }
+        }
 
-        <div class="item">
-            <div class="p-2">
-                <div class="thumbnail h-frame h-350 w-80">
-                    <img src="~/images/h3.jpg" class="img-container w-99 h-200">
-                    <div class="caption">
-                        <div class="h-name">Prakash Javdekar</div>
-                        <div class="hdept">HOD of Electrical depaprtment</div>
-                        <div class="h-qual">M.Tech(IISC), B.Tech(IIT)</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="item">
-            <div class="p-2">
-                <div class="thumbnail h-frame h-350 w-80">
-                    <img src="~/images/h5.jpg" class="img-container w-99 h-200">
-                    <div class="caption">
-                        <div class="h-name">Smriti Irani</div>
-                        <div class="hdept">HOD of Mechanical department</div>
-                        <div class="h-qual">M.Tech(IISC), B.Tech(IIT)</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="item">
-            <div class="p-2">
-                <div class="thumbnail h-frame h-350 w-80">
-                    <img src="~/images/h4.jpg" class="img-container w-99 h-200">
-                    <div class="caption">
-                        <div class="h-name">Amit Shah</div>
-                        <div class="hdept">HOD of Civil department</div>
-                        <div class="h-qual">M.Tech(IISC), B.Tech(IIT)</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="item">
-            <div class="p-2">
-                <div class="thumbnail h-frame h-350 w-80">
-                    <img src="~/images/h1.jpg" class="img-container w-99 h-200">
-                    <div class="caption">
-                        <div class="h-name">Nitin Gadkari</div>
-                        <div class="hdept">HOD of E.C. department</div>
-                        <div class="h-qual">M.Tech(IISC), B.Tech(IIT)</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="item">
-            <div class="p-2">
-                <div class="thumbnail h-frame h-350 w-80">
-                    <img src="~/images/h2.jpg" class="img-container w-99 h-200">
-                    <div class="caption">
-                        <div class="h-name">Harikrishna Jethva</div>
-                        <div class="hdept">HOD of C.S.E. depaprtment</div>
-                        <div class="h-qual">M.Tech(IISC), B.Tech(IIT)</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="item">
-            <div class="p-2">
-                <div class="thumbnail h-frame h-350 w-80">
-                    <img src="~/images/h3.jpg" class="img-container w-99 h-200">
-                    <div class="caption">
-                        <div class="h-name">Prakash Javdekar</div>
-                        <div class="hdept">HOD of Electrical department</div>
-                        <div class="h-qual">M.Tech(IISC), B.Tech(IIT)</div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
     </div>
 </div>

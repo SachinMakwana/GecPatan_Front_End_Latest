@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BACKEND_HTML_DOT_NET.Models
+namespace GECP_FRONTEND_NET_CORE.Models
 {
     public class DepartmentVM
     {
