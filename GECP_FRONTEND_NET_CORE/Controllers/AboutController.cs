@@ -1,8 +1,10 @@
 ﻿using BACKEND_HTML_DOT_NET.Models;
 using GECP_FRONTEND_NET_CORE.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Newtonsoft.Json;
 using RestSharp;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -55,15 +57,70 @@ namespace GECP_FRONTEND_NET_CORE.Controllers
         }
         public IActionResult Infrastructure()
         {
-            return View();
+            List<GalleryVM> galleryVM = new List<GalleryVM>();
+            List<GalleryVM> galleryVM2 = new List<GalleryVM>();
+
+            GalleryVM infrastructureImg = new GalleryVM();
+
+            var restRequest = new RestRequest("/GetAllGalleryDetails", Method.Get);
+            restRequest.AddHeader("Accept", "application/json");
+            restRequest.RequestFormat = DataFormat.Json;
+
+            RestResponse response = client.Execute(restRequest);
+
+            var content = response.Content;
+            if (content != null)
+            {
+                var user = JsonConvert.DeserializeObject<ServiceResponse<List<GalleryVM>>>(content);
+                galleryVM = user.data;
+                foreach (var data in galleryVM)
+                {
+                    if(data.GalleryTagId == 100)
+                    {
+                        galleryVM2.Add(data);
+                    }  
+                }
+            }
+            foreach (var data in galleryVM2)
+            {
+                data.Image = "https://localhost:44374/" + data.Image;
+            }
+
+            return View(galleryVM2);
         }
         public IActionResult Principal()
         {
-            return View();
+            List<CollegeVM> collegeVM = new List<CollegeVM>();
+            var restRequest = new RestRequest("/GetCollegeDetail", Method.Get);
+            restRequest.AddHeader("Accept", "application/json");
+            restRequest.RequestFormat = DataFormat.Json;
+
+            RestResponse response = client.Execute(restRequest);
+
+            var content = response.Content;
+
+            var user = JsonConvert.DeserializeObject<ServiceResponse<List<CollegeVM>>>(content);
+            collegeVM = user.data;
+            return View(collegeVM);
         }
         public IActionResult Overview()
         {
-            return View();
+            List<CollegeVM> collegeVM = new List<CollegeVM>();
+            var restRequest = new RestRequest("/GetCollegeDetail", Method.Get);
+            restRequest.AddHeader("Accept", "application/json");
+            restRequest.RequestFormat = DataFormat.Json;
+
+            RestResponse response = client.Execute(restRequest);
+
+            var content = response.Content;
+
+            var user = JsonConvert.DeserializeObject<ServiceResponse<List<CollegeVM>>>(content);
+            foreach (var data in collegeVM)
+            {
+                data.Image = "https://localhost:44374/" + data.Image;
+            }
+            collegeVM = user.data;
+            return View(collegeVM);
         }
     }
 }

@@ -14,48 +14,77 @@
     <h2 class="centered text-white">ABOUT US</h2> 
     <p class="speciname">INFRASTRUCTURE</p>
 </div>
- <div class="sections">
-  <div class="section1">
-    <div class="b1">
-        <h5 class="NA-head mt-2">CAFETERIA</h5>
-    </div>
-      
-      <div class="type2">
-                <img src="~/images/aboutus/cafe1 (1).jpg" alt="CAFETERIA" class="type1" />
+    <div class="sections">
+ @foreach(var item in Model){
+
+        @if (item.Name == "CAFETERIA")
+        {
+        <div class="section1">
+            <div class="b1">
+                <h5 class="NA-head mt-2">CAFETERIA</h5>
+            </div>
+
+            <div class="type2">
+                
+                    <img src="@item.Image" alt="CAFETERIA" class="type1" />
       </div>
      
     
-  </div>
+            </div>
+            break;
+        }
+ }
+        @foreach (var item in Model)
+        {
+                @if (item.Name == "LIBRARY")
+                {
   <div class="section2">
     <div class="b1">
         <h5 class="NA-head mt-2">LIBRARY AND INFORMATION CENTER</h5>
     </div>
 
             <div class="type2">
-                <img src="~/images/aboutus/library1.jpg" alt="LIBRARY AND INFORMATION CENTER" class="type1" />
-       </div>
+                    <img src="@item.Image" alt="LIBRARY AND INFORMATION CENTER" class="type1" />
+        </div>
        
-  </div>
+            </div>
+            break;
+        }
+        }
+        @foreach (var item in Model)
+        {
+                @if (item.Name == "PLAYGROUND")
+                            {
   <div class="section2">
     <div class="b1">
         <h5 class="NA-head mt-2">PLAYGROUND</h5>
     </div>
-       
        <div class="type2">
- 
-                <img src="~/images/aboutus/playground1.jpg" alt="PLAYGROUND" class="type1" />
+       
+                    <img src="@item.Image" alt="PLAYGROUND" class="type1" />
        </div>
        
-  </div>
+            </div>
+            break;
+        }
+        }
+        @foreach (var item in Model)
+        {
+                @if (item.Name == "CLASSROOM")
+                {
   <div class="section1">
     <div class="b1">
         <h5 class="NA-head mt-2">CLASSROOM</h5>
     </div>
 
             <div class="type2">
-                <img src="~/images/aboutus/classroom1.jpg" alt="CLASSROOM" class="type1" />
-      
+                    <img src="@item.Image" alt="CLASSROOM" class="type1" />
        </div>
       
-  </div>
+            </div>
+            break;
+        }
+        }
  </div>
+
+}

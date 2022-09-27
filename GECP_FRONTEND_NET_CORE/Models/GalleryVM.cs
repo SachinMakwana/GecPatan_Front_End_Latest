@@ -1,9 +1,14 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using System;
 
-namespace BACKEND_HTML_DOT_NET.Models
+namespace GECP_FRONTEND_NET_CORE.Models
 {
     public class GalleryVM
     {
+        public GalleryVM()
+        {
+            InfrastructureList = new List<SelectListItem>();
+        }
         public int Id { get; set; }
         public int GalleryTagId { get; set; }
         public string Name { get; set; }
@@ -14,5 +19,6 @@ namespace BACKEND_HTML_DOT_NET.Models
         public string CreatedDateInt { get; set; }
         public DateTime? UpdatedDate { get; set; }
         public string UpdatedDateInt { get; set; }
+        public IList<SelectListItem> InfrastructureList { get; set; }
     }
 }
