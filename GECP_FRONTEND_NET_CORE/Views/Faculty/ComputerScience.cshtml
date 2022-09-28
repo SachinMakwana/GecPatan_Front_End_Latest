@@ -12,124 +12,26 @@
 </div>
     <div class="container mt-4">
         <div class="row">
-            <div class="col-md-4 col-sm-6 col-xs-12 ">
-                <div class="row ourTeam-box text-center shadow">
-                    <div class="col-md-12 section1">
-                        <img src="~/images/faculty/cseHoD.jpg">
+            @foreach(var faculty in Model){
+                @if (faculty.DeptId == 300){
+
+                    <div class="col-md-4 col-sm-6 col-xs-12 ">
+                        <div class="row ourTeam-box text-center shadow">
+                            <div class="col-md-12 section1">
+                                <img src="@faculty.Image">
+                            </div>
+                            <div class="col-md-12 section2 pb-3">
+                                <h5>@faculty.Name</h5>
+                            <span>@faculty.Designation</span>
+                            </div>
+                            <a href="@Url.Action("FacultyView","Faculty",new {@id=faculty.Id})" class="nomargin section3 text-white">
+                                <div class="col-md-12"> view </div>
+                            </a>
+                        </div>
                     </div>
-                    <div class="col-md-12 section2 pb-3">
-                        <h5>Dr. HARIKRISHNA JETHVA</h5>
-                        <span>Head of Department</span>
-                    </div>
-                    <a href="profileHod.html" class="nomargin section3 text-white">
-                        <div class="col-md-12"> view </div>
-                    </a>
-                    <!-- <div class="col-md-12 section3">
-                        <a href="profileHod.html" class="text-white">view</a>
-                    </div> -->
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="row ourTeam-box text-center shadow">
-                    <div class="col-md-12 section1">
-                        <img src="~/images/faculty/csepinesh.jpg">
-                    </div>
-                    <div class="col-md-12 section2 pb-3">
-                        <h5>Mr. PINESH DARJI</h5>
-                        <span>Assistant Professor</span>
-                    </div>
-                    <a href="profilePinesh.html" class="nomargin section3 text-white">
-                        <div class="col-md-12"> view </div>
-                    </a>
-                    <!-- <div class="col-md-12 section3">
-                        <a href="profilePinesh.html" class="text-white">view</a>
-                    </div> -->
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="row ourTeam-box text-center shadow">
-                    <div class="col-md-12 section1">
-                        <img src="~/images/faculty/cseAdesh.jpg">
-                    </div>
-                    <div class="col-md-12 section2 pb-3">
-                        <h5>Mr. ADESH PANCHAL</h5>
-                        <span>Assistant Professor</span>
-                    </div>
-                    <a href="profileAdesh.html" class="nomargin section3 text-white">
-                        <div class="col-md-12"> view </div>
-                    </a>
-                    <!-- <div class="col-md-12 section3">
-                        <a href="profileAdesh.html" class="text-white">view</a>
-                    </div> -->
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="row ourTeam-box text-center shadow">
-                    <div class="col-md-12 section1">
-                        <img src="~/images/faculty/csesachin.jpg">
-                    </div>
-                    <div class="col-md-12 section2 pb-3">
-                        <h5>Mr. SACHIN MAKWANA</h5>
-                        <span>Assistant Professor</span>
-                    </div>
-                    <a href="profileSachin.html" class="nomargin section3 text-white">
-                        <div class="col-md-12"> view </div>
-                    </a>
-                    <!-- <div class="col-md-12 section3">
-                        <a href="profileSachin.html" class="text-white">view</a>
-                    </div> -->
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="row ourTeam-box text-center shadow">
-                    <div class="col-md-12 section1">
-                        <img src="~/images/faculty/csejay.jpg">
-                    </div>
-                    <div class="col-md-12 section2 pb-3">
-                        <h5>Mr. JAY PATEL</h5>
-                        <span>Assistant Professor</span>
-                    </div>
-                    <a href="profileJay.html" class="nomargin section3 text-white">
-                        <div class="col-md-12"> view </div>
-                    </a>
-                    <!-- <div class="col-md-12 section3">
-                        <a href="profileJay.html" class="text-white">view</a>
-                    </div> -->
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="row ourTeam-box text-center shadow">
-                    <div class="col-md-12 section1">
-                        <img src="~/images/faculty/csepayal.jpg">
-                    </div>
-                    <div class="col-md-12 section2 pb-3">
-                        <h5>Miss. PAYAL PRAJAPATI</h5>
-                        <span>Assistant Professor</span>
-                    </div>
-                    <a href="profilePayal.html" class="nomargin section3 text-white">
-                        <div class="col-md-12"> view </div>
-                    </a>
-                    <!-- <div class="col-md-12 section3">
-                        <a href="profilePayal.html" class="text-white">view</a>
-                    </div> -->
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="row ourTeam-box text-center shadow">
-                    <div class="col-md-12 section1">
-                        <img src="~/images/faculty/cseDivyesh.jpg">
-                    </div>
-                    <div class="col-md-12 section2 pb-3">
-                        <h5>Mr. DIVYESHKUMAR BAVISA</h5>
-                        <span>Assistant Professor</span>
-                    </div>
-                    <a href="profileDivyesh.html" class="nomargin section3 text-white">
-                        <div class="col-md-12"> view </div>
-                    </a>
-                    <!-- <div class="col-md-12 section3">
-                        <a href="profileDivyesh.html" class="text-white">view</a>
-                    </div> -->
-                </div>
-            </div>
+
+                }
+            }
+           
         </div>
     </div>

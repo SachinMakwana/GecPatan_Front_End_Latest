@@ -21,60 +21,33 @@
 
     <!---gallery-->
     <div class="row">
-        <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
-            <div class="effect">
-                <img src="~/images/events/diwali.jpg" class="gal-img">
-                <div class=" w-60 row mx-auto mg-glass"><a href="#" class="fa fa-search text-white   icone1"></a></div>
-            </div>
-        </div>
+        @foreach(var item in Model){
+            @if (item.GalleryTagId == 600){
 
-        <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
-            <div class="effect">
-                <img src="~/images/events/farwell.jpg" class="gal-img">
-                <div class=" w-60 row mx-auto mg-glass"><a href="#" class="fa fa-search text-white   icone1"></a></div>
-            </div>
-        </div>
-        <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
-            <div class="effect">
-                <img src="~/images/events/freshers-party.png" class="gal-img">
-                <div class="w-60 row    mx-auto mg-glass"><a href="#" class="fa fa-search text-white   icone1"></a>
+                <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
+                    <div class="effect">
+                        <img src="@item.Image" class="gal-img">
+                        <div class=" w-60 row mx-auto mg-glass"><a href="#" class="fa fa-search text-white   icone1"></a></div>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
-            <div class="effect">
-                <img src="~/images/events/diwali.jpg" class="gal-img">
-                <div class="w-60 row  mx-auto mg-glass"><a href="#" class="fa fa-search text-white   icone1"></a></div>
-            </div>
-        </div>
+            }
+        }
     </div>
 
     <div class="row">
-        <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
-            <div class="effect">
-                <img src="~/images/events/farwell.jpg" class="gal-img">
-                <div class="w-60 row    mx-auto mg-glass"><a href="#" class="fa fa-search text-white  icone1"></a></div>
-            </div>
-        </div>
-        <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
-            <div class="effect">
-                <img src="~/images/events/freshers-party.png" class="gal-img">
-                <div class="w-60 row   mx-auto mg-glass"><a href="#" class="fa fa-search text-white   icone1 "></a>
+    @foreach (var item in Model)
+    {
+        @if (item.GalleryTagId == 600)
+        {
+
+            <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
+                <div class="effect">
+                    <img src="@item.Image" class="gal-img">
+                    <div class=" w-60 row mx-auto mg-glass"><a href="#" class="fa fa-search text-white   icone1"></a></div>
                 </div>
             </div>
-        </div>
-        <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
-            <div class="effect">
-                <img src="~/images/events/farwell.jpg" class="gal-img">
-                <div class="w-60 row mx-auto mg-glass"><a href="#" class="fa fa-search text-white  icone1"></a></div>
-            </div>
-        </div>
-        <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
-            <div class="effect">
-                <img src="~/images/events/diwali.jpg" class="gal-img">
-                <div class="w-60 row mx-auto mg-glass"><a href="#" class="fa fa-search text-white  icone1"></a></div>
-            </div>
-        </div>
+        }
+    }
     </div>
 
     <!--speaker-container-->

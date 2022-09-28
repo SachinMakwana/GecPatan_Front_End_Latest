@@ -14,75 +14,27 @@
 <!-- Main DEsign -->
 <div class="container mt-4">
     <div class="row">
-        <div class="col-md-4 col-sm-6 col-xs-12 ">
-            <div class="row ourTeam-box text-center shadow">
-                <div class="col-md-12 section1">
-                    <img src="~/images/faculty/electrical/eeGunvantbhai.jpg">
+        @foreach (var faculty in Model)
+        {
+            @if (faculty.DeptId == 400)
+            {
+
+                <div class="col-md-4 col-sm-6 col-xs-12 ">
+                    <div class="row ourTeam-box text-center shadow">
+                        <div class="col-md-12 section1">
+                            <img src="@faculty.Image">
+                        </div>
+                        <div class="col-md-12 section2 pb-3">
+                            <h5>@faculty.Name</h5>
+                            <span>@faculty.Designation</span>
+                        </div>
+                        <a href="@Url.Action("FacultyView","Faculty",new {@id=faculty.Id})" class="nomargin section3 text-white">
+                            <div class="col-md-12"> view </div>
+                        </a>
+                    </div>
                 </div>
-                <div class="col-md-12 section2 pb-3">
-                    <h5>Mr. GUNVANTBHAI PATEL</h5>
-                    <span>Assistant Professor</span>
-                </div>
-                <a href="#" class="nomargin section3 text-white">
-                    <div class="col-md-12"> view </div>
-                </a>
-            </div>
-        </div>
-        <div class="col-md-4 col-sm-6 col-xs-12">
-            <div class="row ourTeam-box text-center shadow">
-                <div class="col-md-12 section1">
-                    <img src="~/images/faculty/electrical/eeHarshadkumar.jpg">
-                </div>
-                <div class="col-md-12 section2 pb-3">
-                    <h5>Mr. HARSHADKUMAR PATEL</h5>
-                    <span>Assistant Professor</span>
-                </div>
-                <a href="#" class="nomargin section3 text-white">
-                    <div class="col-md-12"> view </div>
-                </a>
-            </div>
-        </div>
-        <div class="col-md-4 col-sm-6 col-xs-12">
-            <div class="row ourTeam-box text-center shadow">
-                <div class="col-md-12 section1">
-                    <img src="~/images/faculty/electrical/eeAnilkumar.jpg">
-                </div>
-                <div class="col-md-12 section2 pb-3">
-                    <h5>Mr. ANILKUMAR PATEL</h5>
-                    <span>Assistant Professor</span>
-                </div>
-                <a href="#" class="nomargin section3 text-white">
-                    <div class="col-md-12"> view </div>
-                </a>
-            </div>
-        </div>
-        <div class="col-md-4 col-sm-6 col-xs-12">
-            <div class="row ourTeam-box text-center shadow">
-                <div class="col-md-12 section1">
-                    <img src="~/images/faculty/electrical/eeVijay.jpg">
-                </div>
-                <div class="col-md-12 section2 pb-3">
-                    <h5>Mr. Vijaykumar Prajapati</h5>
-                    <span>Assistant Professor</span>
-                </div>
-                <a href="#" class="nomargin section3 text-white">
-                    <div class="col-md-12"> view </div>
-                </a>
-            </div>
-        </div>
-        <div class="col-md-4 col-sm-6 col-xs-12">
-            <div class="row ourTeam-box text-center shadow">
-                <div class="col-md-12 section1">
-                    <img src="~/images/faculty/electrical/eeNaran.jpg">
-                </div>
-                <div class="col-md-12 section2 pb-3">
-                    <h5>Mr. NARAN DABHI</h5>
-                    <span>Assistant Professor</span>
-                </div>
-                <a href="#" class="nomargin section3 text-white">
-                    <div class="col-md-12"> view </div>
-                </a>
-            </div>
-        </div>
+
+            }
+        }
     </div>
 </div>
