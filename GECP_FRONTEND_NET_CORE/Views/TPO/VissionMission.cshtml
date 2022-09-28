@@ -13,34 +13,30 @@
         Training And Placement Cell
     </div>
 </div>
-
 <div class="container my-5">
     <div class="row">
         <div class="tpo-block col shadow p-4 m-4 bg-dark text-white">
             <div class="headings h4 mx-3">VISION</div>
-            <div class="px-3">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur optio ea enim reiciendis, modi
-                necessitatibus recusandae consectetur accusamus asperiores dicta at earum a, laudantium
-                exercitationem
-                nam amet dolorum fugiat qui.
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem delectus omnis nobis eveniet,
-                dolorem ut minima iusto ad. Pariatur earum deserunt enim ipsam harum tempore adipisci? Delectus,
-                praesentium accusamus eos, inventore dignissimos rem aliquam perspiciatis tenetur officia rerum,
-                odio
-                quas.
-            </div>
+            @foreach(var vision in Model.vision){
+                @if (vision.DeptId == 700)
+                {
+                        <div class="px-3">
+                        @vision.Description
+                        </div>
+                }
+            }
         </div>
         <div class="tpo-block col shadow p-4 m-4 bg-light">
             <div class="headings h4 mx-3">MISSION</div>
-            <div class="px-3">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi quisquam reprehenderit possimus ea
-                expedita libero sed natus, repellat ut amet vero cum aperiam laudantium deleniti debitis dignissimos
-                doloribus! Voluptatibus, non.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis excepturi aliquam, non quasi nihil
-                alias
-                odio aperiam laudantium corporis tempore laborum pariatur porro vitae tempora eveniet facilis sint
-                perspiciatis commodi tenetur qui. Architecto saepe illo porro excepturi in! Voluptatibus, quam.
-            </div>
+            @foreach (var mission in Model.vision)
+            {
+                @if (mission.DeptId == 700)
+                {
+                                <div class="px-3">
+                        @mission.Description
+                                </div>
+                }
+            }
         </div>
 
     </div>

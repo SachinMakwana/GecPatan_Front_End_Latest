@@ -2,6 +2,11 @@
     ViewData["Title"] = "Home Page";
     Layout = "~/views/shared/_layout.cshtml";
 }
+@section Styles{
+    <link rel="stylesheet" href="~/css/cells.css">
+}
+
+
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -9,15 +14,14 @@
         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
     </ol>
     <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img src="images\1.jpg" class="d-block w-100 h-30vw" alt="...">
-        </div>
-        <div class="carousel-item">
-            <img src="images\2.jpg" class="d-block w-100 h-30vw" alt="...">
-        </div>
-        <div class="carousel-item">
-            <img src="images\3.jpg" class="d-block w-100 h-30vw" alt="...">
-        </div>
+        @foreach(var college in Model.gallery){
+            @if (college.GalleryTagId == 101)
+            {
+                <div class="carousel-item active">
+                    <img src="@college.Image" class="d-block w-100 h-30vw" alt="...">
+                </div>
+            }
+        }
     </div>
     <a class="carousel-control-prev mr-t-15vw" href="#carouselExampleIndicators" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -35,141 +39,19 @@
         <div class="col-md-6">
             <div class="NA-head pl-2 h4 ml-2 my-1">News & Announcement</div>
             <div class="NA-content bg-brown white mt-4 ml-2">
-                <!-- <p>
-                   <div class="row">
-                    <i class="fa fa-hand-point-right yellow t-150 symb"></i><p class="pl2 para">Lorem ipsum dolor sit amet, consectetur
-                    adipiscing elit. Vivamus gravida aliquet quam sed ultrices. Duis consectetur dui ligula, in bibendum
-                    neque auctor eu. Curabitur lectus</p>
-                   </div>
-                   <div class="row">
-                    <i class="fa fa-hand-point-right yellow t-150 symb"></i><p class="pl2 para">Lorem ipsum dolor sit amet, consectetur
-                    adipiscing elit. Vivamus gravida aliquet quam sed ultrices. Duis consectetur dui ligula, in bibendum
-                    neque auctor eu. Curabitur lectus</p>
-                   </div>
-                   <div class="row">
-                    <i class="fa fa-hand-point-right yellow t-150 symb"></i><p class="pl2 para">Lorem ipsum dolor sit amet, consectetur
-                    adipiscing elit. Vivamus gravida aliquet quam sed ultrices. Duis consectetur dui ligula, in bibendum
-                    neque auctor eu. Curabitur lectus</p>
-                   </div>
-                   <div class="row">
-                    <i class="fa fa-hand-point-right yellow t-150 symb"></i><p class="pl2 para">Lorem ipsum dolor sit amet, consectetur
-                    adipiscing elit. Vivamus gravida aliquet quam sed ultrices. Duis consectetur dui ligula, in bibendum
-                    neque auctor eu. Curabitur lectus</p>
-                   </div>
-                </p> -->
+                
                 <marquee scrollamount="3" direction="up" onmouseover="stop();" scrollamount="2" onmouseout="start();" loop="500" style="height: 100%; background-color: transparent;">
                     <nav id="sidebar">
                         <ul id="newupdates" class="list-unstyled components">
-
-                            <li>
-                                <div class="row">
-                                    <i class="fa fa-hand-point-right yellow t-150 symb"></i><p class="pl-2 para">
-                                        Lorem ipsum dolor sit amet, consectetur
-                                        adipiscing elit. Vivamus gravida aliquet quam sed ultrices. Duis consectetur dui ligula, in bibendum
-                                        neque auctor eu. Curabitur lectus
-                                    </p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="row">
-                                    <i class="fa fa-hand-point-right yellow t-150 symb"></i><p class="pl-2 para">
-                                        Lorem ipsum dolor sit amet, consectetur
-                                        adipiscing elit. Vivamus gravida aliquet quam sed ultrices. Duis consectetur dui ligula, in bibendum
-                                        neque auctor eu. Curabitur lectus
-                                    </p>
-                                </div>
-                            </li>
-
-                            <li>
-                                <div class="row">
-                                    <i class="fa fa-hand-point-right yellow t-150 symb"></i><p class="pl-2 para">
-                                        Lorem ipsum dolor sit amet, consectetur
-                                        adipiscing elit. Vivamus gravida aliquet quam sed ultrices. Duis consectetur dui ligula, in bibendum
-                                        neque auctor eu. Curabitur lectus
-                                    </p>
-                                </div>
-
-                            </li>
-
-                            <li>
-                                <div class="row">
-                                    <i class="fa fa-hand-point-right yellow t-150 symb"></i><p class="pl-2 para">
-                                        Lorem ipsum dolor sit amet, consectetur
-                                        adipiscing elit. Vivamus gravida aliquet quam sed ultrices. Duis consectetur dui ligula, in bibendum
-                                        neque auctor eu. Curabitur lectus
-                                    </p>
-                                </div>
-                            </li>
-
-
-
-                            <!-- <li> <a href="http://acpdc.co.in/request" target="_blank" class="parentLink">
-                                    <img src="Content/img/new.gif"><b>સીટુડીના</b> જે ઉમેદવારોના રજિસ્ટ્રેશન
-                                    વખતે જરૂરી પ્રમાણપત્રો/દસ્તાવેજો ઉપલબ્ધ ન હોય તેવા કિસ્સાઓમાં હવે
-                                    રજિસ્ટ્રેશન એપ્લિકેશનમાં તેઓની વિગતોમાં (જેવી કે કેટેગરી/TFWS વગેરેમાં)
-                                    સુધારા માટે જરૂરી પ્રમાણપત્રો/દસ્તાવેજો આ ફોર્મમાં ભરી ૧૪/૦૭/૨૦૨૨ સુધીમા અપલોડ
-                                    કરવાના રહેશે.
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="http://acpdc.co.in/Content/information/2022/CtoD/ctod_query_docs_15-06-2022.pdf"
-                                    target="_blank" class="parentLink"><img src="Content/img/new.gif">સીટુડી
-                                    પ્રવેશ અંગે અગત્યની સૂચના</a>
-                            </li> -->
-
-                            <li>
-                                <div class="row">
-                                    <i class="fa fa-hand-point-right yellow t-150 symb"></i><p class="pl-2 para">
-                                        Lorem ipsum dolor sit amet, consectetur
-                                        adipiscing elit. Vivamus gravida aliquet quam sed ultrices. Duis consectetur dui ligula, in bibendum
-                                        neque auctor eu. Curabitur lectus
-                                    </p>
-                                </div>
-                            </li>
-
-
-                            <li>
-                                <div class="row">
-                                    <i class="fa fa-hand-point-right yellow t-150 symb"></i><p class="pl-2 para">
-                                        Lorem ipsum dolor sit amet, consectetur
-                                        adipiscing elit. Vivamus gravida aliquet quam sed ultrices. Duis consectetur dui ligula, in bibendum
-                                        neque auctor eu. Curabitur lectus
-                                    </p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="row">
-                                    <i class="fa fa-hand-point-right yellow t-150 symb"></i><p class="pl-2 para">
-                                        Lorem ipsum dolor sit amet, consectetur
-                                        adipiscing elit. Vivamus gravida aliquet quam sed ultrices. Duis consectetur dui ligula, in bibendum
-                                        neque auctor eu. Curabitur lectus
-                                    </p>
-                                </div>
-                            </li>
-
-                            <li>
-                                <div class="row">
-                                    <i class="fa fa-hand-point-right yellow t-150 symb"></i><p class="pl-2 para">
-                                        Lorem ipsum dolor sit amet, consectetur
-                                        adipiscing elit. Vivamus gravida aliquet quam sed ultrices. Duis consectetur dui ligula, in bibendum
-                                        neque auctor eu. Curabitur lectus
-                                    </p>
-                                </div>
-                            </li>
-
-                            <li>
-                                <div class="row">
-                                    <i class="fa fa-hand-point-right yellow t-150 symb"></i><p class="pl-2 para">
-                                        Lorem ipsum dolor sit amet, consectetur
-                                        adipiscing elit. Vivamus gravida aliquet quam sed ultrices. Duis consectetur dui ligula, in bibendum
-                                        neque auctor eu. Curabitur lectus
-                                    </p>
-                                </div>
-
-                            </li>
-
-
+                            @foreach (var news in Model.newsList){
+                                <li>
+                                    <div class="row">
+                                        <i class="fa fa-hand-point-right yellow t-150 symb"></i><p class="pl-2 para">
+                                            @news.Title :: @news.Description
+                                        </p>
+                                    </div>
+                                </li>
+                            }
                         </ul>
 
                     </nav>
@@ -178,27 +60,17 @@
         </div>
         <div class="col-md-6">
             <div class="NA-head ml-2 h4 my-1">Events</div>
-            <!-- <div class="sliding" id="manual"></div>
-            <div class="row mt-3 w-90">
-                <div class="row w-132p mr-auto justi-saround">
-                    <div class="t-200 align-center white bg-blue square-50p align-middle cursor" onClick="prev()">&#60;
-                    </div>
-                    <div class="t-200 align-center white bg-blue square-50p align-middle cursor" onClick="next()">&gt;
-                    </div>
-                </div>
-                <div class="bg-blue white ReadMore align-middle pad-2 cursor">Read More</div>
-            </div> -->
+            
             <div id="carouselExampleControls" class="carousel slide mt-4 ml-2" data-ride="carousel">
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="images\1.jpg" class="d-block w-100 h-17vw" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images\2.jpg" class="d-block w-100 h-17vw" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images\3.jpg" class="d-block w-100 h-17vw" alt="...">
-                    </div>
+                    @foreach(var events in Model.gallery){
+                        @if (events.GalleryTagId == 600)
+                        {
+                            <div class="carousel-item active">
+                                <img src="@events.Image" class="d-block w-100 h-17vw" alt="...">
+                            </div>
+                        }
+                    }
                 </div>
                 <div class="mt-3 col-11">
                     <div class="row">
@@ -274,68 +146,19 @@
     </div>
 </div>
 
-<!-- OLD Carousel -->
-<!-- <div id="s-container-1"></div>
-<div id="s-container-2"></div>
-<div id="s-container-3"></div>
-<div id="s-container-4"></div>
-<div class="nav-manual mr-t-23 left-48">
-    <div class="nav-btn white-border" onClick="s2()" id="p2"></div>
-    <div class="nav-btn white-border" onClick="s1()" id="p1"></div>
-</div> -->
-<!-- <div class="placement mt-3">
-    <div class="IP">Incredible Placement</div>
-    <div id="carouselExampleIndicators" class="carousel slide mt-5" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        </ol>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div id="s-container-1"></div>
-                <div id="s-container-2"></div>
-                <div id="s-container-3"></div>
-                <div id="s-container-4"></div>
-            </div>
-            <div class="carousel-item">
-                <div id="s-container-5"></div>
-                <div id="s-container-6"></div>
-                <div id="s-container-7"></div>
-                <div id="s-container-8"></div>
-            </div>
-        </div>
-    </div>
-</div> -->
-<!-- OWL Carousel -->
 <div class="placement mt-3">
     <div class="IP">Incredible Placement</div>
 
     <div class="mt-4 mx-auto">
         <div class="owl-carousel owl-theme" id="owlIndex2">
-            <div class="item p-2">
-                <img src="images/p1.jpg" alt="">
-            </div>
-            <div class="item p-2">
-                <img src="images/p2.jpg" alt="">
-            </div>
-            <div class="item p-2">
-                <img src="images/p3.jpg" alt="">
-            </div>
-            <div class="item p-2">
-                <img src="images/p4.jpg" alt="">
-            </div>
-            <div class="item p-2">
-                <img src="images/1.jpg" alt="">
-            </div>
-            <div class="item p-2">
-                <img src="images/2.jpg" alt="">
-            </div>
-            <div class="item p-2">
-                <img src="images/3.jpg" alt="">
-            </div>
-            <div class="item p-2">
-                <img src="images/4.jpg" alt="">
-            </div>
+            @foreach(var placement in Model.gallery){
+                @if (placement.GalleryTagId == 700)
+                {
+                    <div class="item p-2">
+                        <img src="@placement.Image" alt="">
+                    </div>
+                }
+            }
         </div>
     </div>
 </div>
