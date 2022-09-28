@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace BACKEND_HTML_DOT_NET.Models
+namespace GECP_FRONTEND_NET_CORE.Models
 {
     public class MissionVM
     {

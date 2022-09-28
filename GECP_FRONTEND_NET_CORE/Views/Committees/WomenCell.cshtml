@@ -10,56 +10,60 @@
 <!--  Cell container   -->
 
     <!-- 1 - background image with title -->
-<div class="header-block row d-flex align-items-center mx-auto">
+@foreach (var item in Model.committe){
+    @if (item.Name == "Women Cell")
+    {
+    <div class="header-block row d-flex align-items-center mx-auto">
     <img src="~/images/cells/women.jpg" />
         <div class="text-block mx-auto text-block mx-auto d-flex align-items-center justify-content-center">
-            Women cell
+            
+                @item.Name
+           
         </div>
     </div>
 
     <!-- 2 - About women cell row -->
     <div class="about-women-cell row align-items-center mt-5">
         <div class="img-student d-flex justify-content-center mx-auto col-md-6 col-lg-6 col-xl-6 col-12 ">
-            <img src="~/images/cells/students4.jpg" />
+            <img src="@item.Image" />
         </div>
 
         <div class="col-md-6 col-lg-6 col-xl-6 col-12 p-5">
             <div class="headings h4 font-weight-bold">About Women Cell</div>
-            <div class="mt-4 text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam quibusdam aspernatur
-                inventore commodi aliquid autem illo nemo vitae rem veritatis repellat magni, cupiditate sed provident
-                officiis voluptatem voluptas error magnam minus, id expedita! Omnis minus, iste ad error sit odio
-                provident dolorem placeat veniam amet cupiditate incidunt maxime veritatis cum reprehenderit deleniti
-                nemo quibusdam eius possimus labore eligendi, ullam blanditiis? Tempora amet deleniti aspernatur
-                voluptatibus ex eos cum repellat dolor?
-                magnam minus, id expedita! Omnis minus, iste ad error sit odio
-                provident dolorem placeat veniam amet cupiditate incidunt maxime veritatis cum reprehenderit deleniti                
+            <div class="mt-4 text-justify">
+                    @item.Description
             </div>
         </div>
-    </div>
+        </div>
+        break;
+    }
+}
+
 
     <!-- 3 - Vision-Mission row -->
     <div class="row align-items-center mt-5 mb-5">
+        @foreach(var vision in Model.vision){
         <div class="bg-dark text-white col-md-6 col-lg-6 col-xl-6 col-12 p-5">
             <div class="headings h4 font-weight-bold">Vision</div>
             <div class="mt-4 text-justify">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae, iure! Autem aperiam
-                atque, minus maiores perferendis et fugiat eligendi perspiciatis animi! Amet, corrupti atque, rem
-                ratione commodi ad enim autem debitis qui illum blanditiis facilis consectetur, voluptatibus voluptas
-                odio odit? Neque explicabo nisi voluptatem alias, amet nostrum, possimus exercitationem iure facilis
-                fugiat commodi. Magni animi omnis optio nobis id unde.
+                @if(vision.DeptId == 5){
+                    @vision.Description
+                }
             </div>
         </div>
+        }
+        @foreach(var mission in Model.mission){
 
         <div class="bg-light text-dark col-md-6 col-lg-6 col-xl-6 col-12 p-5">
             <div class="headings h4 font-weight-bold">Mission</div>
             <div class="mt-4 text-justify">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus facilis rerum eum adipisci
-                exercitationem autem vel quasi aspernatur. Et harum architecto soluta esse veritatislaudantium, nam
-                voluptatibus minima dolores voluptatum quis, itaque provident alias amet. Veritatis, atque architecto?
-                Mollitia, possimus veritatis quae itaque, quo magni omnis, illo inventore cumque illum esse quisquam
-                recusandae cum maxime placeat? Expedita eligendi enim reiciendis.
+                @if (mission.DeptId == 5)
+                {
+                    @mission.Description
+                }
             </div>
         </div>
+        }
     </div>
 
 
@@ -68,35 +72,14 @@
         <div class="h4 text-center font-weight-bold">ACTIVITIES</div>
         <div class="text-center font-weight-bold text-blue mb-4">Some Random tagline related to the cell</div>
         <div class="owl-carousel owl-theme">
-            <div class="item">
-            <img src="~/images/cells/book.jpg" />
-            </div>
-            <div class="item">
-            <img src="~/images/cells/book.jpg" />
-            </div>
-            <div class="item">
-            <img src="~/images/cells/book.jpg" />
-            </div>
-            <div class="item">
-            <img src="~/images/cells/book.jpg" />
-            </div>
-            <div class="item">
-            <img src="~/images/cells/book1.jpg" />
-            </div>
-            <div class="item">
-            <img src="~/images/cells/book1.jpg" />
-            </div>
-            <div class="item">
-            <img src="~/images/cells/book1.jpg" />
-            </div>
-            <div class="item">
-            <img src="~/images/cells/book1.jpg" />
-            </div>
-            <div class="item">
-            <img src="~/images/cells/book1.jpg" />
-            </div>
-            <div class="item">
-            <img src="~/images/cells/book.jpg" />
+        @foreach (var activities in Model.gallery){
+            @if (activities.GalleryTagId == 500)
+            {
+                <div class="item">
+                    <img src="@activities.Image" />
+                </div>
+            }
+        }
             </div>
         </div>
     </div>
@@ -151,53 +134,27 @@
         <div class="p-2"> <div class="headings h4 font-weight-bold">Meet Our Team</div>  </div>
         <div class="row align-items-center">
             <div class="owl-carousel owl-theme" id="owlMeet">
-                <div class="item">
-                    <div class="mx-auto p-2">
-                        <div class="image">
-                        <img src="~/images/cells/kelly-sikkema-JN0SUcTOig0-unsplash.jpg" id="meetTeamImg1" class="image-img image-overlay-blur img-fluid" alt="">
-                            <div class="image-overlay text-center">
-                                <div class="img-title font-weight-bold">Kelly Sikkema</div>
-                                <p class="img-desc">CEO</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class = "item">
-                    <div class="mx-auto p-2">
-                        <div class="image">
-                        <img src="~/images/cells/kelly-sikkema-JN0SUcTOig0-unsplash.jpg" id="meetTeamImg1" class="image-img image-overlay-blur img-fluid" alt="">
-                            <div class="image-overlay text-center">
-                                <div class="img-title font-weight-bold">Kelly Sikkema</div>
-                                <p class="img-desc">CEO</p>
+            @foreach (var member in Model.members)
+            {
+                @foreach (var faculty in Model.facultyList)
+                {
+                    @if (member.FacultyId == faculty.Id)
+                    {
+                        <div class="item">
+                            <div class="mx-auto p-2">
+                                <div class="image">
+                                    <img src="@faculty.Image" id="meetTeamImg1" class="image-img image-overlay-blur img-fluid" alt="">
+                                    <div class="image-overlay text-center">
+                                        <div class="img-title font-weight-bold">@faculty.Name</div>
+                                        <p class="img-desc">@member.Role</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                
-                <div class = "item">
-                    <div class="mx-auto p-2">
-                        <div class="image">
-                        <img src="~/images/cells/christopher-campbell-rDEOVtE7vOs-unsplash.jpg" id="meetTeamImg1" class="image-img image-overlay-blur img-fluid" alt="">
-                            <div class="image-overlay text-center">
-                                <div class="img-title font-weight-bold">Christopher Campbell</div>
-                                <p class="img-desc">CEO</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class = "item">
-                    <div class="mx-auto p-2">
-                        <div class="image">
-                        <img src="~/images/cells/christopher-campbell-rDEOVtE7vOs-unsplash.jpg" id="meetTeamImg1" class="image-img image-overlay-blur img-fluid" alt="">
-                            <div class="image-overlay text-center">
-                                <div class="img-title font-weight-bold">Christopher Campbell</div>
-                                <p class="img-desc">CEO</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    }
+                }
+               }
 
             </div>
             
@@ -211,43 +168,15 @@
         <div class="owl-carousel owl-theme owl-loaded align-items-center p-3">
             <div class="owl-stage-outer  ">
                 <div class="owl-stage">
-                    <div class="owl-item">
-                    <img src="~/images/cells/photogallery1.jpg" />
-                    </div>
-                    <div class="owl-item ">
-                    <img src="~/images/cells/photogallery1.jpg" />
-                    </div>
-                    <div class="owl-item">
-                    <img src="~/images/cells/photogallery1.jpg" />
-                    </div>
-                    <div class="owl-item">
-                    <img src="~/images/cells/photogallery1.jpg" />
-                    </div>
-                    <div class="owl-item">
-                    <img src="~/images/cells/photogallery1.jpg" />
-                    </div>
-                    <div class="owl-item">
-                    <img src="~/images/cells/photogallery1.jpg" />
-                    </div>
-                    <div class="owl-item">
-                    <img src="~/images/cells/photogallery1.jpg" />
-                    </div>
-                    <div class="owl-item">
-                    <img src="~/images/cells/photogallery1.jpg" />
-                    </div>
-                    <div class="owl-item">
-                    <img src="~/images/cells/photogallery1.jpg" />
-                    </div>
-                    <div class="owl-item">
-                    <img src="~/images/cells/photogallery1.jpg" />
-                    </div>
-                    <div class="owl-item">
-                    <img src="~/images/cells/photogallery1.jpg" />
-                    </div>
-                    <div class="owl-item">
-                    <img src="~/images/cells/photogallery1.jpg" />
-                    </div>
-                </div>
+                @foreach (var photo in Model.gallery)
+                    @if (photo.GalleryTagId == 501)
+                    {
+                        <div class="owl-item">
+                            <img src="~/images/cells/photogallery1.jpg" />
+                        </div>
+                    }
+                }
+            </div>
             </div>
             
         </div>
