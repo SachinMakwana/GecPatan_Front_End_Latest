@@ -1,4 +1,4 @@
-﻿
+﻿@using System.Web
 @{
     ViewData["Title"] = "ComputerScience";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -71,7 +71,7 @@
 
 @foreach (var department in Model.departmentVM)
 {
-    @if (department.Name == "CSE")
+    @if (department.Id == 2)
     {
         <div class="header-block row d-flex align-items-center mx-auto">
             <img src="~/images/faculty/cse2.jpg" />
@@ -88,7 +88,7 @@
                 </div>
                 <div class="col-md-6 col-sm-6 my-2">
                     <div class="description t-80">
-                        @department.Description
+                        @Html.Raw(HttpUtility.HtmlDecode(department.Description))
                     </div>
                 </div>
             </div>
@@ -107,7 +107,8 @@
             <div class="mesdean">
                 <div class="headings h2 t-200">Message from the HOD </div>
                 <div class="description t-80">
-                    @department.Message
+                    @Html.Raw(HttpUtility.HtmlDecode(department.Message))
+
                 </div>
             </div>
         </div>
@@ -127,7 +128,7 @@
 
         @foreach (var faculty in Model.facultyVMList)
         {
-            @if (faculty.DeptId == 300)
+            @if (faculty.DeptId >= 300)
             {
                 <div class="item">
                     <div class="p-2">

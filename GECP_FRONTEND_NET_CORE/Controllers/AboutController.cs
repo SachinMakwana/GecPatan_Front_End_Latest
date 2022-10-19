@@ -80,7 +80,7 @@ namespace GECP_FRONTEND_NET_CORE.Controllers
                 galleryVM = user.data;
                 foreach (var data in galleryVM)
                 {
-                    if (data.GalleryTagId == 100)
+                    if (data.GalleryTagId >= 200)
                     {
                         galleryVM2.Add(data);
                     }
@@ -122,7 +122,7 @@ namespace GECP_FRONTEND_NET_CORE.Controllers
             var user = JsonConvert.DeserializeObject<ServiceResponse<List<CollegeVM>>>(content);
             foreach (var data in collegeVM)
             {
-                data.Image = "https://localhost:44374/" + data.Image;
+                data.Image = imageBaseUrl + data.Image;
             }
             collegeVM = user.data;
             return View(collegeVM);

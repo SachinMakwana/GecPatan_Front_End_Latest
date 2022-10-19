@@ -42,7 +42,7 @@ namespace GECP_FRONTEND_NET_CORE.Controllers
                 departmentVMList = user.data;
                 foreach (var data in departmentVMList)
                 {
-                    data.Image = "https://localhost:44374/" + data.Image;
+                    data.Image = imageBaseUrl + data.Image;
                 }
             }
 
@@ -59,7 +59,7 @@ namespace GECP_FRONTEND_NET_CORE.Controllers
                 facultyVMList = user.data;
                 foreach (var data in facultyVMList)
                 {
-                    data.Image = "https://localhost:44374/" + data.Image;
+                    data.Image = imageBaseUrl + data.Image;
                 }
             }
 

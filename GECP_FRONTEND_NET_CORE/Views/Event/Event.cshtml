@@ -22,7 +22,7 @@
     <!---gallery-->
     <div class="row">
         @foreach(var item in Model){
-            @if (item.GalleryTagId == 600){
+            @if (item.GalleryTagId >= 700){
 
                 <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
                     <div class="effect">
@@ -37,7 +37,7 @@
     <div class="row">
     @foreach (var item in Model)
     {
-        @if (item.GalleryTagId == 600)
+        @if (item.GalleryTagId >= 700)
         {
 
             <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">

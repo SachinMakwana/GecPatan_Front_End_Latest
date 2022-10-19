@@ -65,7 +65,7 @@
             <div id="carouselExampleControls" class="carousel slide mt-4 ml-2" data-ride="carousel">
                 <div class="carousel-inner">
                     @foreach(var events in Model.gallery){
-                        @if (events.GalleryTagId == 600)
+                        @if (events.GalleryTagId >= 700)
                         {
                             <div class="carousel-item active">
                                 <img src="@events.Image" class="d-block w-100 h-17vw" alt="...">
@@ -153,7 +153,7 @@
     <div class="mt-4 mx-auto">
         <div class="owl-carousel owl-theme" id="owlIndex2">
             @foreach(var placement in Model.gallery){
-                @if (placement.GalleryTagId == 700)
+                @if (placement.GalleryTagId >= 800)
                 {
                     <div class="item p-2">
                         <img src="@placement.Image" alt="">

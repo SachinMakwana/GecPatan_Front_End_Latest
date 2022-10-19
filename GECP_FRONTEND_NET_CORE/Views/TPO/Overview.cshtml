@@ -1,4 +1,4 @@
-﻿
+﻿@using System.Web
 @{
     ViewData["Title"] = "Overview";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -197,7 +197,8 @@
                         <div class="p-2 pt-5 h-frame mx-auto" id="compstate-2">
                             <p class="blue align-center">@company.Title</p>
                             <div class="content">
-                                @company.Description
+                                @Html.Raw(HttpUtility.HtmlDecode(company.Description))
+
                             </div>
                         </div>
                     </div>

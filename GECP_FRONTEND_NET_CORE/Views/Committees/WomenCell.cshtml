@@ -1,4 +1,4 @@
-﻿
+﻿@using System.Web
 @{
     ViewData["Title"] = "WomenCell";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -7,133 +7,140 @@
     <link href="@Url.Content("~/css/cells.css")" rel="stylesheet" />
 }
 
-<!--  Cell container   -->
-
+    <!--  Cell container   -->
     <!-- 1 - background image with title -->
-@foreach (var item in Model.committe){
+@foreach (var item in Model.committe)
+{
     @if (item.Name == "Women Cell")
     {
-    <div class="header-block row d-flex align-items-center mx-auto">
-    <img src="~/images/cells/women.jpg" />
-        <div class="text-block mx-auto text-block mx-auto d-flex align-items-center justify-content-center">
-            
+        <div class="header-block row d-flex align-items-center mx-auto">
+            <img src="~/images/cells/women.jpg" />
+            <div class="text-block mx-auto text-block mx-auto d-flex align-items-center justify-content-center">
+
                 @item.Name
-           
-        </div>
-    </div>
 
-    <!-- 2 - About women cell row -->
-    <div class="about-women-cell row align-items-center mt-5">
-        <div class="img-student d-flex justify-content-center mx-auto col-md-6 col-lg-6 col-xl-6 col-12 ">
-            <img src="@item.Image" />
-        </div>
-
-        <div class="col-md-6 col-lg-6 col-xl-6 col-12 p-5">
-            <div class="headings h4 font-weight-bold">About Women Cell</div>
-            <div class="mt-4 text-justify">
-                    @item.Description
             </div>
         </div>
+
+        <!-- 2 - About women cell row -->
+        <div class="about-women-cell row align-items-center mt-5">
+            <div class="img-student d-flex justify-content-center mx-auto col-md-6 col-lg-6 col-xl-6 col-12 ">
+                <img src="@item.Image" />
+            </div>
+
+            <div class="col-md-6 col-lg-6 col-xl-6 col-12 p-5">
+                <div class="headings h4 font-weight-bold">About Women Cell</div>
+                <div class="mt-4 text-justify">
+                    @Html.Raw(HttpUtility.HtmlDecode(item.Description))
+
+                </div>
+            </div>
         </div>
         break;
     }
 }
 
 
-    <!-- 3 - Vision-Mission row -->
-    <div class="row align-items-center mt-5 mb-5">
-        @foreach(var vision in Model.vision){
-        <div class="bg-dark text-white col-md-6 col-lg-6 col-xl-6 col-12 p-5">
-            <div class="headings h4 font-weight-bold">Vision</div>
-            <div class="mt-4 text-justify">
-                @if(vision.DeptId == 5){
-                    @vision.Description
-                }
+<!-- 3 - Vision-Mission row -->
+<div class="row align-items-center mt-5 mb-5">
+    @foreach (var vision in Model.vision)
+    {
+        @if (vision.DeptId == 1001)
+        {
+            <div class="bg-dark text-white col-md-6 col-lg-6 col-xl-6 col-12 p-5">
+                <div class="headings h4 font-weight-bold">Vision</div>
+                <div class="mt-4 text-justify">
+                    @Html.Raw(HttpUtility.HtmlDecode(vision.Description))
+
+                </div>
             </div>
-        </div>
         }
-        @foreach(var mission in Model.mission){
+    }
+    @foreach (var mission in Model.mission)
+    {
 
-        <div class="bg-light text-dark col-md-6 col-lg-6 col-xl-6 col-12 p-5">
-            <div class="headings h4 font-weight-bold">Mission</div>
-            <div class="mt-4 text-justify">
-                @if (mission.DeptId == 5)
-                {
-                    @mission.Description
-                }
+        @if (mission.DeptId == 1001)
+        {
+            <div class="bg-light text-dark col-md-6 col-lg-6 col-xl-6 col-12 p-5">
+                <div class="headings h4 font-weight-bold">Mission</div>
+                <div class="mt-4 text-justify">
+                    @Html.Raw(HttpUtility.HtmlDecode(mission.Description))
+
+                </div>
             </div>
-        </div>
         }
-    </div>
+    }
+</div>
 
 
-    <!-- 4 - Activities -->
-    <div class="mx-5 my-3">
-        <div class="h4 text-center font-weight-bold">ACTIVITIES</div>
-        <div class="text-center font-weight-bold text-blue mb-4">Some Random tagline related to the cell</div>
-        <div class="owl-carousel owl-theme">
-        @foreach (var activities in Model.gallery){
-            @if (activities.GalleryTagId == 500)
+<!-- 4 - Activities -->
+<div class="mx-5 my-3">
+    <div class="h4 text-center font-weight-bold">ACTIVITIES</div>
+    <div class="text-center font-weight-bold text-blue mb-4">Some Random tagline related to the cell</div>
+    <div class="owl-carousel owl-theme">
+        @foreach (var activities in Model.gallery)
+        {
+            @if (activities.GalleryTagId == 1001)
             {
                 <div class="item">
                     <img src="@activities.Image" />
                 </div>
             }
         }
+    </div>
+</div>
+    </div>
+
+<!-- 5 - Objectives -->
+<div class="objectives">
+    <!-- <img src="images/cells//studentclass.jpg" alt=""> -->
+
+    <div class="object-block  mt-5 p-5">
+
+        <div class="text-center d-flex justify-content-center">
+            <div class="headings h4 text-center font-weight-bold text-white mb-4">OBJECTIVES</div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-md-4 col-lg-4 col-xl-4 col-12 text-white">
+                <div class="num h1 my-3">01</div>
+                <div class="title h4 my-3">REACH</div>
+                <div class="text text-justify">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere perspiciatis delectus ducimus
+                    optio, numquam provident quis aut vitae cum possimus doloremque minus aperiam ipsum adipisci
+                    omnis! Magnam debitis eum consequuntur!
+                </div>
+            </div>
+
+            <div class="col-md-4 col-lg-4 col-xl-4 col-12 text-white">
+                <div class="num h1 my-3">02</div>
+                <div class="title h4 my-3">BENEFICIAL</div>
+                <div class="text text-justify">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere perspiciatis delectus ducimus
+                    optio, numquam provident quis aut vitae cum possimus doloremque minus aperiam ipsum adipisci
+                    omnis! Magnam debitis eum consequuntur!
+                </div>
+            </div>
+
+            <div class="col-md-4 col-lg-4 col-xl-4 col-12 text-white">
+                <div class="num h1 my-3">03</div>
+                <div class="title h4 my-3">EMPOWER</div>
+                <div class="text text-justify">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere perspiciatis delectus ducimus
+                    optio, numquam provident quis aut vitae cum possimus doloremque minus aperiam ipsum adipisci
+                    omnis! Magnam debitis eum consequuntur!
+                </div>
             </div>
         </div>
     </div>
+</div>
 
-    <!-- 5 - Objectives -->
-    <div class="objectives">
-        <!-- <img src="images/cells//studentclass.jpg" alt=""> -->
+<!-- 6 - Meet our team -->
+<div class="meet-our-team p-5 bg-light">
 
-        <div class="object-block  mt-5 p-5">
-
-            <div class="text-center d-flex justify-content-center">
-                <div class="headings h4 text-center font-weight-bold text-white mb-4">OBJECTIVES</div>
-            </div>
-
-            <div class="row mt-5">
-                <div class="col-md-4 col-lg-4 col-xl-4 col-12 text-white">
-                    <div class="num h1 my-3">01</div>
-                    <div class="title h4 my-3">REACH</div>
-                    <div class="text text-justify">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere perspiciatis delectus ducimus
-                        optio, numquam provident quis aut vitae cum possimus doloremque minus aperiam ipsum adipisci
-                        omnis! Magnam debitis eum consequuntur!
-                    </div>
-                </div>
-
-                <div class="col-md-4 col-lg-4 col-xl-4 col-12 text-white">
-                    <div class="num h1 my-3">02</div>
-                    <div class="title h4 my-3">BENEFICIAL</div>
-                    <div class="text text-justify">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere perspiciatis delectus ducimus
-                        optio, numquam provident quis aut vitae cum possimus doloremque minus aperiam ipsum adipisci
-                        omnis! Magnam debitis eum consequuntur!
-                    </div>
-                </div>
-
-                <div class="col-md-4 col-lg-4 col-xl-4 col-12 text-white">
-                    <div class="num h1 my-3">03</div>
-                    <div class="title h4 my-3">EMPOWER</div>
-                    <div class="text text-justify">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere perspiciatis delectus ducimus
-                        optio, numquam provident quis aut vitae cum possimus doloremque minus aperiam ipsum adipisci
-                        omnis! Magnam debitis eum consequuntur!
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- 6 - Meet our team -->
-    <div class="meet-our-team p-5 bg-light">
-        
-        <div class="p-2"> <div class="headings h4 font-weight-bold">Meet Our Team</div>  </div>
-        <div class="row align-items-center">
-            <div class="owl-carousel owl-theme" id="owlMeet">
+    <div class="p-2"> <div class="headings h4 font-weight-bold">Meet Our Team</div>  </div>
+    <div class="row align-items-center">
+        <div class="owl-carousel owl-theme" id="owlMeet">
 
             @foreach (var member in Model.members)
             {
@@ -154,31 +161,31 @@
                         </div>
                     }
                 }
-               }
+            }
 
-            </div>
-            
         </div>
+
     </div>
+</div>
 
-    <div class="photo-gallery mx-4 my-5">
-        <div class="text-center d-flex justify-content-center align-items-center">
-            <div class="headings h4 mb-4 font-weight-bold"> Photo Gallery</div>
-        </div>
-        <div class="owl-carousel owl-theme owl-loaded align-items-center p-3">
-            <div class="owl-stage-outer  ">
-                <div class="owl-stage">
+<div class="photo-gallery mx-4 my-5">
+    <div class="text-center d-flex justify-content-center align-items-center">
+        <div class="headings h4 mb-4 font-weight-bold"> Photo Gallery</div>
+    </div>
+    <div class="owl-carousel owl-theme owl-loaded align-items-center p-3">
+        <div class="owl-stage-outer  ">
+            <div class="owl-stage">
                 @foreach (var photo in Model.gallery)
-                    @if (photo.GalleryTagId == 501)
+                    @if (photo.GalleryTagId == 1001)
                     {
                         <div class="owl-item">
-                            <img src="~/images/cells/photogallery1.jpg" />
+                            <img src="@photo.Image" />
                         </div>
                     }
                 }
             </div>
-            </div>
-            
         </div>
+
     </div>
+</div>
 

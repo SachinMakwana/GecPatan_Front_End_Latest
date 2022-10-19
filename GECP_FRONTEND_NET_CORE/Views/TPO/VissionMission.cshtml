@@ -1,4 +1,4 @@
-﻿
+﻿@using System.Web
 @{
     ViewData["Title"] = "VissionMission";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -18,22 +18,24 @@
         <div class="tpo-block col shadow p-4 m-4 bg-dark text-white">
             <div class="headings h4 mx-3">VISION</div>
             @foreach(var vision in Model.vision){
-                @if (vision.DeptId == 700)
+                @if (vision.DeptId >= 800 && vision.DeptId <= 899)
                 {
                         <div class="px-3">
-                        @vision.Description
+                        @Html.Raw(HttpUtility.HtmlDecode(vision.Description))
+
                         </div>
                 }
             }
         </div>
         <div class="tpo-block col shadow p-4 m-4 bg-light">
             <div class="headings h4 mx-3">MISSION</div>
-            @foreach (var mission in Model.vision)
+            @foreach (var mission in Model.mission)
             {
-                @if (mission.DeptId == 700)
+                @if (mission.DeptId >= 800 && mission.DeptId <= 899)
                 {
                                 <div class="px-3">
-                        @mission.Description
+                        @Html.Raw(HttpUtility.HtmlDecode(mission.Description))
+
                                 </div>
                 }
             }

@@ -1,4 +1,4 @@
-﻿
+﻿@using System.Web
 @{
     ViewData["Title"] = "Overview";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -21,7 +21,7 @@
     </div>
     <div class="col-md-6">
         <p class="description">
-                @item.Description
+                @Html.Raw(HttpUtility.HtmlDecode(item.Description))
         </p>
 
     </div>
@@ -32,35 +32,35 @@
         <h2>Departments</h2>
         <div class="boxes">
             <div class="box">
-                <img src="images/aboutus/imac.png" alt="">
+                <img src="~/images/aboutus/imac.png" alt="">
                 <h5>Computer</h5>
                 <div class="box1">
                     <h6>Intake:150</h6>
                 </div>
             </div>
             <div class="box">
-                <img src="images/aboutus/engineering.png" alt="">
+                <img src="~/images/aboutus/engineering.png" alt="">
                 <h5>Civil</h5>
                 <div class="box1">
                     <h6>Intake:120</h6>
                 </div>
             </div>
             <div class="box">
-                <img src="images/aboutus/circuit.png" alt="">
+                <img src="~/images/aboutus/circuit.png" alt="">
                 <h5>EC</h5>
                 <div class="box1">
                     <h6>Intake:30</h6>
                 </div>
             </div>
             <div class="box">
-                <img src="images/aboutus/electricity.png" alt="">
+                <img src="~/images/aboutus/electricity.png" alt="">
                 <h5>Electical</h5>
                 <div class="box1">
                     <h6>Intake:75</h6>
                 </div>
             </div>
             <div class="box">
-                <img src="images/aboutus/support.png" alt="">
+                <img src="~/images/aboutus/support.png" alt="">
                 <h5>Mechanical</h5>
                 <div class="box1">
                     <h6>Intake:75</h6>
