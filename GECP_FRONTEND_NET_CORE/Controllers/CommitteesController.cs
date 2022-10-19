@@ -54,7 +54,7 @@ namespace GECP_FRONTEND_NET_CORE.Controllers
                 committeeVMList = user.data;
                 foreach (var data in committeeVMList)
                 {
-                    data.Image = "https://localhost:44374/" + data.Image;
+                    data.Image = imageBaseUrl + data.Image;
                 }
             }
 

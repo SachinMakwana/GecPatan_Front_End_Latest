@@ -7,16 +7,21 @@ namespace GECP_FRONTEND_NET_CORE.Controllers
 {
     public class FacultyController : Controller
     {
-        private string apiBaseUrl = "https://localhost:44374/api";
+      
         HttpClient hc = new HttpClient();
         private static List<FacultyDetailsVM> facultyList = new List<FacultyDetailsVM>();
 
         RestClient client;
-        public FacultyController()
+        private string apiBaseUrl = string.Empty;
+        private string imageBaseUrl = string.Empty;
+        public FacultyController(IConfiguration configuration)
         {
 
+            apiBaseUrl = configuration["AppIdentitySettings:apiBaseUrl"];
+            imageBaseUrl = configuration["AppIdentitySettings:imageBaseUrl"];
             client = new RestClient(apiBaseUrl);
         }
+        
         public IActionResult ComputerScience()
         {
             var restRequest5 = new RestRequest("/GetAllFacultyDetails", Method.Get);
@@ -32,7 +37,7 @@ namespace GECP_FRONTEND_NET_CORE.Controllers
                 facultyList = user.data;
                 foreach (var data in facultyList)
                 {
-                    data.Image = "https://localhost:44374/" + data.Image;
+                    data.Image = imageBaseUrl + data.Image;
                 }
             }
 

@@ -9,17 +9,22 @@ namespace GECP_FRONTEND_NET_CORE.Controllers
 {
     public class CoursesController : Controller
     {
-        private string apiBaseUrl = "https://localhost:44374/api";
+        
         HttpClient hc = new HttpClient();
         private static List<DepartmentVM> departmentVMList = new List<DepartmentVM>();
         private static List<FacultyDetailsVM> facultyVMList = new List<FacultyDetailsVM>();
 
         RestClient client;
-
-        public CoursesController()
+        private string apiBaseUrl = string.Empty;
+        private string imageBaseUrl = string.Empty;
+        public CoursesController(IConfiguration configuration)
         {
+
+            apiBaseUrl = configuration["AppIdentitySettings:apiBaseUrl"];
+            imageBaseUrl = configuration["AppIdentitySettings:imageBaseUrl"];
             client = new RestClient(apiBaseUrl);
         }
+      
         public IActionResult ComputerScience()
         {
             dynamic mymodel = new ExpandoObject();

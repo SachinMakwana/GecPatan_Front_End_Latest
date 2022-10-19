@@ -88,7 +88,7 @@ namespace GECP_FRONTEND_NET_CORE.Controllers
             }
             foreach (var data in galleryVM2)
             {
-                data.Image = "https://localhost:44374/" + data.Image;
+                data.Image = imageBaseUrl + data.Image;
             }
 
             return View(galleryVM2);

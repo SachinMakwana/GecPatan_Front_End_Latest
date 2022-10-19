@@ -9,17 +9,22 @@ namespace GECP_FRONTEND_NET_CORE.Controllers
 {
     public class TPOController : Controller
     {
-        private string apiBaseUrl = "https://localhost:44374/api";
         HttpClient hc = new HttpClient();
         private static List<CompanyVM> companyList = new List<CompanyVM>();
         private static List<VisionVM> visionVMList = new List<VisionVM>();
         private static List<MissionVM> missionVMList = new List<MissionVM>();
 
         RestClient client;
-        public TPOController()
+        private string apiBaseUrl = string.Empty;
+        private string imageBaseUrl = string.Empty;
+        public TPOController(IConfiguration configuration)
         {
+
+            apiBaseUrl = configuration["AppIdentitySettings:apiBaseUrl"];
+            imageBaseUrl = configuration["AppIdentitySettings:imageBaseUrl"];
             client = new RestClient(apiBaseUrl);
         }
+      
         public IActionResult Overview()
         {
             var restRequest = new RestRequest("/GetAllCompanyDetails", Method.Get);
@@ -35,8 +40,8 @@ namespace GECP_FRONTEND_NET_CORE.Controllers
                 companyList = user.data;
                 foreach (var data in companyList)
                 {
-                    data.Image = "https://localhost:44374/" + data.Image;
-                    data.Logo = "https://localhost:44374/" + data.Logo;
+                    data.Image = imageBaseUrl + data.Image;
+                    data.Logo = imageBaseUrl + data.Logo;
                 }
             }
             return View(companyList);

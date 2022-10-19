@@ -8,15 +8,21 @@ namespace GECP_FRONTEND_NET_CORE.Controllers
 {
     public class GalleryController : Controller
     {
-        private string apiBaseUrl = "https://localhost:44374/api";
+        
         HttpClient hc = new HttpClient();
         private static List<GalleryVM> galleryList = new List<GalleryVM>();
 
         RestClient client;
-        public GalleryController()
+        private string apiBaseUrl = string.Empty;
+        private string imageBaseUrl = string.Empty;
+        public GalleryController(IConfiguration configuration)
         {
+
+            apiBaseUrl = configuration["AppIdentitySettings:apiBaseUrl"];
+            imageBaseUrl = configuration["AppIdentitySettings:imageBaseUrl"];
             client = new RestClient(apiBaseUrl);
         }
+       
         public IActionResult Gallery()
         {
             var restRequest6 = new RestRequest("/GetAllGalleryDetails", Method.Get);
@@ -32,7 +38,7 @@ namespace GECP_FRONTEND_NET_CORE.Controllers
                 galleryList = user.data;
                 foreach (var data in galleryList)
                 {
-                    data.Image = "https://localhost:44374/" + data.Image;
+                    data.Image = imageBaseUrl + data.Image;
                 }
             }
             return View(galleryList);
