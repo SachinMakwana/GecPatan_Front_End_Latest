@@ -2,6 +2,7 @@
 using GECP_FRONTEND_NET_CORE.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
 using RestSharp;
 using System.Linq;
@@ -12,42 +13,46 @@ namespace GECP_FRONTEND_NET_CORE.Controllers
 {
     public class AboutController : Controller
     {
-        private string apiBaseUrl = "https://localhost:44374/api";
         HttpClient hc = new HttpClient();
-        
-
         RestClient client;
-        public AboutController()
+
+        private string apiBaseUrl = string.Empty;
+        private string imageBaseUrl = string.Empty;
+        public AboutController(IConfiguration configuration)
         {
+
+            apiBaseUrl = configuration["AppIdentitySettings:apiBaseUrl"];
+            imageBaseUrl = configuration["AppIdentitySettings:imageBaseUrl"];
             client = new RestClient(apiBaseUrl);
         }
+
         public async Task<IActionResult> VisionMission()
         {
             List<VisionVM> visionVM = new List<VisionVM>();
             List<MissionVM> missionVM = new List<MissionVM>();
-            
-           var restRequest = new RestRequest("/GetAllVisionDetails", Method.Get);
-           restRequest.AddHeader("Accept", "application/json");
-           restRequest.RequestFormat = DataFormat.Json;
 
-           RestResponse response = client.Execute(restRequest);
+            var restRequest = new RestRequest("/GetAllVisionDetails", Method.Get);
+            restRequest.AddHeader("Accept", "application/json");
+            restRequest.RequestFormat = DataFormat.Json;
 
-           var content = response.Content;
+            RestResponse response = client.Execute(restRequest);
 
-           var user = JsonConvert.DeserializeObject<ServiceResponse<List<VisionVM>>>(content);
-           visionVM = user.data;
-            
-           var restRequest2 = new RestRequest("/GetAllMissionDetails", Method.Get);
-           restRequest2.AddHeader("Accept", "application/json");
-           restRequest2.RequestFormat = DataFormat.Json;
+            var content = response.Content;
 
-           RestResponse response2 = client.Execute(restRequest2);
+            var user = JsonConvert.DeserializeObject<ServiceResponse<List<VisionVM>>>(content);
+            visionVM = user.data;
 
-           var content2 = response2.Content;
+            var restRequest2 = new RestRequest("/GetAllMissionDetails", Method.Get);
+            restRequest2.AddHeader("Accept", "application/json");
+            restRequest2.RequestFormat = DataFormat.Json;
 
-           var user2 = JsonConvert.DeserializeObject<ServiceResponse<List<MissionVM>>>(content2);
-           missionVM = user2.data;
-            
+            RestResponse response2 = client.Execute(restRequest2);
+
+            var content2 = response2.Content;
+
+            var user2 = JsonConvert.DeserializeObject<ServiceResponse<List<MissionVM>>>(content2);
+            missionVM = user2.data;
+
             VissionMissionVM data = new VissionMissionVM();
             data.vission = visionVM.Where(m => m.DeptId == 2).FirstOrDefault().Description;
             data.mission = missionVM.Where(m => m.DeptId == 2).FirstOrDefault().Description;
@@ -75,10 +80,10 @@ namespace GECP_FRONTEND_NET_CORE.Controllers
                 galleryVM = user.data;
                 foreach (var data in galleryVM)
                 {
-                    if(data.GalleryTagId == 100)
+                    if (data.GalleryTagId == 100)
                     {
                         galleryVM2.Add(data);
-                    }  
+                    }
                 }
             }
             foreach (var data in galleryVM2)

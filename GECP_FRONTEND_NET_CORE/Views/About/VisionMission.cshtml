@@ -1,4 +1,5 @@
-﻿@{
+﻿@using System.Web
+@{
     ViewData["Title"] = "VisionMission page";
     Layout = "~/views/shared/_layout.cshtml";
 }
@@ -19,7 +20,7 @@
         <div class="col-md-6 p-4 mt-2">
             <div class="NA-head h3">Vision</div>
             <p class="pt-2 text-justify">
-                @Model.vission
+                @Html.Raw(HttpUtility.HtmlDecode(Model.vission))
             </p>
 
         </div>
@@ -28,7 +29,7 @@
         <div class="col-md-6 p-4 mb-2">
             <div class="NA-head h3">Mission</div>
             <p class="pt-2 text-justify">
-               @Model.mission
+                @Html.Raw(HttpUtility.HtmlDecode(Model.mission))
             </p>
 
         </div>
