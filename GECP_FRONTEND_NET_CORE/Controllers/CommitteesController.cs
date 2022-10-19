@@ -10,7 +10,7 @@ namespace GECP_FRONTEND_NET_CORE.Controllers
 {
     public class CommitteesController : Controller
     {
-        private string apiBaseUrl = "https://localhost:44374/api";
+       
         HttpClient hc = new HttpClient();
         private static List<CommitteeVM> committeeVMList = new List<CommitteeVM>();
         private static List<VisionVM> visionVMList = new List<VisionVM>();
@@ -19,12 +19,20 @@ namespace GECP_FRONTEND_NET_CORE.Controllers
         private static List<FacultyDetailsVM> facultyList = new List<FacultyDetailsVM>();
         private static List<GalleryVM> galleryList = new List<GalleryVM>();
 
-
         RestClient client;
-        public CommitteesController()
+
+        private string apiBaseUrl = string.Empty;
+        private string imageBaseUrl = string.Empty;
+        public CommitteesController(IConfiguration configuration)
         {
+
+            apiBaseUrl = configuration["AppIdentitySettings:apiBaseUrl"];
+            imageBaseUrl = configuration["AppIdentitySettings:imageBaseUrl"];
             client = new RestClient(apiBaseUrl);
         }
+       
+
+
         public IActionResult WomenCell()
         {
             dynamic mymodel = new ExpandoObject();

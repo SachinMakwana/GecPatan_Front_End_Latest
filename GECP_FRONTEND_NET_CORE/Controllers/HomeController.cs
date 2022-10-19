@@ -10,16 +10,22 @@ namespace GECP_FRONTEND_NET_CORE.Controllers
 {
     public class HomeController : Controller
     {
-        private string apiBaseUrl = "https://localhost:44374/api";
         HttpClient hc = new HttpClient();
         private static List<GalleryVM> galleryList = new List<GalleryVM>();
         private static List<NewsVM> newsList = new List<NewsVM>();
 
         RestClient client;
-        public HomeController()
+
+        private string apiBaseUrl = string.Empty;
+        private string imageBaseUrl = string.Empty;
+        public HomeController(IConfiguration configuration)
         {
+
+            apiBaseUrl = configuration["AppIdentitySettings:apiBaseUrl"];
+            imageBaseUrl = configuration["AppIdentitySettings:imageBaseUrl"];
             client = new RestClient(apiBaseUrl);
         }
+
         public IActionResult Index()
         {
             dynamic mymodel = new ExpandoObject();

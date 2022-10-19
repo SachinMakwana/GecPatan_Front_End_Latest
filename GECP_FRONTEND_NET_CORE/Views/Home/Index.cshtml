@@ -1,4 +1,5 @@
-﻿@{
+﻿@using System.Web
+@{
     ViewData["Title"] = "Home Page";
     Layout = "~/views/shared/_layout.cshtml";
 }
@@ -47,7 +48,7 @@
                                 <li>
                                     <div class="row">
                                         <i class="fa fa-hand-point-right yellow t-150 symb"></i><p class="pl-2 para">
-                                            @news.Title :: @news.Description
+                                            @Html.Raw(HttpUtility.HtmlDecode(news.Title)) :: @Html.Raw(HttpUtility.HtmlDecode(news.Description))
                                         </p>
                                     </div>
                                 </li>
