@@ -48,7 +48,7 @@
                                 <li>
                                     <div class="row">
                                         <i class="fa fa-hand-point-right yellow t-150 symb"></i><p class="pl-2 para">
-                                            @Html.Raw(HttpUtility.HtmlDecode(news.Title)) :: @Html.Raw(HttpUtility.HtmlDecode(news.Description))
+                                            @Html.Raw(HttpUtility.HtmlDecode(news.Title)) :: <a href="@Url.Action("NewsDetail","Home",new {@id=news.Id})" class="nav-icon fas fa-edit">click here</a>
                                         </p>
                                     </div>
                                 </li>

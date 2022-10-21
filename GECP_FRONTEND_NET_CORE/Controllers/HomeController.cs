@@ -65,5 +65,10 @@ namespace GECP_FRONTEND_NET_CORE.Controllers
 
             return View(mymodel);
         }
+        public IActionResult NewsDetail(int id = 0)
+        {
+            var item = newsList.Where(m => m.Id == id).FirstOrDefault();
+            return View(item);
+        }
     }
 }

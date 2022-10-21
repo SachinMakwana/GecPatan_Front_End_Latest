@@ -27,7 +27,7 @@
                 <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
                     <div class="effect">
                         <img src="@item.Image" class="gal-img">
-                        <div class=" w-60 row mx-auto mg-glass"><a href="#" class="fa fa-search text-white   icone1"></a></div>
+                    <div class=" w-60 row mx-auto mg-glass"><a href="@Url.Action("EventDetail","Event",new {@id=item.Id})" class="fa fa-search text-white   icone1"></a></div>
                     </div>
                 </div>
             }
@@ -43,7 +43,7 @@
             <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
                 <div class="effect">
                     <img src="@item.Image" class="gal-img">
-                    <div class=" w-60 row mx-auto mg-glass"><a href="#" class="fa fa-search text-white   icone1"></a></div>
+                    <div class=" w-60 row mx-auto mg-glass"><a href="@Url.Action("EventDetail","Event",new {@id=item.Id})" class="fa fa-search text-white   icone1"></a></div>
                 </div>
             </div>
         }

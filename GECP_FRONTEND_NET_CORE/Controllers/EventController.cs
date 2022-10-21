@@ -44,5 +44,10 @@ namespace GECP_FRONTEND_NET_CORE.Controllers
 
             return View(galleryList);
         }
+        public IActionResult EventDetail(int id = 0)
+        {
+            var item = galleryList.Where(m => m.Id == id).FirstOrDefault();
+            return View(item);
+        }
     }
 }
