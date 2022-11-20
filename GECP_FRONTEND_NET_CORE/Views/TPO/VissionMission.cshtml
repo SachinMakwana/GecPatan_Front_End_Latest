@@ -18,7 +18,7 @@
         <div class="tpo-block col shadow p-4 m-4 bg-dark text-white">
             <div class="headings h4 mx-3">VISION</div>
             @foreach(var vision in Model.vision){
-                @if (vision.DeptId >= 800 && vision.DeptId <= 899)
+                @if (vision.DeptId == 12 )
                 {
                         <div class="px-3">
                         @Html.Raw(HttpUtility.HtmlDecode(vision.Description))
@@ -31,7 +31,7 @@
             <div class="headings h4 mx-3">MISSION</div>
             @foreach (var mission in Model.mission)
             {
-                @if (mission.DeptId >= 800 && mission.DeptId <= 899)
+                @if (mission.DeptId == 12 )
                 {
                                 <div class="px-3">
                         @Html.Raw(HttpUtility.HtmlDecode(mission.Description))

@@ -1,4 +1,4 @@
-﻿@using System.Web
+﻿    @using System.Web
 @{
     ViewData["Title"] = "WomenCell";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -11,7 +11,7 @@
     <!-- 1 - background image with title -->
 @foreach (var item in Model.committe)
 {
-    @if (item.Name == "Women Cell")
+    @if (item.Name == "WOMEN CELL")
     {
         <div class="header-block row d-flex align-items-center mx-auto">
             <img src="~/images/cells/women.jpg" />
@@ -80,7 +80,7 @@
     <div class="owl-carousel owl-theme">
         @foreach (var activities in Model.gallery)
         {
-            @if (activities.GalleryTagId == 1001)
+            @if (activities.GalleryTagId == 501)
             {
                 <div class="item">
                     <img src="@activities.Image" />
@@ -176,7 +176,7 @@
         <div class="owl-stage-outer  ">
             <div class="owl-stage">
                 @foreach (var photo in Model.gallery)
-                    @if (photo.GalleryTagId == 1001)
+                    @if (photo.GalleryTagId == 501)
                     {
                         <div class="owl-item">
                             <img src="@photo.Image" />

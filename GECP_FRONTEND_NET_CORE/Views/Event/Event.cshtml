@@ -22,7 +22,7 @@
     <!---gallery-->
     <div class="row">
         @foreach(var item in Model){
-            @if (item.GalleryTagId >= 700){
+            @if (item.GalleryTagId >= 601 && item.GalleryTagId <= 699){
 
                 <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
                     <div class="effect">
@@ -37,7 +37,7 @@
     <div class="row">
     @foreach (var item in Model)
     {
-        @if (item.GalleryTagId >= 700)
+        @if (item.GalleryTagId >= 601 && item.GalleryTagId <= 699)
         {
 
             <div class="gallery col-md-3 col-sm-6 p-0 overflow-hidden">
@@ -51,7 +51,7 @@
     </div>
 
     <!--speaker-container-->
-
+@*
     <div class="ev-speaker">
         <h5>MEET OUR SPEAKER</h5>
         <h1>OUR EVENT SPEAKERS</h1>
@@ -446,4 +446,4 @@
             </div>
         </div>
         <span class="popup-btn-close">&times;</span>
-    </div>
+    </div>*@

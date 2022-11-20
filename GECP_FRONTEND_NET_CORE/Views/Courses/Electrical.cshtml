@@ -1,4 +1,5 @@
-﻿
+﻿@using System.Web
+
 @{
     ViewData["Title"] = "Electrical";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -70,7 +71,7 @@
 
 @foreach (var department in Model.departmentVM)
 {
-    @if (department.Name == "EL")
+    @if (department.Name == "ELECTRICAL ENGINEERING")
     {
         <div class="header-block row d-flex align-items-center mx-auto">
             <img src="@department.Image" />
@@ -87,7 +88,7 @@
                 </div>
                 <div class="col-md-6 col-sm-6 my-2">
                     <div class="description t-80">
-                        @department.Description
+                        @Html.Raw(HttpUtility.HtmlDecode(department.Description))
                     </div>
                 </div>
             </div>
@@ -95,20 +96,26 @@
 
         <div class="row">
             <div class="frame">
-                @foreach (var hod in Model.facultyVMList)
+                @foreach (var dept in Model.departmentVM)
                 {
-                    @if (hod.Designation == "HOD" && hod.DeptId == 300)
+                    @if (dept.Id == 7)
                     {
+                        @foreach (var hod in Model.facultyVMList)
+                        {
+                            @if (dept.Head == hod.Id)
+                            {
 
-                        <img src="@hod.Image">
-                        break;
+                                <img src="@hod.Image">
+                                break;
+                            }
+                        }
                     }
                 }
             </div>
             <div class="mesdean">
                 <div class="headings h2 t-200">Message from the HOD </div>
                 <div class="description t-80">
-                    @department.Message
+                    @Html.Raw(HttpUtility.HtmlDecode(department.Message))
                 </div>
             </div>
         </div>
@@ -128,7 +135,7 @@
 
         @foreach (var faculty in Model.facultyVMList)
         {
-            @if (faculty.DeptId == 300)
+            @if (faculty.DeptId == 7)
             {
                 <div class="item">
                     <div class="p-2">

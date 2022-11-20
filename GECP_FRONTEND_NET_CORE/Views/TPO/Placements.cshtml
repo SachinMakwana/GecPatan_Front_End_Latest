@@ -7,8 +7,17 @@
     <link rel="stylesheet" href="~/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="~/css/responsive.dataTables.min.css">
     <link href="~/css/stylesheet.css" rel="stylesheet" />
+
+    <link href="@Url.Content("~/css/principal.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/css/overview.css")" rel="stylesheet" />
+
 }
 @section Script{
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+    <script src="/js/aninum/jquery.animateNumber.min.js"></script>
+    <script src="/js/carouselowl/owl.carousel.js"></script>
+
      <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/responsive/2.3.0/js/dataTables.responsive.min.js"></script>
     <script>
@@ -22,7 +31,7 @@
 
 
         <!-- 1 - background image with title -->
-
+@*
         <div class="header-block d-flex align-items-center mx-auto">
             <!-- <div class="row">   -->
             <img src="~/images/tpo/tpo.jpg.jpg" alt="Training And Placement Cell">
@@ -115,595 +124,121 @@
         <div class="student-info mx-auto justify-content-center h4 text-center font-weight-bold text-white mb-4 ">
             <h1>Student <span> Info</span></h1>
         </div>
-        </div>
+        </div>*@
 
         <!--table data-->
-        <div class="dtable mx-auto justify-content-center p-5">
-            <table id="example" class="display responsive nowrap justify-content-center mx-auto " style="width:100%">
+    <div class="depaprtment hearderset">
+        <img src="~/images/placement.jpg" />
+        <h2 class="centered text-white">Placement</h2>
+    </div>
+    
+    <div class="clearfix "></div>
+    <div class="container">
+
+
+        <div style="overflow-x:auto;" class="table-responsive">
+            <table class="table table-striped table-bordered table-hover">
                 <thead>
                     <tr>
-                        <th class="p-4">First name</th>
-                        <th class="p-4">Middle name</th>
-                        <th class="p-4">Last name</th>
-                        <th class="p-4">Department</th>
-                        <th class="p-4">company-name</th>
-                        <th class="p-4">Salary</th>
-                        <th class="p-4">E-mail</th>
-                        <th>photo</th>
-
+                        <td rowspan="2" style="vertical-align: middle; text-align:center;">Branch</td>
+                        <td rowspan="2" style="vertical-align: middle; text-align: center;">Year</td>
+                        <td rowspan="2" style="vertical-align: middle; text-align: center;">Passout Students</td>
+                        <td colspan="4" style="vertical-align: middle; text-align: center;">Placement</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;">Placed</td>
+                        <td style="text-align:center;">Higher Study</td>
+                        <td style="text-align:center;">Business</td>
+                        <td style="text-align:center;">Placement(%)</td>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Aditya</td>
-                        <td>Girishkumar</td>
-                        <td>Patel</td>
-                        <td>computer</td>
-                        <td>RLOGICAL</td>
-                        <td>4 to 4,50 lakh</td>
-                        <td>Aditya@gmail.com</td>
-                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
+                        <td rowspan="2" style="vertical-align: middle;">Civil Engineering</td>
+                        <td style="text-align:right;">2020-21</td>
+                        <td style="text-align:right;">58</td>
+                        <td style="text-align:right;">17</td>
+                        <td style="text-align:right;">7</td>
+                        <td style="text-align:right;">2</td>
+                        <td style="text-align:right;">45</td>
                     </tr>
                     <tr>
-                        <td>Aditya</td>
-                        <td>Girishkumar</td>
-                        <td>Patel</td>
-                        <td>computer</td>
-                        <td>RLOGICAL</td>
-                        <td>4 to 4,50 lakh</td>
-                        <td>Aditya@gmail.com</td>
-                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
+                        <td style="text-align:right;">2021-22</td>
+                        <td style="text-align:right;">63</td>
+                        <td style="text-align:right;">5</td>
+                        <td style="text-align:right;">9</td>
+                        <td style="text-align:right;">3</td>
+                        <td style="text-align:right;">27</td>
                     </tr>
                     <tr>
-                        <td>Aditya</td>
-                        <td>Girishkumar</td>
-                        <td>Patel</td>
-                        <td>computer</td>
-                        <td>RLOGICAL</td>
-                        <td>4 to 4,50 lakh</td>
-                        <td>Aditya@gmail.com</td>
-                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
+                        <td rowspan="2" style="vertical-align: middle;">Mechnical Engineering</td>
+                        <td style="text-align:right;">2020-21</td>
+                        <td style="text-align:right;">92</td>
+                        <td style="text-align:right;">12</td>
+                        <td style="text-align:right;">11</td>
+                        <td style="text-align:right;">4</td>
+                        <td style="text-align:right;">29</td>
                     </tr>
                     <tr>
-                        <td>Aditya</td>
-                        <td>Girishkumar</td>
-                        <td>Patel</td>
-                        <td>computer</td>
-                        <td>RLOGICAL</td>
-                        <td>4 to 4,50 lakh</td>
-                        <td>Aditya@gmail.com</td>
-                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
+                        <td style="text-align:right;">2021-22</td>
+                        <td style="text-align:right;">114</td>
+                        <td style="text-align:right;">22</td>
+                        <td style="text-align:right;">3</td>
+                        <td style="text-align:right;">0</td>
+                        <td style="text-align:right;">22</td>
                     </tr>
                     <tr>
-                        <td>Aditya</td>
-                        <td>Girishkumar</td>
-                        <td>Patel</td>
-                        <td>computer</td>
-                        <td>RLOGICAL</td>
-                        <td>4 to 4,50 lakh</td>
-                        <td>Aditya@gmail.com</td>
-                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
+                        <td rowspan="2" style="vertical-align: middle;">Electrical Engineering</td>
+                        <td style="text-align:right;">2020-21</td>
+                        <td style="text-align:right;">62</td>
+                        <td style="text-align:right;">24</td>
+                        <td style="text-align:right;">12</td>
+                        <td style="text-align:right;">0</td>
+                        <td style="text-align:right;">58</td>
                     </tr>
                     <tr>
-                        <td>Aditya</td>
-                        <td>Girishkumar</td>
-                        <td>Patel</td>
-                        <td>computer</td>
-                        <td>RLOGICAL</td>
-                        <td>4 to 4,50 lakh</td>
-                        <td>Aditya@gmail.com</td>
-                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
+                        <td style="text-align:right;">2021-22</td>
+                        <td style="text-align:right;">51</td>
+                        <td style="text-align:right;">13</td>
+                        <td style="text-align:right;">0</td>
+                        <td style="text-align:right;">0</td>
+                        <td style="text-align:right;">25</td>
                     </tr>
                     <tr>
-                        <td>Aditya</td>
-                        <td>Girishkumar</td>
-                        <td>Patel</td>
-                        <td>computer</td>
-                        <td>RLOGICAL</td>
-                        <td>4 to 4,50 lakh</td>
-                        <td>Aditya@gmail.com</td>
-                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
+                        <td rowspan="2" style="vertical-align: middle;">Computer Science and Engineering</td>
+                        <td style="text-align:right;">2020-21</td>
+                        <td style="text-align:right;">109</td>
+                        <td style="text-align:right;">42</td>
+                        <td style="text-align:right;">22</td>
+                        <td style="text-align:right;">4</td>
+                        <td style="text-align:right;">62</td>
                     </tr>
                     <tr>
-                        <td>Aditya</td>
-                        <td>Girishkumar</td>
-                        <td>Patel</td>
-                        <td>computer</td>
-                        <td>RLOGICAL</td>
-                        <td>4 to 4,50 lakh</td>
-                        <td>Aditya@gmail.com</td>
-                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
+                        <td style="text-align:right;">2021-22</td>
+                        <td style="text-align:right;">113</td>
+                        <td style="text-align:right;">58</td>
+                        <td style="text-align:right;">24</td>
+                        <td style="text-align:right;">5</td>
+                        <td style="text-align:right;">77</td>
                     </tr>
                     <tr>
-                        <td>Aditya</td>
-                        <td>Girishkumar</td>
-                        <td>Patel</td>
-                        <td>computer</td>
-                        <td>RLOGICAL</td>
-                        <td>4 to 4,50 lakh</td>
-                        <td>Aditya@gmail.com</td>
-                        <td><img class="t-img" src="images/plac&cell/g1.jpg"></td>
+                        <td rowspan="2" style="vertical-align: middle;">Electronics and Communication</td>
+                        <td style="text-align:right;">2020-21</td>
+                        <td style="text-align:right;">23</td>
+                        <td style="text-align:right;">12</td>
+                        <td style="text-align:right;">4</td>
+                        <td style="text-align:right;">1</td>
+                        <td style="text-align:right;">74</td>
                     </tr>
                     <tr>
-                        <td>Aditya</td>
-                        <td>Girishkumar</td>
-                        <td>Patel</td>
-                        <td>computer</td>
-                        <td>RLOGICAL</td>
-                        <td>4 to 4,50 lakh</td>
-                        <td>Aditya@gmail.com</td>
-                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
-                    </tr>
-                    <tr>
-                        <td>Aditya</td>
-                        <td>Girishkumar</td>
-                        <td>Patel</td>
-                        <td>computer</td>
-                        <td>RLOGICAL</td>
-                        <td>4 to 4,50 lakh</td>
-                        <td>Aditya@gmail.com</td>
-                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
-                    </tr>
-                    <tr>
-                        <td>Aditya</td>
-                        <td>Girishkumar</td>
-                        <td>Patel</td>
-                        <td>computer</td>
-                        <td>RLOGICAL</td>
-                        <td>4 to 4,50 lakh</td>
-                        <td>Aditya@gmail.com</td>
-                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
-                    </tr>
-                    <tr>
-                        <td>Aditya</td>
-                        <td>Girishkumar</td>
-                        <td>Patel</td>
-                        <td>computer</td>
-                        <td>RLOGICAL</td>
-                        <td>4 to 4,50 lakh</td>
-                        <td>Aditya@gmail.com</td>
-                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
-                    </tr>
-                    <tr>
-                        <td>Aditya</td>
-                        <td>Girishkumar</td>
-                        <td>Patel</td>
-                        <td>computer</td>
-                        <td>RLOGICAL</td>
-                        <td>4 to 4,50 lakh</td>
-                        <td>Aditya@gmail.com</td>
-                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
-                    </tr>
-                    <tr>
-                        <td>Aditya</td>
-                        <td>Girishkumar</td>
-                        <td>Patel</td>
-                        <td>computer</td>
-                        <td>RLOGICAL</td>
-                        <td>4 to 4,50 lakh</td>
-                        <td>Aditya@gmail.com</td>
-                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
-                    </tr>
-                    <tr>
-                        <td>Aditya</td>
-                        <td>Girishkumar</td>
-                        <td>Patel</td>
-                        <td>computer</td>
-                        <td>RLOGICAL</td>
-                        <td>4 to 4,50 lakh</td>
-                        <td>Aditya@gmail.com</td>
-                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
-                    </tr>
-                    <tr>
-                        <td>Aditya</td>
-                        <td>Girishkumar</td>
-                        <td>Patel</td>
-                        <td>computer</td>
-                        <td>RLOGICAL</td>
-                        <td>4 to 4,50 lakh</td>
-                        <td>Aditya@gmail.com</td>
-                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
-                    </tr>
-                    <tr>
-                        <td>Aditya</td>
-                        <td>Girishkumar</td>
-                        <td>Patel</td>
-                        <td>computer</td>
-                        <td>RLOGICAL</td>
-                        <td>4 to 4,50 lakh</td>
-                        <td>Aditya@gmail.com</td>
-                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
-                    </tr>
-                    <tr>
-                        <td>Aditya</td>
-                        <td>Girishkumar</td>
-                        <td>Patel</td>
-                        <td>computer</td>
-                        <td>RLOGICAL</td>
-                        <td>4 to 4,50 lakh</td>
-                        <td>Aditya@gmail.com</td>
-                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
-                    </tr>
-                    <tr>
-                        <td>Aditya</td>
-                        <td>Girishkumar</td>
-                        <td>Patel</td>
-                        <td>computer</td>
-                        <td>RLOGICAL</td>
-                        <td>4 to 4,50 lakh</td>
-                        <td>Aditya@gmail.com</td>
-                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
-                    </tr>
-                    <tr>
-                        <td>Aditya</td>
-                        <td>Girishkumar</td>
-                        <td>Patel</td>
-                        <td>computer</td>
-                        <td>RLOGICAL</td>
-                        <td>4 to 4,50 lakh</td>
-                        <td>Aditya@gmail.com</td>
-                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
-                    </tr>
-                    <tr>
-                        <td>Aditya</td>
-                        <td>Girishkumar</td>
-                        <td>Patel</td>
-                        <td>computer</td>
-                        <td>RLOGICAL</td>
-                        <td>4 to 4,50 lakh</td>
-                        <td>Aditya@gmail.com</td>
-                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
-                    </tr>
-                    <tr>
-                        <td>Aditya</td>
-                        <td>Girishkumar</td>
-                        <td>Patel</td>
-                        <td>computer</td>
-                        <td>RLOGICAL</td>
-                        <td>4 to 4,50 lakh</td>
-                        <td>Aditya@gmail.com</td>
-                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
-                    </tr>
-                    <tr>
-                        <td>Aditya</td>
-                        <td>Girishkumar</td>
-                        <td>Patel</td>
-                        <td>computer</td>
-                        <td>RLOGICAL</td>
-                        <td>4 to 4,50 lakh</td>
-                        <td>Aditya@gmail.com</td>
-                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
-                    </tr>
-                    <tr>
-                        <td>Aditya</td>
-                        <td>Girishkumar</td>
-                        <td>Patel</td>
-                        <td>computer</td>
-                        <td>RLOGICAL</td>
-                        <td>4 to 4,50 lakh</td>
-                        <td>Aditya@gmail.com</td>
-                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
-                    </tr>
-                    <tr>
-                        <td>Aditya</td>
-                        <td>Girishkumar</td>
-                        <td>Patel</td>
-                        <td>computer</td>
-                        <td>RLOGICAL</td>
-                        <td>4 to 4,50 lakh</td>
-                        <td>Aditya@gmail.com</td>
-                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
-                    </tr>
-                    <tr>
-                        <td>Aditya</td>
-                        <td>Girishkumar</td>
-                        <td>Patel</td>
-                        <td>computer</td>
-                        <td>RLOGICAL</td>
-                        <td>4 to 4,50 lakh</td>
-                        <td>Aditya@gmail.com</td>
-                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
-                    </tr>
-                    <tr>
-                        <td>Aditya</td>
-                        <td>Girishkumar</td>
-                        <td>Patel</td>
-                        <td>computer</td>
-                        <td>RLOGICAL</td>
-                        <td>4 to 4,50 lakh</td>
-                        <td>Aditya@gmail.com</td>
-                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
-                    </tr>
-                    <tr>
-                        <td>Aditya</td>
-                        <td>Girishkumar</td>
-                        <td>Patel</td>
-                        <td>computer</td>
-                        <td>RLOGICAL</td>
-                        <td>4 to 4,50 lakh</td>
-                        <td>Aditya@gmail.com</td>
-                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
-                    </tr>
-                    <tr>
-                        <td>Aditya</td>
-                        <td>Girishkumar</td>
-                        <td>Patel</td>
-                        <td>computer</td>
-                        <td>RLOGICAL</td>
-                        <td>4 to 4,50 lakh</td>
-                        <td>Aditya@gmail.com</td>
-                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
-                    </tr>
-                    <tr>
-                        <td>Aditya</td>
-                        <td>Girishkumar</td>
-                        <td>Patel</td>
-                        <td>computer</td>
-                        <td>RLOGICAL</td>
-                        <td>4 to 4,50 lakh</td>
-                        <td>Aditya@gmail.com</td>
-                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
-                    </tr>
-                    <tr>
-                        <td>Aditya</td>
-                        <td>Girishkumar</td>
-                        <td>Patel</td>
-                        <td>computer</td>
-                        <td>RLOGICAL</td>
-                        <td>4 to 4,50 lakh</td>
-                        <td>Aditya@gmail.com</td>
-                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
-                    </tr>
-                    <tr>
-                        <td>Aditya</td>
-                        <td>Girishkumar</td>
-                        <td>Patel</td>
-                        <td>computer</td>
-                        <td>RLOGICAL</td>
-                        <td>4 to 4,50 lakh</td>
-                        <td>Aditya@gmail.com</td>
-                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
-                    </tr>
-                    <tr>
-                        <td>Aditya</td>
-                        <td>Girishkumar</td>
-                        <td>Patel</td>
-                        <td>computer</td>
-                        <td>RLOGICAL</td>
-                        <td>4 to 4,50 lakh</td>
-                        <td>Aditya@gmail.com</td>
-                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
-                    </tr>
-                    <tr>
-                        <td>Aditya</td>
-                        <td>Girishkumar</td>
-                        <td>Patel</td>
-                        <td>computer</td>
-                        <td>RLOGICAL</td>
-                        <td>4 to 4,50 lakh</td>
-                        <td>Aditya@gmail.com</td>
-                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
-                    </tr>
-                    <tr>
-                        <td>Aditya</td>
-                        <td>Girishkumar</td>
-                        <td>Patel</td>
-                        <td>computer</td>
-                        <td>RLOGICAL</td>
-                        <td>4 to 4,50 lakh</td>
-                        <td>Aditya@gmail.com</td>
-                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
-                    </tr>
-                    <tr>
-                        <td>Aditya</td>
-                        <td>Girishkumar</td>
-                        <td>Patel</td>
-                        <td>computer</td>
-                        <td>RLOGICAL</td>
-                        <td>4 to 4,50 lakh</td>
-                        <td>Aditya@gmail.com</td>
-                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
-                    </tr>
-                    <tr>
-                        <td>Aditya</td>
-                        <td>Girishkumar</td>
-                        <td>Patel</td>
-                        <td>computer</td>
-                        <td>RLOGICAL</td>
-                        <td>4 to 4,50 lakh</td>
-                        <td>Aditya@gmail.com</td>
-                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
-                    </tr>
-                    <tr>
-                        <td>Aditya</td>
-                        <td>Girishkumar</td>
-                        <td>Patel</td>
-                        <td>computer</td>
-                        <td>RLOGICAL</td>
-                        <td>4 to 4,50 lakh</td>
-                        <td>Aditya@gmail.com</td>
-                        <td><img class="t-img" src="~/images/plac&cell/g1.jpg"></td>
-                    </tr>
-                    <tr>
-                        <td>krupalu</td>
-                        <td>Girishkumar</td>
-                        <td>Patel</td>
-                        <td>computer</td>
-                        <td>INFOSYS</td>
-                        <td>4 to 4,50 lakh</td>
-                        <td>krupalu@gmail.com</td>
-                        <td><img class="t-img" src="~/images/plac&cell/b1.jpg"></td>
-                    </tr>
-                    <tr>
-                        <td>krupalu</td>
-                        <td>Girishkumar</td>
-                        <td>Patel</td>
-                        <td>computer</td>
-                        <td>INFOSYS</td>
-                        <td>4 to 4,50 lakh</td>
-                        <td>krupalu@gmail.com</td>
-                        <td><img class="t-img" src="~/images/plac&cell/b1.jpg"></td>
-                    </tr>
-                    <tr>
-                        <td>krupalu</td>
-                        <td>Girishkumar</td>
-                        <td>Patel</td>
-                        <td>computer</td>
-                        <td>INFOSYS</td>
-                        <td>4 to 4,50 lakh</td>
-                        <td>krupalu@gmail.com</td>
-                        <td><img class="t-img" src="~/images/plac&cell/b1.jpg"></td>
-                    </tr>
-                    <tr>
-                        <td>krupalu</td>
-                        <td>Girishkumar</td>
-                        <td>Patel</td>
-                        <td>computer</td>
-                        <td>INFOSYS</td>
-                        <td>4 to 4,50 lakh</td>
-                        <td>krupalu@gmail.com</td>
-                        <td><img class="t-img" src="~/images/plac&cell/b1.jpg"></td>
-                    </tr>
-                    <tr>
-                        <td>krupalu</td>
-                        <td>Girishkumar</td>
-                        <td>Patel</td>
-                        <td>computer</td>
-                        <td>INFOSYS</td>
-                        <td>4 to 4,50 lakh</td>
-                        <td>krupalu@gmail.com</td>
-                        <td><img class="t-img" src="~/images/plac&cell/b1.jpg"></td>
-                    </tr>
-                    <tr>
-                        <td>krupalu</td>
-                        <td>Girishkumar</td>
-                        <td>Patel</td>
-                        <td>computer</td>
-                        <td>INFOSYS</td>
-                        <td>4 to 4,50 lakh</td>
-                        <td>krupalu@gmail.com</td>
-                        <td><img class="t-img" src="~/images/plac&cell/b1.jpg"></td>
-                    </tr>
-                    <tr>
-                        <td>krupalu</td>
-                        <td>Girishkumar</td>
-                        <td>Patel</td>
-                        <td>computer</td>
-                        <td>INFOSYS</td>
-                        <td>4 to 4,50 lakh</td>
-                        <td>krupalu@gmail.com</td>
-                        <td><img class="t-img" src="~/images/plac&cell/b1.jpg"></td>
-                    </tr>
-                    <tr>
-                        <td>krupalu</td>
-                        <td>Girishkumar</td>
-                        <td>Patel</td>
-                        <td>computer</td>
-                        <td>INFOSYS</td>
-                        <td>4 to 4,50 lakh</td>
-                        <td>krupalu@gmail.com</td>
-                        <td><img class="t-img" src="~/images/plac&cell/b1.jpg"></td>
-                    </tr>
-                    <tr>
-                        <td>krupalu</td>
-                        <td>Girishkumar</td>
-                        <td>Patel</td>
-                        <td>computer</td>
-                        <td>INFOSYS</td>
-                        <td>4 to 4,50 lakh</td>
-                        <td>krupalu@gmail.com</td>
-                        <td><img class="t-img" src="~/images/plac&cell/b1.jpg"></td>
-                    </tr>
-                    <tr>
-                        <td>krupalu</td>
-                        <td>Girishkumar</td>
-                        <td>Patel</td>
-                        <td>computer</td>
-                        <td>INFOSYS</td>
-                        <td>4 to 4,50 lakh</td>
-                        <td>krupalu@gmail.com</td>
-                        <td><img class="t-img" src="~/images/plac&cell/b1.jpg"></td>
-                    </tr>
-                    <tr>
-                        <td>krupalu</td>
-                        <td>Girishkumar</td>
-                        <td>Patel</td>
-                        <td>computer</td>
-                        <td>INFOSYS</td>
-                        <td>4 to 4,50 lakh</td>
-                        <td>krupalu@gmail.com</td>
-                        <td><img class="t-img" src="~/images/plac&cell/b1.jpg"></td>
-                    </tr>
-                    <tr>
-                        <td>krupalu</td>
-                        <td>Girishkumar</td>
-                        <td>Patel</td>
-                        <td>computer</td>
-                        <td>INFOSYS</td>
-                        <td>4 to 4,50 lakh</td>
-                        <td>krupalu@gmail.com</td>
-                        <td><img class="t-img" src="~/images/plac&cell/b1.jpg"></td>
-                    </tr>
-                    <tr>
-                        <td>krupalu</td>
-                        <td>Girishkumar</td>
-                        <td>Patel</td>
-                        <td>computer</td>
-                        <td>INFOSYS</td>
-                        <td>4 to 4,50 lakh</td>
-                        <td>krupalu@gmail.com</td>
-                        <td><img class="t-img" src="~/images/plac&cell/b1.jpg"></td>
-                    </tr>
-                    <tr>
-                        <td>krupalu</td>
-                        <td>Girishkumar</td>
-                        <td>Patel</td>
-                        <td>computer</td>
-                        <td>INFOSYS</td>
-                        <td>4 to 4,50 lakh</td>
-                        <td>krupalu@gmail.com</td>
-                        <td><img class="t-img" src="~/images/plac&cell/b1.jpg"></td>
-                    </tr>
-                    <tr>
-                        <td>krupalu</td>
-                        <td>Girishkumar</td>
-                        <td>Patel</td>
-                        <td>computer</td>
-                        <td>INFOSYS</td>
-                        <td>4 to 4,50 lakh</td>
-                        <td>krupalu@gmail.com</td>
-                        <td><img class="t-img" src="~/images/plac&cell/b1.jpg"></td>
-                    </tr>
-                    <tr>
-                        <td>krupalu</td>
-                        <td>Girishkumar</td>
-                        <td>Patel</td>
-                        <td>computer</td>
-                        <td>INFOSYS</td>
-                        <td>4 to 4,50 lakh</td>
-                        <td>krupalu@gmail.com</td>
-                        <td><img class="t-img" src="~/images/plac&cell/b1.jpg"></td>
-                    </tr>
-                    <tr>
-                        <td>krupalu</td>
-                        <td>Girishkumar</td>
-                        <td>Patel</td>
-                        <td>computer</td>
-                        <td>INFOSYS</td>
-                        <td>4 to 4,50 lakh</td>
-                        <td>krupalu@gmail.com</td>
-                        <td><img class="t-img" src="~/images/plac&cell/b1.jpg"></td>
-                    </tr>
-                    <tr>
-                        <td>krupalu</td>
-                        <td>Girishkumar</td>
-                        <td>Patel</td>
-                        <td>computer</td>
-                        <td>INFOSYS</td>
-                        <td>4 to 4,50 lakh</td>
-                        <td>krupalu@gmail.com</td>
-                        <td><img class="t-img" src="~/images/plac&cell/b1.jpg"></td>
+                        <td style="text-align:right;">2021-22</td>
+                        <td style="text-align:right;">21</td>
+                        <td style="text-align:right;">3</td>
+                        <td style="text-align:right;">5</td>
+                        <td style="text-align:right;">2</td>
+                        <td style="text-align:right;">48</td>
                     </tr>
                 </tbody>
             </table>
         </div>
+    </div>

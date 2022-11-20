@@ -54,8 +54,8 @@ namespace GECP_FRONTEND_NET_CORE.Controllers
             missionVM = user2.data;
 
             VissionMissionVM data = new VissionMissionVM();
-            data.vission = visionVM.Where(m => m.DeptId == 2).FirstOrDefault().Description;
-            data.mission = missionVM.Where(m => m.DeptId == 2).FirstOrDefault().Description;
+            data.vission = visionVM.Where(m => m.DeptId == 11).FirstOrDefault().Description;
+            data.mission = missionVM.Where(m => m.DeptId == 11).FirstOrDefault().Description;
 
 
             return View(data);
